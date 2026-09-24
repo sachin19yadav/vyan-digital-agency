@@ -51,7 +51,7 @@ export default function ContactForm() {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors", // Apps Script web apps don't return normal CORS headers
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(form),
       });
       setStatus({ ok: true, message: "Thanks! We've received your details and will contact you shortly." });

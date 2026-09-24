@@ -2,6 +2,13 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const viewport = {
+  themeColor: "#0F1320",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata = {
   title: {
     default: "Vyan Digital Agency — Meta Ads, Google Ads & Growth, Kanpur",

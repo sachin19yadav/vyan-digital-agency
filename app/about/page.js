@@ -40,7 +40,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="wrap">
-          <div className="grid-2" style={{ gap: 48, alignItems: "flex-start" }}>
+          <div className="grid-2 two-col-layout">
             <div>
               <h2 style={{ fontSize: "1.5rem" }}>Why we exist</h2>
               <p className="text-muted">
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 website and social pages don&apos;t sit untouched for months.
               </p>
               <p className="text-muted">
-                That's the gap Vyan fills. Instead of sending clients to five
+                That&apos;s the gap Vyan fills. Instead of sending clients to five
                 different freelancers for ads, listing, website and social
                 accounts, we run it all from one place, so nothing
                 contradicts anything else.

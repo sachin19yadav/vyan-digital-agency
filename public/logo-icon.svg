@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" fill="none">
+  <defs>
+    <linearGradient id="vyan-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D2338"/>
+      <stop offset="100%" stop-color="#121624"/>
+    </linearGradient>
+    <linearGradient id="vyan-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D076"/>
+      <stop offset="100%" stop-color="#D9A441"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="url(#vyan-bg)" stroke="#D9A441" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M10 13L20 28L24.5 21" stroke="url(#vyan-gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 13H30V21" stroke="url(#vyan-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18.5 24.5L30 13" stroke="url(#vyan-gold)" stroke-width="3" stroke-linecap="round"/>
+</svg>

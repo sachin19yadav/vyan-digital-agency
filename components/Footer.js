@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -6,8 +7,10 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div>
-            <div className="logo" style={{ marginBottom: 12 }}>
-              Vyan <span>Digital</span>
+            <div style={{ marginBottom: 14 }}>
+              <Link href="/" className="site-logo-link" aria-label="Vyan Digital Agency Home">
+                <Logo size="normal" />
+              </Link>
             </div>
             <p className="text-muted" style={{ marginBottom: 0 }}>
               A digital growth agency in Kanpur helping local businesses get

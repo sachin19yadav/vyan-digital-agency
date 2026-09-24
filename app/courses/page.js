@@ -81,7 +81,7 @@ export default function CoursesPage() {
           </div>
 
           <div className="section-head">
-            <h2>What's covered</h2>
+            <h2>What&apos;s covered</h2>
             <p className="text-muted">Six modules, taught in plain language with real examples from local businesses.</p>
           </div>
           <div>

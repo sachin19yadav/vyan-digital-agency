@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <section className="section section-light">
         <div className="wrap">
-          <div className="grid-2" style={{ gap: 48, alignItems: "flex-start" }}>
+          <div className="grid-2 contact-grid">
             <div>
               <h2 style={{ fontSize: "1.4rem", marginBottom: 24 }}>Send your details</h2>
               <ContactForm />
