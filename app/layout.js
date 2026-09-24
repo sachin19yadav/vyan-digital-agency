@@ -85,6 +85,9 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "01QA1dYBxrIYgqVyFygvhJsItrB9Z9gI-ryWpk_rKbE",
+  },
   category: "Digital Marketing Agency",
 };
 
@@ -235,6 +238,10 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <meta
+          name="google-site-verification"
+          content="01QA1dYBxrIYgqVyFygvhJsItrB9Z9gI-ryWpk_rKbE"
         />
         <script
           type="application/ld+json"
