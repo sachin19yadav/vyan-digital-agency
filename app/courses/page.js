@@ -1,6 +1,19 @@
 import Link from "next/link";
 
-export const metadata = { title: "Courses" };
+export const metadata = {
+  title: "Social Media & Business Growth Course (₹1,999)",
+  description:
+    "Enroll in Vyan Digital Agency's practical 6-module course on social media growth, Facebook/Instagram ads, Google Business Profile, and client conversion. Perfect for students and business owners.",
+  alternates: {
+    canonical: "/courses",
+  },
+  openGraph: {
+    title: "Practical Social Media & Business Growth Course | Vyan Digital Agency",
+    description:
+      "Learn to grow businesses with social media and run ads profitably. ₹1,999 one-time fee with referral earnings available.",
+    url: "/courses",
+  },
+};
 
 const curriculum = [
   {

@@ -1,6 +1,19 @@
 import Link from "next/link";
 
-export const metadata = { title: "About Us" };
+export const metadata = {
+  title: "About Us — Digital Marketing Agency in Kanpur",
+  description:
+    "Learn about Vyan Digital Agency based in Shatabdi Nagar, Panki, Kanpur. We empower local businesses with transparent, high-ROI digital marketing, Meta/Google ads, and modern business automation.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Vyan Digital Agency — Kanpur, UP",
+    description:
+      "Built for local businesses in Kanpur that need consistent online leads, ads, and systems without maintaining an in-house marketing team.",
+    url: "/about",
+  },
+};
 
 const values = [
   {

@@ -1,6 +1,19 @@
 import Link from "next/link";
 
-export const metadata = { title: "Earn with Us" };
+export const metadata = {
+  title: "Earn with Us — Referral Program & Jio SIM Partnership",
+  description:
+    "Partner with Vyan Digital Agency: Earn ₹1,000 per referral on our social media growth course, or earn directly through our Jio SIM partnership program. Contact us on WhatsApp to get started.",
+  alternates: {
+    canonical: "/earn-with-us",
+  },
+  openGraph: {
+    title: "Earn with Vyan Digital Agency — Referral & Partnership Programs",
+    description:
+      "Refer students or business owners to earn ₹1,000 per referral, or partner with your Jio SIM.",
+    url: "/earn-with-us",
+  },
+};
 
 export default function EarnWithUsPage() {
   return (

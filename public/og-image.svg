@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <linearGradient id="og-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1320"/>
+      <stop offset="50%" stop-color="#161B2E"/>
+      <stop offset="100%" stop-color="#0B0E18"/>
+    </linearGradient>
+    <linearGradient id="og-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE19B"/>
+      <stop offset="50%" stop-color="#E2B155"/>
+      <stop offset="100%" stop-color="#BF8B2B"/>
+    </linearGradient>
+    <linearGradient id="og-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9A441" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#D9A441" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  
+  <!-- Subtle ambient glow circles -->
+  <circle cx="200" cy="180" r="280" fill="url(#og-glow)" filter="url(#blur)"/>
+  <circle cx="1050" cy="450" r="220" fill="url(#og-glow)" filter="url(#blur)"/>
+
+  <!-- Border Frame -->
+  <rect x="30" y="30" width="1140" height="570" rx="16" stroke="rgba(237, 239, 245, 0.08)" stroke-width="1.5" fill="none"/>
+
+  <!-- Logo Mark (left) -->
+  <g transform="translate(100, 100)">
+    <rect width="84" height="84" rx="22" fill="#1D2338" stroke="#D9A441" stroke-width="2.5" stroke-opacity="0.5"/>
+    <path d="M22 28L42 58L51 43" stroke="url(#og-gold)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M46 28H62V44" stroke="url(#og-gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M39 51L62 28" stroke="url(#og-gold)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Agency Eyebrow -->
+  <text x="210" y="135" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="#D9A441" letter-spacing="0.1em">DIGITAL GROWTH AGENCY • KANPUR</text>
+  <text x="210" y="172" font-family="'Space Grotesk', system-ui, sans-serif" font-size="44" font-weight="700" fill="#EDEFF5" letter-spacing="-0.02em">Vyan <tspan fill="#D9A441">Digital</tspan></text>
+
+  <!-- Main Headline -->
+  <text x="100" y="290" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="#EDEFF5" letter-spacing="-0.02em">
+    Meta Ads, Google Ads &amp;
+  </text>
+  <text x="100" y="355" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="url(#og-gold)" letter-spacing="-0.02em">
+    Business Growth in Kanpur
+  </text>
+
+  <!-- Tagline / Services list -->
+  <text x="100" y="430" font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="400" fill="#A6ABC0">
+    Google Maps Listing • Social Media Handling • Business Automation • Web Development
+  </text>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(100, 485)">
+    <!-- Location Badge -->
+    <rect width="280" height="48" rx="8" fill="#1D2338" stroke="rgba(237, 239, 245, 0.12)" stroke-width="1"/>
+    <text x="20" y="31" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="500" fill="#EDEFF5">📍 Panki, Kanpur, Uttar Pradesh</text>
+  </g>
+
+  <g transform="translate(400, 485)">
+    <!-- Phone Badge -->
+    <rect width="220" height="48" rx="8" fill="#1D2338" stroke="rgba(237, 239, 245, 0.12)" stroke-width="1"/>
+    <text x="20" y="31" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="500" fill="#EDEFF5">📞 +91 96548 80240</text>
+  </g>
+</svg>

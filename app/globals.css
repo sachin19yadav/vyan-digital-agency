@@ -938,7 +938,7 @@ footer a:hover {
   padding: 12px 14px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
   font-size: 16px; /* Prevents auto-zoom on iOS */
   min-height: 48px;
@@ -956,7 +956,7 @@ footer a:hover {
 .section-light .form-field input,
 .section-light .form-field select,
 .section-light .form-field textarea {
-  background: #ffffff;
+  background-color: #ffffff;
   color: var(--light-text);
   border: 1px solid rgba(22, 27, 46, 0.18);
 }
@@ -971,15 +971,26 @@ footer a:hover {
 .form-field select {
   cursor: pointer;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A6ABC0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 40px;
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A6ABC0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 14px 14px !important;
+  padding-right: 42px;
+}
+
+.form-field select::-ms-expand {
+  display: none;
 }
 
 .section-light .form-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23565C73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23565C73' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 14px 14px !important;
 }
 
 .form-note {

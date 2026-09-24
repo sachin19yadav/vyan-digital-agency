@@ -1,6 +1,19 @@
 import ContactForm from "@/components/ContactForm";
 
-export const metadata = { title: "Contact Us" };
+export const metadata = {
+  title: "Contact Us — Get a Free Digital Growth Consultation",
+  description:
+    "Get in touch with Vyan Digital Agency in Panki, Kanpur. Call or WhatsApp +91 96548 80240, visit our office behind Cambridge School, or submit an enquiry for ads and business growth services.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Vyan Digital Agency — Kanpur, UP",
+    description:
+      "Talk to our team in Kanpur about Meta Ads, Google Ads, local listing SEO, and website development. Fast response within 24-48 hours.",
+    url: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (

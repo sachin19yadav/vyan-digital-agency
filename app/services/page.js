@@ -1,6 +1,19 @@
 import Link from "next/link";
 
-export const metadata = { title: "Services" };
+export const metadata = {
+  title: "Services — Meta Ads, Google Ads & Web Development",
+  description:
+    "Explore our 7 core digital growth services in Kanpur: Meta Ads (Facebook & Instagram), Google Ads, Google Maps Business Profile, Facebook & YouTube Account Handling, Business Automations, and Website Development.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Digital Growth Services in Kanpur | Vyan Digital Agency",
+    description:
+      "Meta Ads, Google Ads, Google Maps optimization, social accounts, and custom websites for Kanpur businesses.",
+    url: "/services",
+  },
+};
 
 const services = [
   {
