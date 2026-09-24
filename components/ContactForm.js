@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Replace with your own Google Apps Script Web App URL.
 // See SETUP-GOOGLE-SHEETS.md at the project root for the 5-minute setup.
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxek_EVhcM__i92wU9T3FwWZUfD1KZmuTod6K3TMBHONN2v9pz_NGfDFvrFsSh4-eO1GQ/exec";
 
 const SERVICES = [
   "Meta Ads (Facebook & Instagram)",
