@@ -15,9 +15,32 @@ export const metadata = {
   },
 };
 
+const earnSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://vyandigitalagency.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Earn with Us",
+      item: "https://vyandigitalagency.com/earn-with-us",
+    },
+  ],
+};
+
 export default function EarnWithUsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(earnSchema) }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Earn with Vyan</p>

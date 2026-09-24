@@ -53,9 +53,38 @@ const audience = [
   },
 ];
 
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "Social Media & Business Growth Course",
+  description:
+    "A practical 6-module course covering social media marketing, Meta and Google ads, Google Business Profile optimization, and client acquisition in Kanpur.",
+  provider: {
+    "@type": "Organization",
+    name: "Vyan Digital Agency",
+    sameAs: "https://vyandigitalagency.com",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "1999",
+    priceCurrency: "INR",
+    category: "Paid",
+    availability: "https://schema.org/InStock",
+  },
+  hasCourseInstance: {
+    "@type": "CourseInstance",
+    courseMode: "Blended",
+    location: "Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020",
+  },
+};
+
 export default function CoursesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Learn with Vyan</p>

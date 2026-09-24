@@ -216,6 +216,27 @@ const jsonLd = {
         areaServed: "IN",
         availableLanguage: ["English", "Hindi"],
       },
+      sameAs: [
+        "https://wa.me/919654880240"
+      ],
+      knowsAbout: [
+        "Digital Marketing",
+        "Meta Ads (Facebook & Instagram Ads)",
+        "Google Ads & PPC Management",
+        "Google Business Profile & Local SEO",
+        "Social Media Management",
+        "Business Process Automation",
+        "WhatsApp Marketing Automation",
+        "Custom Website Development",
+        "Lead Generation"
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "48",
+        bestRating: "5",
+        worstRating: "1",
+      },
     },
     {
       "@type": "WebSite",
@@ -243,6 +264,12 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="01QA1dYBxrIYgqVyFygvhJsItrB9Z9gI-ryWpk_rKbE"
         />
+        {/* Geo Location Tags for Kanpur Local Search */}
+        <meta name="geo.region" content="IN-UP" />
+        <meta name="geo.placename" content="Kanpur" />
+        <meta name="geo.position" content="26.4716;80.2447" />
+        <meta name="ICBM" content="26.4716, 80.2447" />
+        <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

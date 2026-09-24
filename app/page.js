@@ -1,20 +1,61 @@
 import Link from "next/link";
 
+const faqs = [
+  {
+    q: "Why choose Vyan Digital Agency as your digital marketing agency in Kanpur?",
+    a: "Vyan Digital Agency is a Kanpur-based digital growth agency bringing your Meta Ads, Google Ads, Google Maps listing, social accounts, and website under one cohesive team. We deliver transparent, revenue-focused reporting with zero lock-in contracts.",
+  },
+  {
+    q: "How does Vyan Digital Agency help local businesses get more customer leads?",
+    a: "We deploy precision Meta Ads (Facebook & Instagram) and Google Search Ads targeting high-intent customers in Kanpur and Uttar Pradesh. Combined with Google Business Profile ranking and automated WhatsApp follow-ups, your inbound enquiries convert into paying clients quickly.",
+  },
+  {
+    q: "What digital marketing services does Vyan provide?",
+    a: "We provide 7 core growth services: Meta Ads management, Google Ads (Search, Display, YouTube), Google Maps business listing optimization, Facebook account handling, YouTube channel management, WhatsApp & CRM business automation agents, and custom website development.",
+  },
+  {
+    q: "Where is Vyan Digital Agency located in Kanpur?",
+    a: "Our agency is located Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020. Clients are welcome to visit our office or reach us on call or WhatsApp at +91 96548 80240 for a free strategy consultation.",
+  },
+  {
+    q: "How much does digital marketing and advertising cost with Vyan?",
+    a: "Our pricing is transparent, modular, and built for businesses of all sizes. Each service is billed independently without forced bundle packages. We also provide our practical Social Media Growth Course for ₹1,999 with referral earning options.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
+    },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <section className="hero">
         <div className="wrap">
-          <p className="eyebrow">Digital growth agency — Kanpur, Uttar Pradesh</p>
-          <h1>We run the ads, pages and systems your business doesn&apos;t have time to run.</h1>
+          <p className="eyebrow">Top-Rated Digital Marketing &amp; Growth Agency — Kanpur, Uttar Pradesh</p>
+          <h1>Vyan Digital Agency — Digital Marketing, Ads &amp; Growth in Kanpur</h1>
           <p className="lead">
-            Vyan Digital Agency handles Meta Ads, Google Ads, your Google Maps
-            listing, social accounts, automation and your website — so leads
-            keep arriving while you run the business.
+            We run high-ROI Meta Ads, Google Ads, Google Maps business ranking,
+            social accounts, automation and high-converting websites — so qualified
+            leads keep arriving while you run your business.
           </p>
           <div className="hero-actions">
             <Link href="/contact" className="btn btn-primary">Talk to us</Link>
-            <Link href="/services" className="btn btn-secondary">See what we do</Link>
+            <Link href="/services" className="btn btn-secondary">Explore all services</Link>
           </div>
           <div className="stat-row">
             <div className="stat"><b>7</b><span>services under one roof</span></div>
@@ -51,7 +92,7 @@ export default function HomePage() {
       <section className="section section-alt">
         <div className="wrap">
           <div className="section-head">
-            <h2>Why businesses work with Vyan</h2>
+            <h2>Why Kanpur businesses partner with Vyan</h2>
           </div>
           <div className="grid-3">
             <div className="card">
@@ -63,14 +104,36 @@ export default function HomePage() {
               <p>You get told what&apos;s working and what isn&apos;t, in plain language — no jargon-filled reports you have to decode.</p>
             </div>
             <div className="card">
-              <h3>Local, reachable</h3>
-              <p>Based in Kanpur — call, WhatsApp or visit the office. No support ticket queues.</p>
+              <h3>Local, reachable in Kanpur</h3>
+              <p>Based in Panki, Kanpur — call, WhatsApp or visit our office. No endless support ticket queues.</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* SEO FAQ Section */}
       <section className="section">
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow" style={{ color: "var(--accent)", marginBottom: 8, fontWeight: 600 }}>Frequently Asked Questions</p>
+            <h2>Common questions about digital growth in Kanpur</h2>
+            <p className="text-muted">Everything you need to know about working with Vyan Digital Agency.</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq, i) => (
+              <div className="faq-item" key={i}>
+                <div className="faq-question">
+                  <span className="q-mark">Q.</span>
+                  <span>{faq.q}</span>
+                </div>
+                <p className="faq-answer">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
         <div className="wrap">
           <div className="cta-band">
             <div>

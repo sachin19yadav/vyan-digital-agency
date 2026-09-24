@@ -15,9 +15,43 @@ export const metadata = {
   },
 };
 
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      name: "Contact Vyan Digital Agency Kanpur",
+      description:
+        "Get in touch with Vyan Digital Agency in Panki, Kanpur. Free 1-on-1 digital marketing and growth consultation.",
+      url: "https://vyandigitalagency.com/contact",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://vyandigitalagency.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Contact",
+          item: "https://vyandigitalagency.com/contact",
+        },
+      ],
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Get in touch</p>
@@ -50,7 +84,7 @@ export default function ContactPage() {
                 <div>
                   <strong>Address</strong>
                   <p style={{ margin: "4px 0 0" }}>
-                    Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh
+                    Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020
                   </p>
                 </div>
               </div>

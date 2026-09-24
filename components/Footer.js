@@ -31,7 +31,7 @@ export default function Footer() {
             <h4>Reach us</h4>
             <ul>
               <li><a href="tel:+919654880240">+91 96548 80240</a></li>
-              <li>Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur</li>
+              <li>Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020</li>
             </ul>
           </div>
         </div>
