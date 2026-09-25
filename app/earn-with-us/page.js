@@ -166,15 +166,22 @@ export default function EarnWithUsPage() {
                 </div>
 
                 <div style={{ display: "flex", gap: 12, marginTop: "auto", flexWrap: "wrap" }}>
+                  <Link
+                    href="/portal"
+                    className="btn btn-primary btn-icon"
+                    style={{ flex: 1, justifyContent: "center" }}
+                  >
+                    <span>Get Code &amp; Partner Portal</span>
+                    <ArrowRight size={16} />
+                  </Link>
                   <a
                     href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20want%20to%20register%20as%20a%20Course%20Referral%20Partner"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-whatsapp btn-icon"
-                    style={{ flex: 1, justifyContent: "center" }}
                   >
                     <MessageCircle size={16} />
-                    <span>Get Referral Code</span>
+                    <span>WhatsApp</span>
                   </a>
                   <Link href="/courses" className="btn btn-secondary">
                     View Course
@@ -326,6 +333,10 @@ export default function EarnWithUsPage() {
               </p>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Link href="/portal" className="btn btn-primary btn-icon">
+                <span>Partner Portal &amp; Code</span>
+                <ArrowRight size={16} />
+              </Link>
               <a
                 href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20want%20to%20start%20with%20Earn%20With%20Us"
                 target="_blank"
@@ -333,10 +344,10 @@ export default function EarnWithUsPage() {
                 className="btn btn-whatsapp btn-icon"
               >
                 <MessageCircle size={16} />
-                <span>Message on WhatsApp</span>
+                <span>WhatsApp</span>
               </a>
               <Link href="/contact" className="btn btn-secondary">
-                Submit Contact Form
+                Submit Form
               </Link>
             </div>
           </div>

@@ -116,6 +116,7 @@ export default function Footer() {
               <li><Link href="/about">About Agency</Link></li>
               <li><Link href="/courses">Social Media Course (₹1,999)</Link></li>
               <li><Link href="/earn-with-us">Earn with Us Program</Link></li>
+              <li><Link href="/portal" style={{ color: "var(--accent)", fontWeight: 600 }}>Partner Portal (Login / Code)</Link></li>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/contact">Free Strategy Session</Link></li>
               <li><a href="https://wa.me/919654880240" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
@@ -156,7 +157,15 @@ export default function Footer() {
 
         <div className="foot-bottom">
           <span>© {new Date().getFullYear()} Vyan Digital Agency. All rights reserved.</span>
-          <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+          <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+            <Link href="/portal" style={{ color: "var(--accent)", fontSize: "0.82rem", textDecoration: "none" }}>
+              Partner Portal
+            </Link>
+            <span>•</span>
+            <Link href="/admin" style={{ color: "var(--text-muted)", fontSize: "0.82rem", textDecoration: "none" }}>
+              Admin CRM
+            </Link>
+            <span>•</span>
             <Link href="/privacy-policy" style={{ color: "var(--text-muted)", fontSize: "0.82rem", textDecoration: "none" }}>
               Privacy Policy
             </Link>
