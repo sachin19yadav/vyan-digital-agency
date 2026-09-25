@@ -6,7 +6,7 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/admin"],
       },
       // Explicitly allow Google, Bing, and major AI search engine crawlers (ChatGPT, Perplexity, Claude, Apple)
       {

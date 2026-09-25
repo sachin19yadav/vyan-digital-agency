@@ -162,10 +162,6 @@ export default function Footer() {
               Partner Portal
             </Link>
             <span>•</span>
-            <Link href="/admin" style={{ color: "var(--text-muted)", fontSize: "0.82rem", textDecoration: "none" }}>
-              Admin CRM
-            </Link>
-            <span>•</span>
             <Link href="/privacy-policy" style={{ color: "var(--text-muted)", fontSize: "0.82rem", textDecoration: "none" }}>
               Privacy Policy
             </Link>
