@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MetaPixel from "@/components/MetaPixel";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.vyandigitalagency.com";
 
@@ -366,6 +367,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <MetaPixel />
         <Header />
         <main>{children}</main>
         <Footer />

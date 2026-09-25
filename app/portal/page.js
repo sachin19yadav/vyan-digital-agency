@@ -119,6 +119,11 @@ function PortalContent() {
         localStorage.setItem("vyan_partner_code", json.partner.referralCode);
         // Refresh partner view
         await fetchPartnerProfile(json.partner.referralCode, false);
+        if (json.isNew && typeof window !== "undefined" && typeof window.fbq === "function") {
+          window.fbq("track", "CompleteRegistration", {
+            content_name: "Referral Partner",
+          });
+        }
         setActiveTab("dashboard");
         setStatusMessage({
           ok: true,

@@ -58,6 +58,12 @@ export default function ContactForm() {
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(form),
       });
+      if (typeof window !== "undefined" && typeof window.fbq === "function") {
+        window.fbq("track", "Lead", {
+          content_name: form.service,
+          content_category: "Agency Inquiry",
+        });
+      }
       setStatus({ ok: true, message: "Thank you! We have received your inquiry and will contact you within 24 hours." });
       setForm({ name: "", mobile: "", service: "" });
     } catch {
