@@ -10,7 +10,6 @@ import Logo from "@/components/Logo";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/locations", label: "Locations" },
   { href: "/courses", label: "Courses" },
   { href: "/earn-with-us", label: "Earn with Us" },
   { href: "/about", label: "About Us" },

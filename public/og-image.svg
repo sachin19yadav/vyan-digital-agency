@@ -38,7 +38,7 @@
   </g>
 
   <!-- Agency Eyebrow -->
-  <text x="210" y="135" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="#D9A441" letter-spacing="0.1em">DIGITAL GROWTH AGENCY • KANPUR</text>
+  <text x="210" y="135" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="600" fill="#D9A441" letter-spacing="0.1em">TOP DIGITAL MARKETING &amp; ADS AGENCY • UP &amp; INDIA</text>
   <text x="210" y="172" font-family="'Space Grotesk', system-ui, sans-serif" font-size="44" font-weight="700" fill="#EDEFF5" letter-spacing="-0.02em">Vyan <tspan fill="#D9A441">Digital</tspan></text>
 
   <!-- Main Headline -->
@@ -46,22 +46,22 @@
     Meta Ads, Google Ads &amp;
   </text>
   <text x="100" y="355" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="url(#og-gold)" letter-spacing="-0.02em">
-    Business Growth in Kanpur
+    Web &amp; App Development in UP &amp; India
   </text>
 
   <!-- Tagline / Services list -->
-  <text x="100" y="430" font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="400" fill="#A6ABC0">
-    Google Maps Listing • Social Media Handling • Business Automation • Web Development
+  <text x="100" y="430" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="400" fill="#A6ABC0">
+    Meta &amp; Google Ads • Google Maps SEO • Custom Websites • Android &amp; iOS Mobile Apps
   </text>
 
   <!-- Bottom Badges -->
   <g transform="translate(100, 485)">
     <!-- Location Badge -->
-    <rect width="280" height="48" rx="8" fill="#1D2338" stroke="rgba(237, 239, 245, 0.12)" stroke-width="1"/>
-    <text x="20" y="31" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="500" fill="#EDEFF5">📍 Panki, Kanpur, Uttar Pradesh</text>
+    <rect width="360" height="48" rx="8" fill="#1D2338" stroke="rgba(237, 239, 245, 0.12)" stroke-width="1"/>
+    <text x="18" y="31" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="500" fill="#EDEFF5">📍 HQ: Kanpur, UP • Serving All India</text>
   </g>
 
-  <g transform="translate(400, 485)">
+  <g transform="translate(480, 485)">
     <!-- Phone Badge -->
     <rect width="220" height="48" rx="8" fill="#1D2338" stroke="rgba(237, 239, 245, 0.12)" stroke-width="1"/>
     <text x="20" y="31" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="500" fill="#EDEFF5">📞 +91 96548 80240</text>

@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Earn with Us — Referral Program & Jio SIM Partnership",
+  title: "Earn with Us — Referral Partner & Jio SIM Programs",
   description:
     "Partner with Vyan Digital Agency: Earn ₹1,000 per referral on our social media growth course, or earn directly through our Jio SIM partnership program. Contact us on WhatsApp to get started.",
   alternates: {
@@ -27,6 +27,20 @@ export const metadata = {
     description:
       "Refer students or business owners to earn ₹1,000 per referral, or partner with your Jio SIM.",
     url: "/earn-with-us",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Earn with Vyan Digital Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Earn with Vyan Digital Agency — Referral & Partnership Programs",
+    description: "Refer students or business owners to earn ₹1,000 per referral, or partner with your Jio SIM.",
+    images: ["/og-image.svg"],
   },
 };
 
@@ -79,8 +93,8 @@ export default function EarnWithUsPage() {
             <div className="modern-card" style={{ padding: 0 }}>
               <div className="card-img-wrap" style={{ height: 210 }}>
                 <img
-                  src="https://images.unsplash.com/photo-1556742049-0a67e5572240?auto=format&fit=crop&w=800&q=80"
-                  alt="Referral Program Earnings"
+                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80"
+                  alt="Course Referral Program and Direct Earnings"
                 />
                 <div className="card-img-overlay"></div>
                 <span className="card-badge-top">Program 01 • High Payout</span>

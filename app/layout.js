@@ -78,9 +78,9 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Best Digital Marketing Agency in Kanpur — Ads Agency, Web & App Development",
+    title: "Vyan Digital Agency — Top Digital Marketing & Ads Agency",
     description:
-      "Looking for the best marketing agency or ads agency in Kanpur? Vyan Digital Agency helps local businesses and SMEs get found, generate qualified leads, and scale with Meta Ads, Google Ads, Google Maps SEO, and custom apps.",
+      "Looking for the top digital marketing agency or ads agency? Vyan Digital Agency empowers businesses and SMEs with high-ROI Meta Ads, Google Ads, Google Maps SEO, WhatsApp automations, and custom Android/iOS apps.",
     url: siteUrl,
     siteName: "Vyan Digital Agency",
     images: [
@@ -88,7 +88,7 @@ export const metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Vyan Digital Agency Kanpur — Best Digital Marketing & Ads Agency",
+        alt: "Vyan Digital Agency — Best Digital Marketing, Ads & App Development Agency",
       },
     ],
     locale: "en_IN",
@@ -96,9 +96,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Digital Marketing Agency in Kanpur — Ads Agency & App Development",
+    title: "Vyan Digital Agency — Top Digital Marketing & Ads Agency",
     description:
-      "Premier digital marketing and ads agency in Kanpur helping businesses and SMEs scale with Meta Ads, Google Ads, local SEO, and apps.",
+      "Premier digital marketing, ads agency and app development company helping businesses scale with Meta Ads, Google Ads, local SEO, and custom apps.",
     images: ["/og-image.svg"],
   },
   robots: {
@@ -282,17 +282,30 @@ const jsonLd = {
         "https://wa.me/919654880240"
       ],
       knowsAbout: [
-        "Digital Marketing",
+        "Marketing Agency",
+        "Digital Marketing Agency",
+        "Digital Agency",
+        "Ads Agency",
+        "Advertising Agency",
+        "Top Digital Marketing Agency in Uttar Pradesh",
+        "Best Digital Marketing Agency in UP",
+        "Top Marketing Agency in India",
+        "Best Ads Agency in India",
         "Meta Ads (Facebook & Instagram Ads)",
         "Google Ads & PPC Management",
         "Google Business Profile & Local SEO",
-        "Social Media Management",
-        "Business Process Automation",
-        "WhatsApp Marketing Automation",
-        "Custom Website Development",
+        "Google Maps 3-Pack SEO",
+        "Social Media Management & Video Production",
+        "Business Automation Agents & WhatsApp Chatbots",
+        "Custom Website Development (Next.js, React)",
         "Mobile App Development (Android & iOS)",
-        "Cross-Platform App Development",
-        "Lead Generation"
+        "Cross-Platform App Development (Flutter, React Native)",
+        "E-Commerce App Development",
+        "Education LMS App Development",
+        "Healthcare & Clinic Booking App Development",
+        "Business ERP & Field Staff Apps",
+        "Performance Marketing & High ROAS Scaling",
+        "Lead Generation & Conversion Rate Optimization"
       ],
       aggregateRating: {
         "@type": "AggregateRating",
@@ -316,7 +329,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -328,11 +341,14 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="01QA1dYBxrIYgqVyFygvhJsItrB9Z9gI-ryWpk_rKbE"
         />
-        {/* Geo Location Tags for Kanpur Local Search */}
+        {/* Geo Location Tags for Uttar Pradesh & Pan-India Search */}
         <meta name="geo.region" content="IN-UP" />
-        <meta name="geo.placename" content="Kanpur" />
+        <meta name="geo.placename" content="Uttar Pradesh, Kanpur, India" />
         <meta name="geo.position" content="26.4716;80.2447" />
         <meta name="ICBM" content="26.4716, 80.2447" />
+        <meta name="target" content="all" />
+        <meta name="coverage" content="India, Worldwide" />
+        <meta name="rating" content="General" />
         <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"

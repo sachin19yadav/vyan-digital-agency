@@ -116,6 +116,7 @@ export default function Footer() {
               <li><Link href="/about">About Agency</Link></li>
               <li><Link href="/courses">Social Media Course (₹1,999)</Link></li>
               <li><Link href="/earn-with-us">Earn with Us Program</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/contact">Free Strategy Session</Link></li>
               <li><a href="https://wa.me/919654880240" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
             </ul>
@@ -153,95 +154,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* State & National SEO Location Links Grid */}
-        <div style={{ marginTop: 40, paddingTop: 30, borderTop: "1px solid var(--border)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 14 }}>
-            <h5 style={{ fontSize: "0.95rem", color: "var(--accent)", margin: 0, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              Top Digital Marketing &amp; Ads Agency Service Hubs (Uttar Pradesh &amp; Pan-India)
-            </h5>
-            <Link href="/locations" style={{ fontSize: "0.85rem", color: "var(--accent)", textDecoration: "none", fontWeight: 600 }}>
-              View All Locations →
-            </Link>
-          </div>
-
-          <div style={{ marginBottom: 14 }}>
-            <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 6, fontWeight: 600 }}>UTTAR PRADESH HUBS:</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 14px", fontSize: "0.82rem" }}>
-              <Link href="/locations/uttar-pradesh" style={{ color: "var(--text)" }}>Uttar Pradesh (Statewide)</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/kanpur" style={{ color: "var(--text)" }}>Kanpur</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/lucknow" style={{ color: "var(--text)" }}>Lucknow</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/noida" style={{ color: "var(--text)" }}>Noida &amp; Greater Noida</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/varanasi" style={{ color: "var(--text)" }}>Varanasi</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/prayagraj" style={{ color: "var(--text)" }}>Prayagraj</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/agra" style={{ color: "var(--text)" }}>Agra</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/ghaziabad" style={{ color: "var(--text)" }}>Ghaziabad</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/meerut" style={{ color: "var(--text)" }}>Meerut</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/gorakhpur" style={{ color: "var(--text)" }}>Gorakhpur</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/bareilly" style={{ color: "var(--text)" }}>Bareilly</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/aligarh" style={{ color: "var(--text)" }}>Aligarh</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/moradabad" style={{ color: "var(--text)" }}>Moradabad</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/ayodhya" style={{ color: "var(--text)" }}>Ayodhya</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/jhansi" style={{ color: "var(--text)" }}>Jhansi</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/mathura" style={{ color: "var(--text)" }}>Mathura &amp; Vrindavan</Link>
-            </div>
-          </div>
-
-          <div>
-            <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 6, fontWeight: 600 }}>PAN-INDIA METROS:</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 14px", fontSize: "0.82rem" }}>
-              <Link href="/locations/india" style={{ color: "var(--text)" }}>India (National)</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/delhi-ncr" style={{ color: "var(--text)" }}>Delhi NCR</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/mumbai" style={{ color: "var(--text)" }}>Mumbai</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/bengaluru" style={{ color: "var(--text)" }}>Bengaluru</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/pune" style={{ color: "var(--text)" }}>Pune</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/hyderabad" style={{ color: "var(--text)" }}>Hyderabad</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/jaipur" style={{ color: "var(--text)" }}>Jaipur</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/patna" style={{ color: "var(--text)" }}>Patna</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/indore" style={{ color: "var(--text)" }}>Indore</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/ahmedabad" style={{ color: "var(--text)" }}>Ahmedabad</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/kolkata" style={{ color: "var(--text)" }}>Kolkata</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/chandigarh" style={{ color: "var(--text)" }}>Chandigarh</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/dehradun" style={{ color: "var(--text)" }}>Dehradun</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/bhopal" style={{ color: "var(--text)" }}>Bhopal</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/ranchi" style={{ color: "var(--text)" }}>Ranchi</Link>
-              <span style={{ color: "var(--border)" }}>•</span>
-              <Link href="/locations/surat" style={{ color: "var(--text)" }}>Surat</Link>
-            </div>
-          </div>
-        </div>
-
         <div className="foot-bottom">
-          <span>© {new Date().getFullYear()} Vyan Digital Agency. Built for businesses across Uttar Pradesh &amp; India.</span>
-          <span>Shatabdi Nagar, Panki • Kanpur, Uttar Pradesh 208020</span>
+          <span>© {new Date().getFullYear()} Vyan Digital Agency. All rights reserved.</span>
+          <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+            <Link href="/privacy-policy" style={{ color: "var(--text-muted)", fontSize: "0.82rem", textDecoration: "none" }}>
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <span style={{ color: "var(--text-muted)", fontSize: "0.82rem" }}>Shatabdi Nagar, Panki • Kanpur, Uttar Pradesh 208020</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -31,44 +31,44 @@ import {
 
 const faqs = [
   {
-    q: "Why choose Vyan Digital Agency as your digital marketing agency in Kanpur?",
-    a: "Vyan Digital Agency is a Kanpur-based digital growth and ads agency bringing your Meta Ads, Google Ads, Google Maps listing, social media accounts, custom websites, and mobile apps under one cohesive team. We deliver transparent, revenue-focused reporting with zero lock-in contracts.",
+    q: "Why is Vyan Digital Agency ranked among the top digital marketing agencies in Uttar Pradesh and India?",
+    a: "Vyan Digital Agency is recognized as a premier digital marketing agency and ads agency across Uttar Pradesh (serving Kanpur, Lucknow, Noida, Varanasi, Prayagraj, Agra, Gorakhpur) and nationwide. We unite high-ROI Meta Ads (Facebook & Instagram), high-intent Google Ads (PPC), Google Maps 3-Pack SEO, WhatsApp chatbot automations, custom Next.js websites, and custom Android/iOS mobile applications under one dedicated team with transparent ROAS reporting and zero lock-in contracts.",
   },
   {
-    q: "Which is the best ads agency in Kanpur for Meta Ads and Google Ads?",
-    a: "Vyan Digital Agency is recognized as the best ads agency in Kanpur because we focus on cost-per-lead and return on ad spend (ROAS). We design high-converting video and carousel creatives, write localized Hindi-English ad copy, and continuously optimize budgets across Facebook, Instagram, Google Search, and YouTube.",
+    q: "Which is the best ads agency in Uttar Pradesh and Kanpur for Meta Ads and Google Ads?",
+    a: "Vyan Digital Agency is ranked as the best ads agency because we focus strictly on bottom-line client revenue, lowest cost-per-lead (CPL ₹38–₹72), and proven return on ad spend (averaging 4.8x ROAS). We engineer high-converting video creatives, write persuasive bilingual (Hindi & English) ad copy, deploy negative keyword defenses, and continuously split-test ad sets across Facebook, Instagram, Google Search, and YouTube.",
+  },
+  {
+    q: "Can Vyan Digital Agency serve businesses in any city or state across India?",
+    a: "Yes. While our physical headquarters is located in Panki, Kanpur, Uttar Pradesh, our performance marketing, advertising campaigns, and custom web and mobile app development services power businesses across Lucknow, Noida, Delhi NCR, Varanasi, Mumbai, Bengaluru, Jaipur, Patna, and throughout India. We conduct client strategy sessions seamlessly via Google Meet, Zoom, phone, and direct WhatsApp.",
+  },
+  {
+    q: "How does Google Maps SEO help local businesses rank #1 for 'near me' searches?",
+    a: "Over 80% of local customers search Google for 'marketing agency near me', 'doctor near me', 'coaching near me', or 'showroom near me'. As an elite local SEO and SME agency, Vyan optimizes your Google Business Profile (GBP) categories, geo-tagged photos, local business citations, and automated 5-star WhatsApp review systems to rank your business in the prestigious top 3 Google Maps pack.",
+  },
+  {
+    q: "What custom mobile app development and web development services do you provide for SMEs?",
+    a: "Vyan Digital Agency builds custom Android and iOS mobile applications (using Flutter and React Native) and lightning-fast websites using Next.js. We specialize in 6 application categories: E-commerce & Quick Delivery apps, Coaching & Education LMS apps (with DRM protected video streaming), Healthcare clinic & doctor appointment booking apps, Business ERP & field staff tracking tools, On-demand service booking apps, and custom SaaS web portals.",
   },
   {
     q: "How does Vyan Digital Agency help local businesses and SMEs get more customer leads?",
-    a: "We deploy precision Meta Ads (Facebook & Instagram) and Google Search Ads targeting high-intent customers in Kanpur and Uttar Pradesh. Combined with Google Business Profile ranking and automated WhatsApp follow-ups, your inbound enquiries convert into paying clients quickly.",
+    a: "We deploy precision Meta Ads (Facebook & Instagram) and Google Search Ads targeting high-intent buyers in your specific locality. Combined with top-ranked Google Business Profile SEO and automated 24/7 WhatsApp response bots, your inbound enquiries convert into paying clients within 30 seconds.",
   },
   {
-    q: "How does Google Maps SEO help local Kanpur businesses get customers searching 'near me'?",
-    a: "Over 80% of local customers in Kanpur search Google for 'doctor near me', 'coaching near me', or 'showroom near me'. As a premier local SEO and digital agency, Vyan optimizes your Google Business Profile (GBP) categories, geo-tagged photos, local citations, and automated review systems to rank your business in the top 3 Google Maps pack.",
+    q: "Where is Vyan Digital Agency located and how can I get a consultation?",
+    a: "Our agency headquarters is located Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020. Clients across UP and all states of India are welcome to visit our office or reach us directly on phone or WhatsApp at +91 96548 80240 for a free 30-minute growth consultation and audit.",
   },
   {
-    q: "Do you offer custom mobile app development and website development for SMEs in Kanpur?",
-    a: "Yes. Vyan Digital Agency builds custom Android and iOS mobile applications (using Flutter and React Native) as well as lightning-fast, SEO-optimized business websites using Next.js. We develop educational apps for coaching centers, e-commerce & quick delivery apps, healthcare appointment portals, and field staff ERP tools.",
-  },
-  {
-    q: "What digital marketing and tech services does Vyan provide?",
-    a: "We provide 8 core growth & tech services: Meta Ads management, Google Ads (Search, Display, YouTube), Google Maps business listing optimization, Facebook account handling, YouTube channel management, WhatsApp & CRM business automation agents, Custom Website Development, and Custom Mobile & Web App Development (Android & iOS).",
-  },
-  {
-    q: "Where is Vyan Digital Agency located in Kanpur?",
-    a: "Our agency is located Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020. Clients are welcome to visit our office or reach us on call or WhatsApp at +91 96548 80240 for a free strategy consultation.",
-  },
-  {
-    q: "How much does digital marketing and advertising cost with Vyan for SMEs?",
-    a: "Our pricing is transparent, modular, and built for businesses of all sizes from startups to established SMEs. Each service is billed independently without forced bundle packages. We also provide our practical Social Media Growth Course for ₹1,999 with referral earning options.",
+    q: "How much does digital marketing, advertising, and app development cost with Vyan for SMEs?",
+    a: "Our pricing is transparent, modular, and built for businesses of all sizes from emerging startups to established SMEs. Each service (Meta Ads, Google Ads, Maps SEO, App Development) is quoted independently with zero forced bundles. We also provide our practical Social Media Growth Course for ₹1,999 with attractive referral earning opportunities.",
   },
 ];
 
 const services = [
   {
     title: "Meta Ads (Facebook & Instagram)",
-    desc: "Targeted campaigns built around who actually buys from you in Kanpur & UP — custom creative designs, high-converting copy, and weekly optimization.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+    desc: "Targeted campaigns built around who actually buys from you in Kanpur, UP & Pan-India — custom creative designs, high-converting copy, and weekly optimization.",
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80",
     badge: "Highest ROI",
     icon: Megaphone,
     features: [
@@ -80,7 +80,7 @@ const services = [
   {
     title: "Google Ads (Search & Display)",
     desc: "Put your business in front of customers actively searching for your services right now. High-intent keyword bidding with zero wasted budget.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
     badge: "High Purchase Intent",
     icon: Search,
     features: [
@@ -91,8 +91,8 @@ const services = [
   },
   {
     title: "Google Maps Business Listing",
-    desc: "Dominate local search in Kanpur. We optimize your Google Business Profile to rank in the top 3-pack for high-volume 'near me' searches.",
-    image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80",
+    desc: "Dominate local search in Kanpur & your city. We optimize your Google Business Profile to rank in the top 3-pack for high-volume 'near me' searches.",
+    image: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=800&q=80",
     badge: "Local SEO 3-Pack",
     icon: MapPin,
     features: [
@@ -102,22 +102,22 @@ const services = [
     ],
   },
   {
-    title: "Facebook Account Handling",
-    desc: "End-to-end management of your brand's presence: creative content calendar, engagement posts, and instant message follow-ups.",
-    image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&q=80",
+    title: "Facebook & Instagram Account Handling",
+    desc: "End-to-end management of your brand's presence: creative content calendar, engagement posts, reels, and instant message follow-ups.",
+    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80",
     badge: "Brand Authority",
     icon: Users,
     features: [
-      "Consistent weekly branded posts",
+      "Consistent weekly branded posts & reels",
       "Inbox & comment reply handling",
       "Community building & page trust growth",
     ],
   },
   {
-    title: "YouTube Channel Handling",
-    desc: "Turn YouTube into a predictable lead channel. We handle upload scheduling, high-CTR thumbnails, SEO descriptions, and channel optimization.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    badge: "Video Marketing",
+    title: "YouTube Channel Handling & Video Production",
+    desc: "Turn YouTube into a predictable lead channel. We handle studio recording setup, upload scheduling, high-CTR thumbnails, and SEO descriptions.",
+    image: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80",
+    badge: "Video Authority",
     icon: PlayCircle,
     features: [
       "Eye-catching custom thumbnails",
@@ -126,9 +126,9 @@ const services = [
     ],
   },
   {
-    title: "Business Automation Agents",
+    title: "Business Automation Agents & WhatsApp Bots",
     desc: "Never lose a lead again. We deploy WhatsApp auto-replies, lead capture chatbots, and automated CRM follow-up systems that run 24/7.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80",
     badge: "24/7 Lead Capture",
     icon: Bot,
     features: [
@@ -139,8 +139,8 @@ const services = [
   },
   {
     title: "Custom Website Development",
-    desc: "Lightning-fast, mobile-first websites designed to turn visitors into paying customers. Fully responsive, clean code, and built for SEO.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    desc: "Lightning-fast, mobile-first websites designed to turn visitors into paying customers. Fully responsive, clean Next.js code, and built for SEO.",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
     badge: "High Conversion",
     icon: Globe,
     features: [
@@ -152,7 +152,7 @@ const services = [
   {
     title: "Mobile & Web App Development",
     desc: "Custom Android, iOS, and Web applications built for your business — e-commerce stores, coaching LMS apps, doctor clinic booking apps, and custom operational ERP/CRM systems.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
     badge: "Android & iOS Apps",
     icon: Smartphone,
     features: [
@@ -498,11 +498,11 @@ export default function HomePage() {
           <div className="section-head">
             <div className="live-badge" style={{ marginBottom: 12 }}>
               <ShieldCheck size={14} style={{ color: "var(--accent)" }} />
-              <span>The Local Advantage</span>
+              <span>Statewide &amp; National Excellence</span>
             </div>
-            <h2>Why Kanpur Business Owners Choose Vyan</h2>
+            <h2>Why Business Owners Across Uttar Pradesh &amp; India Choose Vyan</h2>
             <p className="text-muted">
-              We are not an anonymous agency sitting in another state. We understand Kanpur consumers, local buying habits, and high-conversion vernacular copy.
+              We combine deep regional buying insights, high-converting Hindi-English vernacular ad copy, and cutting-edge software engineering to turn ad spend into profitable revenue.
             </p>
           </div>
 
@@ -630,115 +630,56 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Pan-India & Uttar Pradesh Growth Network Section */}
-      <section className="section" style={{ background: "var(--card)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-        <div className="wrap">
-          <div className="section-head" style={{ textAlign: "center", maxWidth: 840, margin: "0 auto 40px" }}>
-            <div className="live-badge" style={{ marginBottom: 12 }}>
-              <Globe size={14} style={{ color: "var(--accent)" }} />
-              <span>Statewide &amp; Pan-India SEO Dominance</span>
+          {/* Statewide Uttar Pradesh & Pan-India Hubs */}
+          <div style={{ marginTop: 40 }}>
+            <div style={{ textAlign: "center", marginBottom: 24 }}>
+              <h3 style={{ fontSize: "1.25rem", color: "var(--text)", marginBottom: 6 }}>
+                Statewide Uttar Pradesh &amp; Pan-India Growth Corridors
+              </h3>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", margin: 0 }}>
+                Delivering high-ROI ads, Google Maps dominance, and custom app engineering across all key economic regions.
+              </p>
             </div>
-            <h2>Serving Businesses Across All Cities in <span className="text-gradient">Uttar Pradesh &amp; India</span></h2>
-            <p className="text-muted">
-              Whether you are in Lucknow, Noida, Varanasi, Agra, or national business capitals like Delhi NCR, Mumbai, and Bengaluru,
-              our performance marketing campaigns, Google Ads, and custom mobile apps deliver guaranteed lower CPL and high ROAS.
-            </p>
-          </div>
 
-          <div style={{ marginBottom: 30 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 14 }}>
-              <MapPin size={18} style={{ color: "var(--accent)" }} />
-              <h3 style={{ fontSize: "1.1rem", margin: 0 }}>Top Uttar Pradesh Commercial Hubs</h3>
+            <div className="grid-3" style={{ gap: 20 }}>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Lucknow (Gomti Nagar, Hazratganj)</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Uttar Pradesh&apos;s capital hub. Scaling hospitals, colleges, real estate developers, and luxury brands with high-intent Google Search Ads, Meta Reels, and local SEO.
+                </p>
+              </div>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Noida, Greater Noida &amp; Delhi NCR</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Tech startups, D2C brands, and commercial services scaling national customer acquisition through custom SaaS web portals, Flutter/React Native mobile apps, and programmatic ads.
+                </p>
+              </div>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Varanasi &amp; Purvanchal Center</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Eastern UP commercial epicenter. Empowering tourism brands, silk handlooms, coaching institutes, and healthcare centers with Google Maps #1 rankings and WhatsApp lead funnels.
+                </p>
+              </div>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Agra &amp; Western UP Industrial Hub</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Manufacturing and export corridor. Dominating buyer search rankings for footwear brands, marble craft exporters, luxury resorts, and education providers with Google Ads.
+                </p>
+              </div>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Prayagraj &amp; Gorakhpur Centers</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Premier government exam coaching academies, regional medical clinics, and trading networks driving consistent student enrollments and customer enquiries with Meta Ads.
+                </p>
+              </div>
+              <div className="modern-card">
+                <h3 style={{ fontSize: "1.1rem", color: "var(--accent)", marginBottom: 6 }}>Pan-India Metros (Mumbai, BLR, Delhi, Jaipur)</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Delivering remote performance marketing excellence, Next.js web development, and Android/iOS mobile applications for ambitious businesses across every Indian state.
+                </p>
+              </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 12 }}>
-              {[
-                { name: "Uttar Pradesh (Statewide)", slug: "uttar-pradesh" },
-                { name: "Kanpur", slug: "kanpur" },
-                { name: "Lucknow", slug: "lucknow" },
-                { name: "Noida & Greater Noida", slug: "noida" },
-                { name: "Varanasi", slug: "varanasi" },
-                { name: "Prayagraj", slug: "prayagraj" },
-                { name: "Agra", slug: "agra" },
-                { name: "Ghaziabad", slug: "ghaziabad" },
-                { name: "Meerut", slug: "meerut" },
-                { name: "Gorakhpur", slug: "gorakhpur" },
-                { name: "Bareilly", slug: "bareilly" },
-                { name: "Aligarh", slug: "aligarh" },
-                { name: "Moradabad", slug: "moradabad" },
-                { name: "Ayodhya", slug: "ayodhya" },
-                { name: "Jhansi", slug: "jhansi" },
-                { name: "Mathura & Vrindavan", slug: "mathura" },
-              ].map((city) => (
-                <Link
-                  key={city.slug}
-                  href={`/locations/${city.slug}`}
-                  className="modern-card"
-                  style={{
-                    padding: "12px 16px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    textDecoration: "none",
-                    color: "inherit",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  <span style={{ fontWeight: 600 }}>{city.name}</span>
-                  <ArrowRight size={14} style={{ color: "var(--accent)" }} />
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 14 }}>
-              <Building2 size={18} style={{ color: "var(--accent)" }} />
-              <h3 style={{ fontSize: "1.1rem", margin: 0 }}>Major Commercial Metros &amp; State Capitals</h3>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 12 }}>
-              {[
-                { name: "India (National Hub)", slug: "india" },
-                { name: "Delhi NCR", slug: "delhi-ncr" },
-                { name: "Mumbai", slug: "mumbai" },
-                { name: "Bengaluru", slug: "bengaluru" },
-                { name: "Pune", slug: "pune" },
-                { name: "Hyderabad", slug: "hyderabad" },
-                { name: "Jaipur", slug: "jaipur" },
-                { name: "Patna", slug: "patna" },
-                { name: "Indore", slug: "indore" },
-                { name: "Ahmedabad", slug: "ahmedabad" },
-                { name: "Kolkata", slug: "kolkata" },
-                { name: "Chandigarh", slug: "chandigarh" },
-              ].map((metro) => (
-                <Link
-                  key={metro.slug}
-                  href={`/locations/${metro.slug}`}
-                  className="modern-card"
-                  style={{
-                    padding: "12px 16px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    textDecoration: "none",
-                    color: "inherit",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  <span style={{ fontWeight: 600 }}>{metro.name}</span>
-                  <ArrowRight size={14} style={{ color: "var(--accent)" }} />
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 30 }}>
-            <Link href="/locations" className="btn btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-              <span>View All 30+ Service Locations</span>
-              <ArrowRight size={16} />
-            </Link>
           </div>
         </div>
       </section>
@@ -750,7 +691,7 @@ export default function HomePage() {
             <p className="eyebrow" style={{ color: "var(--accent)", marginBottom: 8, fontWeight: 600 }}>
               Frequently Asked Questions
             </p>
-            <h2>Common Questions About Digital Growth in Kanpur</h2>
+            <h2>Common Questions About Digital Marketing &amp; Ads in UP &amp; India</h2>
             <p className="text-muted">Everything you need to know about working with Vyan Digital Agency.</p>
           </div>
 

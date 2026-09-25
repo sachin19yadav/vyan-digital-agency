@@ -17,17 +17,32 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "About Us — Digital Marketing Agency in Kanpur",
+  title: "About Us — Top Digital Marketing & Ads Agency in UP & India",
   description:
-    "Learn about Vyan Digital Agency based in Shatabdi Nagar, Panki, Kanpur. We empower local businesses with transparent, high-ROI digital marketing, Meta/Google ads, and modern business automation.",
+    "Learn about Vyan Digital Agency, the leading performance marketing, ads, and app development company in Uttar Pradesh and India. Headquartered in Panki, Kanpur with statewide and national reach.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Vyan Digital Agency — Kanpur, UP",
+    title: "About Vyan Digital Agency — Top Digital Marketing & Ads Agency",
     description:
-      "Built for local businesses in Kanpur that need consistent online leads, ads, and systems without maintaining an in-house marketing team.",
+      "Premier digital marketing, ads agency and app development company serving Uttar Pradesh and Pan-India. Discover our mission, proven metrics, and client success stories.",
     url: "/about",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "About Vyan Digital Agency — Top Marketing & Ads Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Vyan Digital Agency — Top Digital Marketing & Ads Agency",
+    description:
+      "Premier digital marketing, ads agency and app development company serving Uttar Pradesh and Pan-India.",
+    images: ["/og-image.svg"],
   },
 };
 
@@ -105,11 +120,9 @@ export default function AboutPage() {
             <Building size={14} style={{ color: "var(--accent)" }} />
             <span>Panki, Kanpur Headquarters</span>
           </div>
-          <h1>Empowering Local Kanpur Businesses With Modern Digital Advantages</h1>
+          <h1>Empowering Businesses in Uttar Pradesh &amp; India With Modern Digital Growth</h1>
           <p className="lead">
-            Vyan Digital Agency was founded with one clear purpose: bring enterprise-level
-            advertising precision and marketing automations to local businesses that don't have
-            an expensive in-house marketing department.
+            Vyan Digital Agency was founded with one clear purpose: bring enterprise-level advertising precision, high-converting Meta &amp; Google Ads, Google Maps local SEO dominance, and custom web &amp; mobile app development to businesses that want aggressive, predictable revenue growth without maintaining a bloated in-house department.
           </p>
         </div>
       </section>
@@ -120,7 +133,7 @@ export default function AboutPage() {
           <div className="grid-2" style={{ gap: 44, alignItems: "center" }}>
             <div style={{ position: "relative", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--card-shadow)" }}>
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
                 alt="Vyan Digital Agency Team Strategy Session"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />

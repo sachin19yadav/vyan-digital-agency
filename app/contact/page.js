@@ -12,17 +12,31 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Us — Get a Free Digital Growth Consultation",
+  title: "Contact Us — Consult with Top Digital Marketing & Ads Experts",
   description:
-    "Get in touch with Vyan Digital Agency in Panki, Kanpur. Call or WhatsApp +91 96548 80240, visit our office behind Cambridge School, or submit an enquiry for ads and business growth services.",
+    "Get in touch with Vyan Digital Agency in Kanpur, Uttar Pradesh. Call or WhatsApp +91 96548 80240, visit our office behind Cambridge School, or submit an enquiry for high-ROI ads, SEO, and web/app development.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Vyan Digital Agency — Kanpur, UP",
+    title: "Contact Vyan Digital Agency — Top Digital Marketing & Ads Agency",
     description:
-      "Talk to our team in Kanpur about Meta Ads, Google Ads, local listing SEO, and website development. Fast response within 24-48 hours.",
+      "Talk to our team about Meta Ads, Google Ads, Google Maps SEO, and custom app development. Fast response within 24-48 hours.",
     url: "/contact",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Vyan Digital Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Vyan Digital Agency — Top Digital Marketing & Ads Agency",
+    description: "Connect with our growth team on WhatsApp or phone for a free marketing and ad strategy audit.",
+    images: ["/og-image.svg"],
   },
 };
 

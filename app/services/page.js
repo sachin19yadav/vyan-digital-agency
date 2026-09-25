@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Megaphone,
   Search,
@@ -25,17 +26,31 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Services — Meta Ads, Google Ads, Web & App Development",
+  title: "Digital Marketing, Ads Agency & App Development Services",
   description:
-    "Explore our 8 core digital growth and tech services in Kanpur: Meta Ads (Facebook & Instagram), Google Ads, Google Maps Business Profile, Facebook & YouTube Account Handling, Business Automations, Website Development, and Custom Mobile & Web App Development.",
+    "Explore our 8 full-stack digital marketing and tech services across Uttar Pradesh and India: Meta Ads, Google Ads PPC, Google Maps Local SEO, Social Media Handling, WhatsApp Automation, Custom Web Development, and Android/iOS App Development.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Digital Growth & App Development Services in Kanpur | Vyan Digital Agency",
+    title: "Digital Marketing, Ads Agency & App Development Services | Vyan Digital Agency",
     description:
-      "Meta Ads, Google Ads, Google Maps optimization, custom websites, and Android/iOS mobile application development for Kanpur businesses.",
+      "High-ROI Meta Ads, Google Ads, Google Maps 3-Pack SEO, WhatsApp business chatbots, and custom Android/iOS apps for businesses across Uttar Pradesh and India.",
     url: "/services",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Vyan Digital Agency Growth & Tech Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing, Ads Agency & App Development Services | Vyan Digital Agency",
+    description: "High-ROI Meta Ads, Google Ads, Maps SEO, and custom Android/iOS apps for businesses across UP and India.",
+    images: ["/og-image.svg"],
   },
 };
 
@@ -43,11 +58,11 @@ const services = [
   {
     title: "Meta Ads (Facebook & Instagram)",
     category: "Paid Social Growth",
-    desc: "We plan, design and run laser-targeted ad campaigns across Facebook and Instagram — built around who actually buys from you in Kanpur & UP. We create custom ad videos, carousels, and manage weekly budget scaling.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+    desc: "We plan, design and run laser-targeted ad campaigns across Facebook and Instagram — built around who actually buys from you in Kanpur, Uttar Pradesh & Pan-India. We create custom ad videos, carousels, and manage weekly budget scaling.",
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80",
     icon: Megaphone,
     deliverables: [
-      "Kanpur geo-radius & demographic audience segmentation",
+      "Kanpur & regional geo-radius demographic audience segmentation",
       "Custom ad creative design (motion graphics, carousel & reels format)",
       "A/B split testing of ad copy, hooks, and call-to-actions",
       "Weekly ROAS optimization and budget scaling",
@@ -58,7 +73,7 @@ const services = [
     title: "Google Ads (Search, Display & YouTube)",
     category: "High-Intent Lead Gen",
     desc: "Search ads that place your business in front of customers actively typing what you sell right now. Set up with exact-match keywords, negative keyword filters, and conversion tracking so no rupee is wasted.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
     icon: Search,
     deliverables: [
       "High-intent keyword research for Kanpur & Uttar Pradesh",
@@ -72,7 +87,7 @@ const services = [
     title: "Google Maps Business Profile Listing",
     category: "Local SEO & 3-Pack Ranking",
     desc: "We create, verify, or fix your Google Business Profile — correct primary categories, localized geo-tagged photos, service areas, and an automated customer review engine to make you rank #1 for 'near me' queries.",
-    image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=800&q=80",
     icon: MapPin,
     deliverables: [
       "Google Business Profile claim, verification, and category audit",
@@ -83,10 +98,10 @@ const services = [
     idealFor: "Retail Stores, Restaurants & Cafes, Clinics, Automobile Showrooms",
   },
   {
-    title: "Facebook Account Handling",
+    title: "Facebook & Instagram Account Handling",
     category: "Organic Social Presence",
     desc: "Day-to-day management of your business page: monthly content calendar, professional graphic design, and swift inbox/comment responses — keeping your brand active, trustworthy, and engaging.",
-    image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80",
     icon: Users,
     deliverables: [
       "12-16 custom branded graphics & reels per month",
@@ -97,10 +112,10 @@ const services = [
     idealFor: "Local Brands, Coaching Centers, Gyms, Event Organizers",
   },
   {
-    title: "YouTube Channel Handling",
+    title: "YouTube Channel Handling & Video Production",
     category: "Video Authority & SEO",
     desc: "Channel setup, video upload scheduling, click-worthy custom thumbnails, and SEO descriptions handled end-to-end. Perfect for business owners wanting a powerful YouTube channel without the editing and upload headache.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80",
     icon: PlayCircle,
     deliverables: [
       "High-CTR thumbnail design for desktop & mobile feeds",
@@ -111,10 +126,10 @@ const services = [
     idealFor: "Educators, Doctors, Consultants, Real Estate Developers",
   },
   {
-    title: "Business Automation Agents",
+    title: "Business Automation Agents & WhatsApp Bots",
     category: "WhatsApp & AI Automations",
     desc: "We build WhatsApp and web chat automations that respond to customer inquiries within seconds, qualify lead intent, collect contact numbers, and follow up automatically while you focus on core operations.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80",
     icon: Bot,
     deliverables: [
       "Official WhatsApp Cloud API bot configuration",
@@ -128,7 +143,7 @@ const services = [
     title: "Custom Website Development",
     category: "Web & Landing Page Dev",
     desc: "A modern, lightning-fast, mobile-first website designed to turn local visitors into paying clients. Built with Next.js, clean SEO markup, and one-click WhatsApp/Call inquiry buttons.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
     icon: Globe,
     deliverables: [
       "100% responsive, high-speed mobile & desktop design",
@@ -142,7 +157,7 @@ const services = [
     title: "Mobile & Web App Development",
     category: "Android & iOS Applications",
     desc: "End-to-end custom mobile and web applications engineered for performance, security, and exceptional user experience. From native Android & iOS to cross-platform Flutter and React Native apps, we build scalable solutions with integrated payments, authentication, and live admin panels.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
     icon: Smartphone,
     deliverables: [
       "Cross-platform Android & iOS development (Flutter / React Native)",
@@ -158,56 +173,137 @@ const appTypes = [
   {
     title: "E-Commerce & Quick Delivery Apps",
     desc: "Feature-packed online shopping apps with product catalogs, smart search, one-click UPI checkout, and live order tracking.",
+    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
     icon: ShoppingBag,
     features: ["Cart & Multi-payment Gateway", "Delivery Partner Real-time GPS", "Customer Push Notifications"],
   },
   {
     title: "Coaching, LMS & Educational Apps",
     desc: "Custom learning apps for coaching institutes with encrypted video lecture streaming, mock test series, and student analytics.",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
     icon: GraduationCap,
     features: ["DRM Video Protection (Anti-piracy)", "Interactive Tests & Scorecards", "PDF Notes & Doubt Chat"],
   },
   {
     title: "Healthcare & Clinic Booking Apps",
     desc: "Dedicated patient apps for doctors and multi-speciality hospitals to automate appointment slots and digital prescriptions.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
     icon: Stethoscope,
     features: ["Doctor Slot Scheduling", "Prescription & Report Uploads", "Automated WhatsApp Reminders"],
   },
   {
     title: "Business ERP & Field Staff Apps",
     desc: "Internal mobile tools for Kanpur manufacturers, traders, and service teams to monitor staff, generate bills, and track stock.",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
     icon: Briefcase,
     features: ["GPS Geofenced Attendance", "Instant PDF Invoicing & GST", "Live Inventory & Lead CRM"],
   },
   {
     title: "On-Demand Services & Booking Apps",
     desc: "Service marketplace apps for salons, repairs, cleaning, or home maintenance with instant booking and verified provider profiles.",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=800&q=80",
     icon: Layers,
     features: ["Service Scheduling & Rescheduling", "OTP Service Verification", "Customer Reviews & Tips"],
   },
   {
     title: "Custom SaaS & Cloud Web Portals",
     desc: "Responsive web portals and SaaS platforms that work seamlessly across desktop browsers and mobile devices with role-based access.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     icon: Globe,
     features: ["Multi-tenant Cloud Architecture", "Role-based Admin Permissions", "Automated Analytics & Export"],
   },
 ];
 
-const breadcrumbSchema = {
+const servicesPageSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://vyandigitalagency.com",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://vyandigitalagency.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Services",
+          item: "https://vyandigitalagency.com/services",
+        },
+      ],
     },
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Services",
-      item: "https://vyandigitalagency.com/services",
+      "@type": "ItemList",
+      name: "Digital Marketing & App Development Services",
+      description: "Complete growth marketing, advertising, and custom mobile application development services by Vyan Digital Agency.",
+      itemListElement: [
+        {
+          "@type": "Service",
+          position: 1,
+          name: "Meta Ads (Facebook & Instagram Advertising)",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Social Media Advertising",
+          description: "Audience targeting, creative management and weekly ad optimization across Kanpur & UP.",
+        },
+        {
+          "@type": "Service",
+          position: 2,
+          name: "Google Ads (Search, Display & YouTube)",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "PPC Advertising",
+          description: "High-intent search and conversion campaigns targeting buyers actively looking for your services.",
+        },
+        {
+          "@type": "Service",
+          position: 3,
+          name: "Google Maps Business Listing Optimization",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Local SEO",
+          description: "Google Business Profile verification, 3-Pack ranking, and 5-star review management.",
+        },
+        {
+          "@type": "Service",
+          position: 4,
+          name: "Social Media Account Handling (Facebook & Instagram)",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Social Media Management",
+          description: "Monthly content calendar, bilingual graphics and reels, and daily community management.",
+        },
+        {
+          "@type": "Service",
+          position: 5,
+          name: "YouTube Channel Handling & Video Production",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Video Marketing",
+          description: "Studio recording setup, high-CTR thumbnails, and search-optimized video titles and descriptions.",
+        },
+        {
+          "@type": "Service",
+          position: 6,
+          name: "Business Automation Agents & WhatsApp Bots",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "WhatsApp Automation",
+          description: "WhatsApp auto-replies, lead qualification chatbots, and instant CRM sync.",
+        },
+        {
+          "@type": "Service",
+          position: 7,
+          name: "Custom Website Development",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Website Development",
+          description: "Fast, mobile-responsive business websites and landing pages built with Next.js.",
+        },
+        {
+          "@type": "Service",
+          position: 8,
+          name: "Mobile & Web App Development",
+          provider: { "@type": "LocalBusiness", name: "Vyan Digital Agency" },
+          serviceType: "Mobile Application Development",
+          description: "Custom Android, iOS, and Web applications built with Flutter, React Native, and Next.js.",
+        },
+      ],
     },
   ],
 };
@@ -217,7 +313,7 @@ export default function ServicesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesPageSchema) }}
       />
 
       <section className="page-hero">
@@ -226,10 +322,9 @@ export default function ServicesPage() {
             <Layers size={14} style={{ color: "var(--accent)" }} />
             <span>Full-Stack Growth &amp; Technology Solutions</span>
           </div>
-          <h1>Eight Growth &amp; Technology Services. One Dedicated Kanpur Team.</h1>
+          <h1>Top Digital Marketing, Ads Agency &amp; App Development Services in UP &amp; India</h1>
           <p className="lead">
-            Pick one service or deploy all eight — each is priced and delivered independently,
-            yet architected to seamlessly compound your customer acquisition, operations, and retention.
+            Empowering businesses across Kanpur, Lucknow, Noida, Varanasi, and all across India with high-ROI Meta Ads, Google Ads (PPC), Google Maps local SEO, WhatsApp automation bots, and custom Android/iOS mobile application development. Pick one modular service or deploy all eight — each is engineered for measurable revenue and transparent growth.
           </p>
         </div>
       </section>
@@ -327,34 +422,48 @@ export default function ServicesPage() {
             {appTypes.map((app, idx) => {
               const AppIcon = app.icon;
               return (
-                <div className="modern-card" key={idx}>
-                  <div className="icon-box" style={{ width: 44, height: 44, marginBottom: 16 }}>
-                    <AppIcon size={22} />
+                <div className="service-card-modern" key={idx} style={{ display: "flex", flexDirection: "column" }}>
+                  <div className="card-img-wrap" style={{ height: 180 }}>
+                    <Image
+                      src={app.image}
+                      alt={app.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 400px"
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
 
-                  <h3 style={{ fontSize: "1.15rem", marginBottom: 8 }}>{app.title}</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", lineHeight: 1.55, marginBottom: 16 }}>
-                    {app.desc}
-                  </p>
+                  <div className="service-card-content" style={{ display: "flex", flexDirection: "column", flex: 1, padding: "20px 22px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                      <div className="icon-box" style={{ width: 38, height: 38, margin: 0 }}>
+                        <AppIcon size={20} />
+                      </div>
+                      <h3 style={{ fontSize: "1.15rem", margin: 0 }}>{app.title}</h3>
+                    </div>
 
-                  <ul className="card-checklist" style={{ marginTop: "auto", marginBottom: 20 }}>
-                    {app.features.map((f, i) => (
-                      <li key={i}>
-                        <CheckCircle2 size={15} />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.55, marginBottom: 16 }}>
+                      {app.desc}
+                    </p>
 
-                  <a
-                    href={`https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20am%20interested%20in%20building%20a%20${encodeURIComponent(app.title)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="card-cta-link"
-                  >
-                    <span>Discuss This App Type</span>
-                    <ArrowRight size={15} />
-                  </a>
+                    <ul className="service-deliverables" style={{ marginTop: "auto", marginBottom: 20 }}>
+                      {app.features.map((f, i) => (
+                        <li key={i}>
+                          <CheckCircle2 size={15} style={{ color: "var(--accent)" }} />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <a
+                      href={`https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20am%20interested%20in%20building%20a%20${encodeURIComponent(app.title)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-cta-link"
+                    >
+                      <span>Discuss This App Architecture</span>
+                      <ArrowRight size={15} />
+                    </a>
+                  </div>
                 </div>
               );
             })}

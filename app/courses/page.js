@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Social Media & Business Growth Course (₹1,999)",
+  title: "Social Media & Performance Marketing Course (₹1,999)",
   description:
     "Enroll in Vyan Digital Agency's practical 6-module course on social media growth, Facebook/Instagram ads, Google Business Profile, and client conversion. Perfect for students and business owners.",
   alternates: {
@@ -31,6 +31,21 @@ export const metadata = {
     description:
       "Learn to grow businesses with social media and run ads profitably. ₹1,999 one-time fee with referral earnings available.",
     url: "/courses",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Vyan Digital Agency Social Media Course",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Practical Social Media & Business Growth Course | Vyan Digital Agency",
+    description:
+      "Learn to grow businesses with social media and run ads profitably. ₹1,999 one-time fee with referral earnings available.",
+    images: ["/og-image.svg"],
   },
 };
 
@@ -215,8 +230,8 @@ export default function CoursesPage() {
               <div className="course-card-featured">
                 <div style={{ position: "relative", height: 200, borderRadius: "var(--radius-sm)", overflow: "hidden", marginBottom: 20 }}>
                   <img
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-                    alt="Social Media and Business Growth Course Online"
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+                    alt="Social Media and Performance Marketing Course Online"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                   <div className="card-img-overlay"></div>
