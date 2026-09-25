@@ -1,4 +1,15 @@
 import ContactForm from "@/components/ContactForm";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  MessageCircle,
+  Mail,
+  ShieldCheck,
+  Sparkles,
+  ArrowRight,
+  Headphones,
+} from "lucide-react";
 
 export const metadata = {
   title: "Contact Us — Get a Free Digital Growth Consultation",
@@ -52,63 +63,148 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
+
       <section className="page-hero">
         <div className="wrap">
-          <p className="eyebrow">Get in touch</p>
-          <h1>Tell us about your business, we&apos;ll take it from there.</h1>
+          <div className="live-badge" style={{ marginBottom: 12 }}>
+            <Headphones size={14} style={{ color: "var(--accent)" }} />
+            <span>Direct Client Support &amp; Consultations</span>
+          </div>
+          <h1>Tell Us About Your Business. We&apos;ll Architect Your Growth Plan.</h1>
           <p className="lead">
-            Share your details below or reach us directly by phone or
-            WhatsApp — we usually reply within 24–48 hours.
+            Submit your inquiry below or connect directly via WhatsApp or phone.
+            Our team responds within 24–48 hours with a customized strategy breakdown.
           </p>
         </div>
       </section>
 
-      <section className="section section-light">
+      {/* 3 Quick Contact Channel Cards */}
+      <section className="section" style={{ paddingBottom: 20 }}>
         <div className="wrap">
-          <div className="grid-2 contact-grid">
-            <div>
-              <h2 style={{ fontSize: "1.4rem", marginBottom: 24 }}>Send your details</h2>
+          <div className="contact-cards-grid">
+            {/* Quick WhatsApp Card */}
+            <div className="quick-contact-card">
+              <div className="icon-box" style={{ background: "rgba(37, 211, 102, 0.15)", borderColor: "rgba(37, 211, 102, 0.35)", color: "#25D366" }}>
+                <MessageCircle size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem", marginBottom: 4 }}>WhatsApp Direct</h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: 16 }}>
+                Fastest way to get answers. Real humans reply directly to your questions.
+              </p>
+              <a
+                href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I'd%20like%20to%20consult%20about%20marketing%20for%20my%20business"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-icon"
+                style={{ width: "100%", justifyContent: "center", padding: "10px 16px" }}
+              >
+                <MessageCircle size={16} />
+                <span>+91 96548 80240</span>
+              </a>
+            </div>
+
+            {/* Quick Phone Call Card */}
+            <div className="quick-contact-card">
+              <div className="icon-box">
+                <Phone size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem", marginBottom: 4 }}>Call Our Office</h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: 16 }}>
+                Available Monday to Saturday from 9:30 AM to 7:00 PM IST.
+              </p>
+              <a
+                href="tel:+919654880240"
+                className="btn btn-secondary btn-icon"
+                style={{ width: "100%", justifyContent: "center", padding: "10px 16px" }}
+              >
+                <Phone size={16} />
+                <span>Call +91 96548 80240</span>
+              </a>
+            </div>
+
+            {/* Office Location Card */}
+            <div className="quick-contact-card">
+              <div className="icon-box">
+                <MapPin size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem", marginBottom: 4 }}>Kanpur Headquarters</h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: 16 }}>
+                Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur 208020.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Cambridge+School+Shatabdi+Nagar+Panki+Kanpur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-icon"
+                style={{ width: "100%", justifyContent: "center", padding: "10px 16px" }}
+              >
+                <MapPin size={16} />
+                <span>Get Directions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Form & Google Maps Section */}
+      <section className="section" style={{ paddingTop: 20 }}>
+        <div className="wrap">
+          <div className="grid-2 contact-grid" style={{ alignItems: "stretch" }}>
+            {/* Left Column: Form Card */}
+            <div className="modern-card" style={{ padding: "32px 28px" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid var(--line)" }}>
+                <div>
+                  <h2 style={{ fontSize: "1.3rem", margin: 0 }}>Send Business Details</h2>
+                  <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>Free Competitor &amp; ROI Analysis</span>
+                </div>
+                <span className="showcase-tag">24h Response</span>
+              </div>
               <ContactForm />
             </div>
 
-            <div>
-              <h2 style={{ fontSize: "1.4rem", marginBottom: 24 }}>Visit or call</h2>
+            {/* Right Column: Office Location & Map */}
+            <div className="modern-card" style={{ padding: "32px 28px", display: "flex", flexDirection: "column" }}>
+              <div style={{ marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid var(--line)" }}>
+                <h2 style={{ fontSize: "1.3rem", margin: 0 }}>Visit Our Kanpur Office</h2>
+                <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>Shatabdi Nagar, Panki • Open Mon–Sat</span>
+              </div>
 
-              <div className="contact-info-row">
-                <div className="icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                    <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z" />
-                    <circle cx="12" cy="9.5" r="2.3" />
-                  </svg>
+              <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 20 }}>
+                <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                  <MapPin size={20} style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }} />
+                  <div>
+                    <strong style={{ fontSize: "0.92rem", display: "block", color: "var(--text)" }}>Physical Address</strong>
+                    <p style={{ margin: "2px 0 0", fontSize: "0.88rem", color: "var(--text-muted)" }}>
+                      Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <strong>Address</strong>
-                  <p style={{ margin: "4px 0 0" }}>
-                    Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020
-                  </p>
+
+                <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                  <Clock size={18} style={{ color: "var(--accent)", flexShrink: 0 }} />
+                  <div>
+                    <strong style={{ fontSize: "0.92rem", display: "block", color: "var(--text)" }}>Office Working Hours</strong>
+                    <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>Monday – Saturday: 9:30 AM – 7:00 PM</span>
+                  </div>
+                </div>
+
+                <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                  <Phone size={18} style={{ color: "var(--accent)", flexShrink: 0 }} />
+                  <div>
+                    <strong style={{ fontSize: "0.92rem", display: "block", color: "var(--text)" }}>Direct Phone &amp; WhatsApp</strong>
+                    <a href="tel:+919654880240" style={{ fontSize: "0.88rem", color: "var(--accent)", fontWeight: 600 }}>
+                      +91 96548 80240
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="contact-info-row">
-                <div className="icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Phone / WhatsApp</strong>
-                  <p style={{ margin: "4px 0 0" }}>
-                    <a href="tel:+919654880240">+91 96548 80240</a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="map-frame" style={{ marginTop: 28 }}>
+              <div className="map-frame" style={{ marginTop: "auto", minHeight: 250 }}>
                 <iframe
                   src="https://www.google.com/maps?q=Cambridge%20School%20Shatabdi%20Nagar%20Panki%20Kanpur&output=embed"
                   loading="lazy"
                   allowFullScreen
-                  title="Vyan Digital Agency location"
+                  title="Vyan Digital Agency office location map"
                 />
               </div>
             </div>

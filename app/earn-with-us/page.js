@@ -1,4 +1,19 @@
 import Link from "next/link";
+import {
+  Share2,
+  Smartphone,
+  CheckCircle2,
+  ArrowRight,
+  MessageCircle,
+  Sparkles,
+  TrendingUp,
+  ShieldCheck,
+  Zap,
+  DollarSign,
+  Gift,
+  Clock,
+  Award,
+} from "lucide-react";
 
 export const metadata = {
   title: "Earn with Us — Referral Program & Jio SIM Partnership",
@@ -41,76 +56,275 @@ export default function EarnWithUsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(earnSchema) }}
       />
+
       <section className="page-hero">
         <div className="wrap">
-          <p className="eyebrow">Earn with Vyan</p>
-          <h1>Two ways to earn alongside Vyan Digital Agency.</h1>
+          <div className="live-badge" style={{ marginBottom: 12 }}>
+            <Gift size={14} style={{ color: "var(--accent)" }} />
+            <span>Monetize With Vyan</span>
+          </div>
+          <h1>Two Direct Ways to Earn Alongside Vyan Digital Agency</h1>
           <p className="lead">
-            Choose the program that fits you — refer our course to students
-            and business owners, or partner with us using your Jio SIM.
+            Whether you are a student, local creator, or business owner, choose the partnership program
+            that fits your profile — earn ₹1,000 per course referral or partner with your active Jio SIM.
           </p>
         </div>
       </section>
 
+      {/* Main Programs Grid as 2 Large Modern Feature Cards with Images */}
       <section className="section">
         <div className="wrap">
-          <div className="grid-2" style={{ gap: 32, alignItems: "stretch" }}>
-            <div className="program">
-              <p className="eyebrow" style={{ marginBottom: 10 }}>Program 1</p>
-              <h3>Refer our course, earn per referral</h3>
-              <p className="text-muted">
-                We teach students and business owners how to build and grow a
-                business using social media. The course is priced at ₹1,999.
-                When you refer someone and they join through you, you earn a
-                fixed payout.
-              </p>
-              <div className="amount">₹1,000 <span>per successful referral</span></div>
-              <ol>
-                <li>You refer a student or business owner to our ₹1,999 social media course.</li>
-                <li>They join the course through your reference.</li>
-                <li>You receive ₹1,000 as your referral payout — for every person you bring in.</li>
-              </ol>
-              <p className="text-muted" style={{ marginTop: 18, marginBottom: 0 }}>
-                Open to anyone — students, business owners, or anyone with an
-                audience willing to learn how to earn through social media.
-              </p>
-              <div style={{ marginTop: 20 }}>
-                <Link href="/courses" className="btn btn-secondary">See course details</Link>
+          <div className="grid-2" style={{ gap: 36, alignItems: "stretch" }}>
+            {/* Program 1: Course Referral Partner */}
+            <div className="modern-card" style={{ padding: 0 }}>
+              <div className="card-img-wrap" style={{ height: 210 }}>
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0a67e5572240?auto=format&fit=crop&w=800&q=80"
+                  alt="Referral Program Earnings"
+                />
+                <div className="card-img-overlay"></div>
+                <span className="card-badge-top">Program 01 • High Payout</span>
+              </div>
+
+              <div style={{ padding: 28, display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+                  <div className="icon-box" style={{ marginBottom: 0 }}>
+                    <Share2 size={22} />
+                  </div>
+                  <div>
+                    <h2 style={{ fontSize: "1.3rem", margin: 0 }}>Course Referral Partner</h2>
+                    <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Open to Students &amp; Creators</span>
+                  </div>
+                </div>
+
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  Recommend our practical ₹1,999 Social Media &amp; Business Growth Course. For every single student or business owner who enrolls through you, you get an immediate fixed payout.
+                </p>
+
+                <div style={{ background: "rgba(15, 19, 32, 0.7)", border: "1px solid var(--line)", borderRadius: "var(--radius-sm)", padding: "16px 20px", margin: "16px 0 20px" }}>
+                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    Your Guaranteed Payout:
+                  </div>
+                  <div className="price-tag" style={{ fontSize: "2.4rem", margin: "4px 0" }}>
+                    ₹1,000 <span style={{ fontSize: "0.9rem" }}>per successful referral</span>
+                  </div>
+                </div>
+
+                {/* Earnings Calculator Projection */}
+                <div style={{ marginBottom: 20 }}>
+                  <strong style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--text)", display: "block", marginBottom: 10 }}>
+                    Earnings Potential:
+                  </strong>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, textAlign: "center" }}>
+                    <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "10px", borderRadius: "var(--radius-sm)" }}>
+                      <b style={{ color: "var(--accent)", fontSize: "1.1rem" }}>₹3,000</b>
+                      <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>3 Referrals</div>
+                    </div>
+                    <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "10px", borderRadius: "var(--radius-sm)" }}>
+                      <b style={{ color: "var(--accent)", fontSize: "1.1rem" }}>₹10,000</b>
+                      <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>10 Referrals</div>
+                    </div>
+                    <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "10px", borderRadius: "var(--radius-sm)" }}>
+                      <b style={{ color: "var(--accent)", fontSize: "1.1rem" }}>₹25,000</b>
+                      <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>25 Referrals</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: 24 }}>
+                  <strong style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--text)", display: "block", marginBottom: 10 }}>
+                    How It Works:
+                  </strong>
+                  <ul className="card-checklist" style={{ margin: 0 }}>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Message us on WhatsApp to register your referral code</span>
+                    </li>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Share your reference with classmates, friends or clients</span>
+                    </li>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Receive ₹1,000 directly into your UPI/Bank account per student</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style={{ display: "flex", gap: 12, marginTop: "auto", flexWrap: "wrap" }}>
+                  <a
+                    href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20want%20to%20register%20as%20a%20Course%20Referral%20Partner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-whatsapp btn-icon"
+                    style={{ flex: 1, justifyContent: "center" }}
+                  >
+                    <MessageCircle size={16} />
+                    <span>Get Referral Code</span>
+                  </a>
+                  <Link href="/courses" className="btn btn-secondary">
+                    View Course
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="program">
-              <p className="eyebrow" style={{ marginBottom: 10 }}>Program 2</p>
-              <h3>Earn with your Jio SIM</h3>
-              <p className="text-muted">
-                If you have a Jio SIM connection, you can connect with us
-                directly to start earning. Reach out on WhatsApp or call and
-                we&apos;ll walk you through how this program works and what
-                you need to get started.
-              </p>
-              <div style={{ margin: "24px 0" }}>
-                <a href="https://wa.me/919654880240" className="btn btn-primary">
-                  Message us on WhatsApp
-                </a>
+            {/* Program 2: Jio SIM Partner Program */}
+            <div className="modern-card" style={{ padding: 0 }}>
+              <div className="card-img-wrap" style={{ height: 210 }}>
+                <img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
+                  alt="Jio SIM Partnership Program"
+                />
+                <div className="card-img-overlay"></div>
+                <span className="card-badge-top">Program 02 • Telecom Partner</span>
               </div>
-              <p className="text-muted" style={{ marginBottom: 0 }}>
-                Eligibility: an active Jio SIM in your name.
+
+              <div style={{ padding: 28, display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+                  <div className="icon-box" style={{ marginBottom: 0 }}>
+                    <Smartphone size={22} />
+                  </div>
+                  <div>
+                    <h2 style={{ fontSize: "1.3rem", margin: 0 }}>Earn with Your Jio SIM</h2>
+                    <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Passive Telecom Partnership</span>
+                  </div>
+                </div>
+
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+                  If you hold an active Jio SIM connection, you can partner with our agency network to start earning. We coordinate directly with you to set up your account.
+                </p>
+
+                <div style={{ background: "rgba(15, 19, 32, 0.7)", border: "1px solid var(--line)", borderRadius: "var(--radius-sm)", padding: "16px 20px", margin: "16px 0 20px" }}>
+                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    Eligibility Requirement:
+                  </div>
+                  <div style={{ color: "#4CAF7D", fontSize: "1.2rem", fontWeight: 700, margin: "6px 0" }}>
+                    Active Jio SIM in Your Name
+                  </div>
+                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: 0 }}>
+                    Must be registered with valid ID proof and active cellular connectivity.
+                  </p>
+                </div>
+
+                <div style={{ marginBottom: 24 }}>
+                  <strong style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--text)", display: "block", marginBottom: 10 }}>
+                    Program Highlights:
+                  </strong>
+                  <ul className="card-checklist" style={{ margin: 0 }}>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Zero initial investment or registration fee required</span>
+                    </li>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Direct 1-on-1 verification and onboarding call</span>
+                    </li>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Transparent weekly payouts via UPI or Bank Transfer</span>
+                    </li>
+                    <li>
+                      <CheckCircle2 size={16} />
+                      <span>Assistance available directly at our Kanpur office</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style={{ marginTop: "auto" }}>
+                  <a
+                    href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20have%20an%20active%20Jio%20SIM%20and%20want%20details%20on%20Program%202"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-whatsapp btn-icon"
+                    style={{ width: "100%", justifyContent: "center" }}
+                  >
+                    <MessageCircle size={18} />
+                    <span>Inquire via WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Payout Transparency Cards */}
+      <section className="section section-alt">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="live-badge" style={{ marginBottom: 12 }}>
+              <ShieldCheck size={14} style={{ color: "var(--accent)" }} />
+              <span>Partner Guarantees</span>
+            </div>
+            <h2>Why Partners Trust Vyan for Reliable Payouts</h2>
+            <p className="text-muted">
+              We maintain absolute transparency so our community can recommend our brand with confidence.
+            </p>
+          </div>
+
+          <div className="grid-3">
+            <div className="modern-card">
+              <div className="icon-box">
+                <Zap size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem" }}>Instant UPI Transfers</h3>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                As soon as your referral confirms enrollment, your ₹1,000 payout is credited to your Google Pay, PhonePe, or Paytm within 24 hours.
+              </p>
+            </div>
+
+            <div className="modern-card">
+              <div className="icon-box">
+                <ShieldCheck size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem" }}>Zero Upfront Joining Cost</h3>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                You never pay a single rupee to become an affiliate or partner. The program is 100% free to join and start earning.
+              </p>
+            </div>
+
+            <div className="modern-card">
+              <div className="icon-box">
+                <Clock size={22} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem" }}>Local Support in Kanpur</h3>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                Have questions or need help tracking referrals? Our team is available on WhatsApp and at our office in Shatabdi Nagar, Panki.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section section-alt">
+      {/* CTA Band */}
+      <section className="section">
         <div className="wrap">
-          <div className="cta-band">
+          <div className="cta-band" style={{ background: "linear-gradient(145deg, #171E33 0%, #111524 100%)" }}>
             <div>
-              <h2>Ready to start earning?</h2>
-              <p className="text-muted" style={{ marginBottom: 0 }}>
-                Call, WhatsApp, or fill our contact form and mention &quot;Earn with Us.&quot;
+              <div className="showcase-tag" style={{ marginBottom: 12 }}>
+                <Sparkles size={12} />
+                <span>Start Earning Today</span>
+              </div>
+              <h2>Ready to partner with Vyan Digital Agency?</h2>
+              <p className="text-muted" style={{ marginBottom: 0, maxWidth: "56ch" }}>
+                Send us a message mentioning &ldquo;Earn with Us&rdquo; and we will issue your partner link or guide your Jio SIM onboarding immediately.
               </p>
             </div>
-            <Link href="/contact" className="btn btn-primary">Contact us</Link>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <a
+                href="https://wa.me/919654880240?text=Hi%20Vyan%20Digital,%20I%20want%20to%20start%20with%20Earn%20With%20Us"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-icon"
+              >
+                <MessageCircle size={16} />
+                <span>Message on WhatsApp</span>
+              </a>
+              <Link href="/contact" className="btn btn-secondary">
+                Submit Contact Form
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,21 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { User, Phone, Briefcase, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 // Replace with your own Google Apps Script Web App URL.
 // See SETUP-GOOGLE-SHEETS.md at the project root for the 5-minute setup.
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxek_EVhcM__i92wU9T3FwWZUfD1KZmuTod6K3TMBHONN2v9pz_NGfDFvrFsSh4-eO1GQ/exec";
+const GOOGLE_SCRIPT_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
+  "https://script.google.com/macros/s/AKfycbxek_EVhcM__i92wU9T3FwWZUfD1KZmuTod6K3TMBHONN2v9pz_NGfDFvrFsSh4-eO1GQ/exec";
 
 const SERVICES = [
   "Meta Ads (Facebook & Instagram)",
-  "Google Ads",
-  "Google Maps Business Listing",
+  "Google Ads (Search & Display)",
+  "Google Maps Business Listing (SEO)",
   "Facebook Account Handling",
   "YouTube Account Handling",
-  "Automation Agents for Business",
-  "Website Development",
+  "Business Automation Agents (WhatsApp Bot)",
+  "Custom Website Development",
+  "Mobile & Web App Development (Android & iOS)",
   "Courses / Earn with Us",
-  "Not sure / need guidance",
+  "Full Agency Audit / Need Guidance",
 ];
 
 export default function ContactForm() {
@@ -54,7 +58,7 @@ export default function ContactForm() {
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(form),
       });
-      setStatus({ ok: true, message: "Thanks! We've received your details and will contact you shortly." });
+      setStatus({ ok: true, message: "Thank you! We have received your inquiry and will contact you within 24 hours." });
       setForm({ name: "", mobile: "", service: "" });
     } catch {
       setStatus({ ok: false, message: "Something went wrong. Please call/WhatsApp +91 96548 80240 instead." });
@@ -66,19 +70,26 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-field">
-        <label htmlFor="name">Full name</label>
+        <label htmlFor="name" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <User size={15} style={{ color: "var(--accent)" }} />
+          <span>Full Name</span>
+        </label>
         <input
           type="text"
           id="name"
           name="name"
           required
-          placeholder="Your name"
+          placeholder="e.g. Ramesh Kumar"
           value={form.name}
           onChange={handleChange}
         />
       </div>
+
       <div className="form-field">
-        <label htmlFor="mobile">Mobile number</label>
+        <label htmlFor="mobile" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <Phone size={15} style={{ color: "var(--accent)" }} />
+          <span>Mobile Number (WhatsApp)</span>
+        </label>
         <input
           type="tel"
           id="mobile"
@@ -86,28 +97,53 @@ export default function ContactForm() {
           required
           pattern="[0-9]{10}"
           maxLength={10}
-          placeholder="10-digit mobile number"
+          placeholder="10-digit WhatsApp number"
           value={form.mobile}
           onChange={handleChange}
         />
       </div>
+
       <div className="form-field">
-        <label htmlFor="service">Service you're interested in</label>
+        <label htmlFor="service" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <Briefcase size={15} style={{ color: "var(--accent)" }} />
+          <span>Service You Are Interested In</span>
+        </label>
         <select id="service" name="service" required value={form.service} onChange={handleChange}>
-          <option value="" disabled>Select a service</option>
+          <option value="" disabled>Select a growth service</option>
           {SERVICES.map((s) => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
       </div>
-      <button type="submit" className="btn btn-primary" disabled={submitting}>
-        {submitting ? "Submitting…" : "Submit enquiry"}
+
+      <button
+        type="submit"
+        className="btn btn-primary btn-icon"
+        disabled={submitting}
+        style={{ width: "100%", justifyContent: "center" }}
+      >
+        {submitting ? (
+          <>
+            <Loader2 size={18} className="animate-spin" />
+            <span>Sending Inquiry…</span>
+          </>
+        ) : (
+          <>
+            <span>Submit Strategy Inquiry</span>
+            <Send size={16} />
+          </>
+        )}
       </button>
+
       {status && (
-        <p className={`form-status show ${status.ok ? "ok" : "err"}`}>{status.message}</p>
+        <div className={`form-status show ${status.ok ? "ok" : "err"}`} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 14 }}>
+          {status.ok ? <CheckCircle2 size={18} style={{ flexShrink: 0 }} /> : <AlertCircle size={18} style={{ flexShrink: 0 }} />}
+          <span>{status.message}</span>
+        </div>
       )}
+
       <p className="form-note text-muted">
-        By submitting, you agree we may contact you on the number provided.
+        🔒 We respect your privacy. No spam. You will only be contacted regarding your inquiry.
       </p>
     </form>
   );

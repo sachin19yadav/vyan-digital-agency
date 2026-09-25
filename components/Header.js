@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Phone, MessageCircle, ArrowRight, Menu, X } from "lucide-react";
 
 import Logo from "@/components/Logo";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/locations", label: "Locations" },
   { href: "/courses", label: "Courses" },
   { href: "/earn-with-us", label: "Earn with Us" },
   { href: "/about", label: "About Us" },
@@ -83,9 +85,27 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <Link href="/contact" className="nav-cta" onClick={() => setOpen(false)}>
-            Get a free consultation
-          </Link>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <a
+              href="tel:+919654880240"
+              className="nav-phone-pill"
+              aria-label="Call Vyan Digital Agency"
+            >
+              <Phone size={14} style={{ color: "var(--accent)" }} />
+              <span>+91 96548 80240</span>
+            </a>
+
+            <Link
+              href="/contact"
+              className="nav-cta"
+              onClick={() => setOpen(false)}
+              style={{ display: "inline-flex", alignItems: "center", gap: 6 }}
+            >
+              <span>Get Consultation</span>
+              <ArrowRight size={15} />
+            </Link>
+          </div>
         </nav>
 
         <button

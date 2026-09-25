@@ -1,16 +1,24 @@
+import { getAllLocations } from "@/data/locations";
+
 export default function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vyandigitalagency.com";
   const currentDate = new Date().toISOString();
 
-  return [
+  const staticRoutes = [
     {
       url: `${baseUrl}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/locations`,
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -40,4 +48,13 @@ export default function sitemap() {
       priority: 0.9,
     },
   ];
+
+  const locationRoutes = getAllLocations().map((loc) => ({
+    url: `${baseUrl}/locations/${loc.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: loc.isState || loc.isNational || loc.slug === "kanpur" || loc.slug === "lucknow" || loc.slug === "noida" ? 0.95 : 0.85,
+  }));
+
+  return [...staticRoutes, ...locationRoutes];
 }
