@@ -7,7 +7,7 @@ import { User, Phone, Briefcase, Send, CheckCircle2, AlertCircle, Loader2 } from
 // See SETUP-GOOGLE-SHEETS.md at the project root for the 5-minute setup.
 const GOOGLE_SCRIPT_URL =
   process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
-  "https://script.google.com/macros/s/AKfycbxek_EVhcM__i92wU9T3FwWZUfD1KZmuTod6K3TMBHONN2v9pz_NGfDFvrFsSh4-eO1GQ/exec";
+  "https://script.google.com/macros/s/AKfycbyarIClk8ovvT9lKqYIZkqUCP6seEIWOv-nFbsGw2905FeABpVOK6Bbfz-tHJQ2OCck/exec";
 
 const SERVICES = [
   "Meta Ads (Facebook & Instagram)",

@@ -112,7 +112,7 @@
     }
   ],
   "config": {
-    "googleSheetUrl": "https://script.google.com/macros/s/AKfycbxek_EVhcM__i92wU9T3FwWZUfD1KZmuTod6K3TMBHONN2v9pz_NGfDFvrFsSh4-eO1GQ/exec",
+    "googleSheetUrl": "https://script.google.com/macros/s/AKfycbyarIClk8ovvT9lKqYIZkqUCP6seEIWOv-nFbsGw2905FeABpVOK6Bbfz-tHJQ2OCck/exec",
     "rewardPerEnrollment": 1000,
     "adminPin": "vyan@2026"
   }
