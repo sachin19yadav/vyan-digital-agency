@@ -126,7 +126,7 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Vyan Digital Agency",
-    sameAs: "https://vyandigitalagency.com",
+    sameAs: "https://www.vyandigitalagency.com",
   },
   offers: {
     "@type": "Offer",

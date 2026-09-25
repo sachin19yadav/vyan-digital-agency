@@ -84,7 +84,7 @@ const aboutSchema = {
       name: "About Vyan Digital Agency Kanpur",
       description:
         "Learn about Vyan Digital Agency based in Panki, Kanpur. Founded to give local businesses consistent digital marketing advantages.",
-      url: "https://vyandigitalagency.com/about",
+      url: "https://www.vyandigitalagency.com/about",
     },
     {
       "@type": "BreadcrumbList",
@@ -93,13 +93,13 @@ const aboutSchema = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://vyandigitalagency.com",
+          item: "https://www.vyandigitalagency.com",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "About",
-          item: "https://vyandigitalagency.com/about",
+          item: "https://www.vyandigitalagency.com/about",
         },
       ],
     },

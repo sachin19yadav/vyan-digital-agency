@@ -252,15 +252,15 @@ export default function HomePage() {
             <div>
               <div className="live-badge">
                 <span className="pulse-dot"></span>
-                <span>🏆 #1 Rated Digital Marketing Agency &amp; Ads Agency in Uttar Pradesh &amp; India</span>
+                <span>🏆 #1 Rated Digital Marketing, Social Media Marketing &amp; Ads Agency in UP &amp; India</span>
               </div>
 
-              <h1>Top Digital Marketing &amp; Ads Agency in Uttar Pradesh &amp; India</h1>
+              <h1>Top Digital Marketing Agency, Social Media &amp; Ads Agency in UP &amp; India</h1>
 
               <p className="lead">
-                Looking for the leading <strong>digital marketing agency</strong>, <strong>ads agency</strong>, or full-service <strong>digital agency</strong>?
+                Looking for the leading <strong>digital marketing agency</strong>, <strong>social media marketing agency</strong>, <strong>marketing agency</strong>, or full-service <strong>digital agency</strong>?
                 Vyan Digital Agency empowers businesses across Kanpur, Lucknow, Noida, Varanasi, and all major cities in India with high-ROI Meta Ads (Facebook &amp; Instagram),
-                Google Search &amp; PPC Ads, Google Maps #1 SEO ranking, 24/7 WhatsApp automation, and custom web &amp; mobile app development.
+                dedicated <strong>social media agency</strong> content handling, Google Search &amp; PPC Ads, Google Maps #1 SEO ranking, 24/7 WhatsApp automation, and custom web &amp; mobile app development.
               </p>
 
               <div className="hero-actions">

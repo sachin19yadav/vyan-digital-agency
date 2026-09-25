@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vyandigitalagency.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.vyandigitalagency.com";
 
 export const viewport = {
   themeColor: "#0F1320",
@@ -14,17 +14,24 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Top Digital Marketing & Ads Agency in Uttar Pradesh & India — Web & App Development",
+    default: "Top Digital Marketing Agency, Social Media & Ads Agency in UP & India",
     template: "%s | Vyan Digital Agency",
   },
   description:
-    "Vyan Digital Agency is the #1 digital marketing agency, ads agency, and growth partner across Uttar Pradesh and India. We specialize in Meta Ads, Google Ads, Google Maps SEO, social media marketing, WhatsApp automation, and custom web & mobile app development.",
+    "Vyan Digital Agency is the #1 digital marketing agency, social media marketing agency, ads agency, and growth partner across Uttar Pradesh and India. We specialize in Meta Ads, Google Ads, Google Maps SEO, social media management, WhatsApp automation, and custom web & mobile app development.",
   keywords: [
     "Marketing Agency",
     "Digital Marketing Agency",
     "Digital Agency",
+    "Social Media Marketing Agency",
+    "Social Media Agency",
+    "SMMA",
     "Ads Agency",
     "Advertising Agency",
+    "Top Social Media Marketing Agency in Uttar Pradesh",
+    "Best Social Media Marketing Agency in UP",
+    "Social Media Marketing Agency in India",
+    "Social Media Agency in Kanpur",
     "Top Digital Marketing Agency in Uttar Pradesh",
     "Best Digital Marketing Agency in UP",
     "Marketing Agency Uttar Pradesh",
@@ -132,8 +139,11 @@ const jsonLd = {
         "Vyan Digital Agency",
         "Vyan Marketing Agency",
         "Vyan Ads Agency",
+        "Vyan Social Media Agency",
         "Top Marketing Agency in Uttar Pradesh",
         "Best Digital Marketing Agency in UP",
+        "Top Social Media Marketing Agency in Uttar Pradesh",
+        "Best Social Media Agency in India",
         "Top Ads Agency in Uttar Pradesh",
         "Best Digital Marketing Agency in Kanpur",
         "Top Digital Marketing Agency in India"

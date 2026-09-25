@@ -52,13 +52,13 @@ const earnSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://vyandigitalagency.com",
+      item: "https://www.vyandigitalagency.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Earn with Us",
-      item: "https://vyandigitalagency.com/earn-with-us",
+      item: "https://www.vyandigitalagency.com/earn-with-us",
     },
   ],
 };

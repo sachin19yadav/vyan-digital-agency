@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ShieldCheck, Lock, Eye, FileText, ArrowRight, Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vyandigitalagency.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.vyandigitalagency.com";
 
 export const metadata = {
   title: "Privacy Policy — Data Protection & Privacy Commitment",

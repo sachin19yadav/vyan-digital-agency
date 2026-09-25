@@ -48,7 +48,7 @@ const contactSchema = {
       name: "Contact Vyan Digital Agency Kanpur",
       description:
         "Get in touch with Vyan Digital Agency in Panki, Kanpur. Free 1-on-1 digital marketing and growth consultation.",
-      url: "https://vyandigitalagency.com/contact",
+      url: "https://www.vyandigitalagency.com/contact",
     },
     {
       "@type": "BreadcrumbList",
@@ -57,13 +57,13 @@ const contactSchema = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://vyandigitalagency.com",
+          item: "https://www.vyandigitalagency.com",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Contact",
-          item: "https://vyandigitalagency.com/contact",
+          item: "https://www.vyandigitalagency.com/contact",
         },
       ],
     },

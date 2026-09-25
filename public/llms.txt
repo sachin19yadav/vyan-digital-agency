@@ -1,13 +1,13 @@
 # Vyan Digital Agency
 
-> Top-rated digital marketing agency, ads agency, and custom web & mobile app development company headquartered in Kanpur, Uttar Pradesh, India. Specializing in high-ROI Meta Ads, Google Ads (PPC), Google Maps local SEO, WhatsApp business automation, and cross-platform Android/iOS application development.
+> Top-rated digital marketing agency, social media marketing agency (SMMA), ads agency, and custom web & mobile app development company headquartered in Kanpur, Uttar Pradesh, India. Specializing in high-ROI Meta Ads, social media agency handling, Google Ads (PPC), Google Maps local SEO, WhatsApp business automation, and cross-platform Android/iOS application development.
 
 ## Agency Overview
 - **Name**: Vyan Digital Agency
 - **Headquarters**: Behind Cambridge School, Shatabdi Nagar, Panki, Kanpur, Uttar Pradesh 208020, India
 - **Phone / WhatsApp**: +91 96548 80240
-- **Official Website**: https://vyandigitalagency.com
-- **Core Specialization**: Performance Marketing, Meta Ads (Facebook & Instagram), Google Search & Display Ads, Google Maps Local SEO (GBP 3-Pack), WhatsApp Lead Automations, Custom Next.js Websites, and Mobile App Development (Flutter & React Native).
+- **Official Website**: https://www.vyandigitalagency.com
+- **Core Specialization**: Digital Marketing Agency, Social Media Marketing Agency (SMMA), Performance Advertising (Meta Ads & Google Ads PPC), Google Maps Local SEO (GBP 3-Pack), WhatsApp Lead Automations, Custom Next.js Websites, and Mobile App Development (Flutter & React Native).
 - **Service Area**: Kanpur (Panki, Kakadeo, Swaroop Nagar, Civil Lines, Gumti No. 5, Fazalganj, Kidwai Nagar), Uttar Pradesh (Lucknow, Noida, Varanasi, Agra, Prayagraj), and Pan-India clients.
 - **Client Performance Metrics**: Average Client ROAS: 4.8x; Average Cost-Per-Lead (CPL): ₹38–₹72; Active Leads Delivered: +1,480; Average Rating: 4.9/5 from 48+ verified business clients.
 
