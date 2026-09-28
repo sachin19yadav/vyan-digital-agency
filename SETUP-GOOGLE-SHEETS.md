@@ -51,11 +51,12 @@ function doPost(e) {
     
     // Automatically create header row if sheet is empty
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["Timestamp", "Name", "Mobile", "Service"]);
+      sheet.appendRow(["Timestamp", "Name", "Mobile", "Gmail / Email", "Service / Source"]);
     }
 
     var name = "";
     var mobile = "";
+    var email = "";
     var service = "";
 
     // Parse incoming data safely (supports JSON and form parameters)
@@ -64,16 +65,19 @@ function doPost(e) {
         var data = JSON.parse(e.postData.contents);
         name = data.name || "";
         mobile = data.mobile || "";
-        service = data.service || "";
+        email = data.email || data.gmail || "";
+        service = data.service || data.source || "";
       } catch (err) {
         name = (e.parameter && e.parameter.name) || "";
         mobile = (e.parameter && e.parameter.mobile) || "";
-        service = (e.parameter && e.parameter.service) || "";
+        email = (e.parameter && (e.parameter.email || e.parameter.gmail)) || "";
+        service = (e.parameter && (e.parameter.service || e.parameter.source)) || "";
       }
     } else if (e && e.parameter) {
       name = e.parameter.name || "";
       mobile = e.parameter.mobile || "";
-      service = e.parameter.service || "";
+      email = e.parameter.email || e.parameter.gmail || "";
+      service = e.parameter.service || e.parameter.source || "";
     }
 
     // Append new lead row
@@ -81,6 +85,7 @@ function doPost(e) {
       new Date(),
       name,
       mobile,
+      email,
       service
     ]);
 

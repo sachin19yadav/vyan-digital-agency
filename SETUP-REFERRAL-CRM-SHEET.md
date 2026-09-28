@@ -182,22 +182,24 @@ function doPost(e) {
     }
 
     // ========================================================
-    // CASE 2: WEBSITE CONTACT FORM LEAD (Stores into Sheet1)
+    // CASE 2: WEBSITE CONTACT / LEAD FORM (Stores into Sheet1)
     // ========================================================
     var contactSheet = ss.getSheetByName("Sheet1") || ss.getSheetByName("Contact_Enquiries") || ss.getSheets()[0];
     if (contactSheet.getLastRow() === 0) {
-      contactSheet.appendRow(["Timestamp", "Name", "Mobile", "Service"]);
-      contactSheet.getRange(1, 1, 1, 4).setFontWeight("bold").setBackground("#D9A441");
+      contactSheet.appendRow(["Timestamp", "Name", "Mobile", "Gmail / Email", "Service / Source"]);
+      contactSheet.getRange(1, 1, 1, 5).setFontWeight("bold").setBackground("#D9A441");
     }
 
     var name = payload.name || "";
     var mobile = payload.mobile || "";
-    var service = payload.service || "";
+    var email = payload.email || payload.gmail || "";
+    var service = payload.service || payload.source || "";
 
     contactSheet.appendRow([
       new Date(),
       name,
       mobile,
+      email,
       service
     ]);
 
