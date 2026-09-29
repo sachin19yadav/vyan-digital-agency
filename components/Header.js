@@ -48,8 +48,27 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Do not render website agency header on dedicated hospital or restaurant applications
-  if (pathname?.startsWith("/hospital") || pathname?.startsWith("/resturent") || pathname?.startsWith("/restaurant")) {
+  // Do not render website agency header on dedicated standalone business applications
+  const standalonePrefixes = [
+    "/hospital",
+    "/resturent",
+    "/restaurant",
+    "/beauty-parlour",
+    "/vegetables",
+    "/properties",
+    "/hotel",
+    "/school",
+    "/staffing",
+    "/construction",
+    "/inventory",
+    "/home-tuition",
+    "/repair-services",
+    "/car-cleaning",
+    "/mlm",
+    "/grocery",
+    "/business-suite",
+  ];
+  if (standalonePrefixes.some((p) => pathname?.startsWith(p))) {
     return null;
   }
 
