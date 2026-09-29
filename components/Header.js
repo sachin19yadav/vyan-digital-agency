@@ -48,6 +48,11 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  // Do not render website agency header on dedicated hospital application
+  if (pathname?.startsWith("/hospital")) {
+    return null;
+  }
+
   return (
     <header className="site-header">
       <div className="wrap">

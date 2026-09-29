@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, MapPin, Clock, MessageCircle, ArrowRight, ShieldCheck } from "lucide-react";
 import Logo from "@/components/Logo";
 
@@ -30,6 +33,11 @@ function YoutubeIcon(props) {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/hospital")) {
+    return null;
+  }
+
   return (
     <footer>
       <div className="wrap">
