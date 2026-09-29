@@ -42,10 +42,10 @@ export default function RoomsManager({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Hospital Floor-Wise Rooms &amp; Inpatient Bed Census
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Real-time visual map of occupied and available beds across ICU, Deluxe Rooms, and General Wards.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function RoomsManager({
           style={{
             backgroundColor: selectedFloorId === "ALL" ? "#0284C7" : "#111C44",
             color: selectedFloorId === "ALL" ? "#ffffff" : "#94A3B8",
-            border: "1px solid #1E293B",
+            border: "1px solid #e2e8f0",
             padding: "8px 16px",
             borderRadius: "8px",
             fontSize: "0.85rem",
@@ -105,7 +105,7 @@ export default function RoomsManager({
             style={{
               backgroundColor: selectedFloorId === fl.id ? "#0284C7" : "#111C44",
               color: selectedFloorId === fl.id ? "#ffffff" : "#94A3B8",
-              border: "1px solid #1E293B",
+              border: "1px solid #e2e8f0",
               padding: "8px 16px",
               borderRadius: "8px",
               fontSize: "0.85rem",
@@ -132,8 +132,8 @@ export default function RoomsManager({
             <div
               key={floor.id}
               style={{
-                backgroundColor: "#111C44",
-                border: "1px solid #1E293B",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: "14px",
                 padding: "24px",
               }}
@@ -144,7 +144,7 @@ export default function RoomsManager({
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  borderBottom: "1px solid #1E293B",
+                  borderBottom: "1px solid #e2e8f0",
                   paddingBottom: 14,
                   marginBottom: 18,
                   flexWrap: "wrap",
@@ -158,7 +158,7 @@ export default function RoomsManager({
                       {floor.name}
                     </h3>
                   </div>
-                  <span style={{ fontSize: "0.82rem", color: "#94A3B8", marginTop: 2, display: "block" }}>
+                  <span style={{ fontSize: "0.82rem", color: "#64748b", marginTop: 2, display: "block" }}>
                     {floor.description}
                   </span>
                 </div>
@@ -190,8 +190,8 @@ export default function RoomsManager({
                   <div
                     key={rIdx}
                     style={{
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #1E293B",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #e2e8f0",
                       borderRadius: "10px",
                       padding: "16px",
                       display: "flex",
@@ -200,14 +200,14 @@ export default function RoomsManager({
                     }}
                   >
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <strong style={{ color: "#F8FAFC", fontSize: "0.95rem" }}>
+                      <strong style={{ color: "#0f172a", fontSize: "0.95rem" }}>
                         {room.roomNo}
                       </strong>
                       <span
                         style={{
                           fontSize: "0.72rem",
-                          backgroundColor: "#1E293B",
-                          color: "#94A3B8",
+                          backgroundColor: "#ffffff",
+                          color: "#64748b",
                           padding: "2px 8px",
                           borderRadius: "4px",
                         }}
@@ -216,7 +216,7 @@ export default function RoomsManager({
                       </span>
                     </div>
 
-                    <div style={{ fontSize: "0.78rem", color: "#94A3B8" }}>
+                    <div style={{ fontSize: "0.78rem", color: "#64748b" }}>
                       Dr. Incharge: <strong style={{ color: "#ffffff" }}>{room.inchargeDoctor}</strong>
                       <br />
                       Attending Nurse: <strong style={{ color: "#34D399" }}>{room.attendingNurse}</strong>

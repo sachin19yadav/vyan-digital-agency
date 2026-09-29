@@ -192,8 +192,8 @@ export default function DoctorPortal({
       {/* Doctor Header & Selector Bar */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           padding: "20px 24px",
           marginBottom: 24,
@@ -222,7 +222,7 @@ export default function DoctorPortal({
           </div>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <h2 style={{ margin: 0, fontSize: "1.3rem", fontWeight: 700, color: "#F8FAFC" }}>
+              <h2 style={{ margin: 0, fontSize: "1.3rem", fontWeight: 700, color: "#0f172a" }}>
                 {selectedDoctor?.name}
               </h2>
               <span
@@ -239,7 +239,7 @@ export default function DoctorPortal({
                 ● On Inpatient Rounds
               </span>
             </div>
-            <p style={{ margin: "3px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+            <p style={{ margin: "3px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
               {selectedDoctor?.designation} • <strong>{selectedDoctor?.department}</strong> • Chamber:{" "}
               {selectedDoctor?.room}
             </p>
@@ -249,16 +249,16 @@ export default function DoctorPortal({
         {/* Doctor Switcher & New Patient Action */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            <label style={{ fontSize: "0.75rem", color: "#94A3B8", fontWeight: 600 }}>
+            <label style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 600 }}>
               Switch Doctor Profile:
             </label>
             <select
               value={selectedDoctorId}
               onChange={(e) => setSelectedDoctorId(e.target.value)}
               style={{
-                backgroundColor: "#1E293B",
+                backgroundColor: "#ffffff",
                 color: "#ffffff",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "8px 12px",
                 borderRadius: "8px",
                 fontSize: "0.85rem",
@@ -282,7 +282,7 @@ export default function DoctorPortal({
               alignItems: "center",
               gap: 8,
               backgroundColor: "#0D9488",
-              color: "#ffffff",
+              color: "#0f172a",
               border: "none",
               padding: "10px 18px",
               borderRadius: "8px",
@@ -310,8 +310,8 @@ export default function DoctorPortal({
       >
         <div
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "12px",
             padding: "18px 20px",
             display: "flex",
@@ -334,10 +334,10 @@ export default function DoctorPortal({
             <Bed size={22} />
           </div>
           <div>
-            <span style={{ fontSize: "0.8rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>
               Admitted Inpatients (IPD)
             </span>
-            <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#F8FAFC" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#0f172a" }}>
               {myPatients.filter((p) => p.status === "Admitted").length} Patients
             </div>
           </div>
@@ -345,8 +345,8 @@ export default function DoctorPortal({
 
         <div
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "12px",
             padding: "18px 20px",
             display: "flex",
@@ -369,10 +369,10 @@ export default function DoctorPortal({
             <Pill size={22} />
           </div>
           <div>
-            <span style={{ fontSize: "0.8rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>
               Total Prescriptions Active
             </span>
-            <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#F8FAFC" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#0f172a" }}>
               {prescriptions.filter((r) => r.doctorId === selectedDoctor?.id).length} Active Rx
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function DoctorPortal({
         {/* Card 3: Today's OPD Queue */}
         <div
           style={{
-            backgroundColor: "#111C44",
+            backgroundColor: "#ffffff",
             border: "1px solid rgba(13, 148, 136, 0.35)",
             borderRadius: "12px",
             padding: "18px 20px",
@@ -405,13 +405,13 @@ export default function DoctorPortal({
             <Clock size={22} />
           </div>
           <div>
-            <span style={{ fontSize: "0.8rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>
               Today&apos;s OPD Patients
             </span>
             <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#2DD4BF" }}>
               {todayDoctorApts.length} Patients
             </div>
-            <div style={{ fontSize: "0.72rem", color: "#94A3B8", marginTop: 2 }}>
+            <div style={{ fontSize: "0.72rem", color: "#64748b", marginTop: 2 }}>
               <span style={{ color: "#FCD34D" }}>{myWaitingCount} Waiting</span> •{" "}
               <span style={{ color: "#38BDF8" }}>{myInConsultCount} In Chamber</span> •{" "}
               <span style={{ color: "#34D399" }}>{myCompletedCount} Done</span>
@@ -422,8 +422,8 @@ export default function DoctorPortal({
         {/* Card 4: OPD Timings */}
         <div
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "12px",
             padding: "18px 20px",
             display: "flex",
@@ -446,13 +446,13 @@ export default function DoctorPortal({
             <Activity size={22} />
           </div>
           <div>
-            <span style={{ fontSize: "0.8rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>
               OPD Timings Today
             </span>
-            <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#F8FAFC", marginTop: 2 }}>
+            <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#0f172a", marginTop: 2 }}>
               {selectedDoctor?.opdTiming || "Morning Session"}
             </div>
-            <div style={{ fontSize: "0.72rem", color: "#94A3B8", marginTop: 2 }}>
+            <div style={{ fontSize: "0.72rem", color: "#64748b", marginTop: 2 }}>
               Chamber: {selectedDoctor?.room}
             </div>
           </div>
@@ -462,7 +462,7 @@ export default function DoctorPortal({
       {/* OPD TODAY QUEUE SECTION FOR THIS DOCTOR */}
       <div
         style={{
-          backgroundColor: "#111C44",
+          backgroundColor: "#ffffff",
           border: "1px solid rgba(13, 148, 136, 0.3)",
           borderRadius: "14px",
           padding: "24px",
@@ -475,7 +475,7 @@ export default function DoctorPortal({
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: 16,
-            borderBottom: "1px solid #1E293B",
+            borderBottom: "1px solid #e2e8f0",
             paddingBottom: 14,
             flexWrap: "wrap",
             gap: 12,
@@ -488,7 +488,7 @@ export default function DoctorPortal({
                 OPD Outpatient Token Queue for {selectedDoctor?.name}
               </h3>
             </div>
-            <p style={{ margin: "3px 0 0", fontSize: "0.82rem", color: "#94A3B8" }}>
+            <p style={{ margin: "3px 0 0", fontSize: "0.82rem", color: "#64748b" }}>
               Live queue booked by reception desk. Call patients into chamber and write digital prescriptions.
             </p>
           </div>
@@ -500,7 +500,7 @@ export default function DoctorPortal({
               style={{
                 backgroundColor: opdDateFilter === "2026-09-29" ? "#0D9488" : "#0F172A",
                 color: opdDateFilter === "2026-09-29" ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "5px 12px",
                 borderRadius: "6px",
                 fontSize: "0.78rem",
@@ -515,7 +515,7 @@ export default function DoctorPortal({
               style={{
                 backgroundColor: opdDateFilter === "2026-09-30" ? "#0D9488" : "#0F172A",
                 color: opdDateFilter === "2026-09-30" ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "5px 12px",
                 borderRadius: "6px",
                 fontSize: "0.78rem",
@@ -530,7 +530,7 @@ export default function DoctorPortal({
               style={{
                 backgroundColor: opdDateFilter === "ALL" ? "#0D9488" : "#0F172A",
                 color: opdDateFilter === "ALL" ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "5px 12px",
                 borderRadius: "6px",
                 fontSize: "0.78rem",
@@ -548,8 +548,8 @@ export default function DoctorPortal({
             style={{
               padding: "24px",
               textAlign: "center",
-              color: "#94A3B8",
-              backgroundColor: "#0F172A",
+              color: "#64748b",
+              backgroundColor: "#ffffff",
               borderRadius: "8px",
               fontSize: "0.86rem",
             }}
@@ -562,7 +562,7 @@ export default function DoctorPortal({
               <div
                 key={apt.id}
                 style={{
-                  backgroundColor: "#0F172A",
+                  backgroundColor: "#ffffff",
                   border: `1px solid ${
                     apt.status === "In Consultation"
                       ? "#38BDF8"
@@ -613,7 +613,7 @@ export default function DoctorPortal({
                       <span style={{ fontWeight: 800, color: "#ffffff", fontSize: "0.98rem" }}>
                         {apt.patientName}
                       </span>
-                      <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>
+                      <span style={{ fontSize: "0.78rem", color: "#64748b" }}>
                         ({apt.age}y/{apt.gender} • 📞 {apt.mobile})
                       </span>
                       <span
@@ -639,9 +639,9 @@ export default function DoctorPortal({
                         {apt.status}
                       </span>
                     </div>
-                    <div style={{ fontSize: "0.8rem", color: "#CBD5E1", marginTop: 2 }}>
+                    <div style={{ fontSize: "0.8rem", color: "#475569", marginTop: 2 }}>
                       Problem: <strong style={{ color: "#FCD34D" }}>{apt.chiefComplaint}</strong> • Slot:{" "}
-                      <span style={{ color: "#94A3B8" }}>{apt.timeSlot} ({apt.appointmentDate})</span>
+                      <span style={{ color: "#64748b" }}>{apt.timeSlot} ({apt.appointmentDate})</span>
                     </div>
                   </div>
                 </div>
@@ -658,7 +658,7 @@ export default function DoctorPortal({
                       }}
                       style={{
                         backgroundColor: "#0284C7",
-                        color: "#ffffff",
+                        color: "#0f172a",
                         border: "none",
                         padding: "6px 14px",
                         borderRadius: "6px",
@@ -686,7 +686,7 @@ export default function DoctorPortal({
                       }}
                       style={{
                         backgroundColor: "#10B981",
-                        color: "#ffffff",
+                        color: "#0f172a",
                         border: "none",
                         padding: "6px 14px",
                         borderRadius: "6px",
@@ -708,9 +708,9 @@ export default function DoctorPortal({
                       });
                     }}
                     style={{
-                      backgroundColor: "#1E293B",
+                      backgroundColor: "#ffffff",
                       color: "#38BDF8",
-                      border: "1px solid #334155",
+                      border: "1px solid #cbd5e1",
                       padding: "6px 12px",
                       borderRadius: "6px",
                       fontSize: "0.78rem",
@@ -728,7 +728,7 @@ export default function DoctorPortal({
                   <button
                     onClick={() => onAdmitPatientClick(selectedDoctor)}
                     style={{
-                      backgroundColor: "#1E293B",
+                      backgroundColor: "#ffffff",
                       color: "#FCD34D",
                       border: "1px solid rgba(234, 179, 8, 0.3)",
                       padding: "6px 12px",
@@ -754,8 +754,8 @@ export default function DoctorPortal({
       {/* Doctor's Inpatient Care Table */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           padding: "24px",
         }}
@@ -766,17 +766,17 @@ export default function DoctorPortal({
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: 20,
-            borderBottom: "1px solid #1E293B",
+            borderBottom: "1px solid #e2e8f0",
             paddingBottom: 14,
             flexWrap: "wrap",
             gap: 12,
           }}
         >
           <div>
-            <h3 style={{ margin: 0, fontSize: "1.15rem", fontWeight: 700, color: "#F8FAFC" }}>
+            <h3 style={{ margin: 0, fontSize: "1.15rem", fontWeight: 700, color: "#0f172a" }}>
               Patients Under {selectedDoctor?.name}&apos;s Care ({myPatients.length})
             </h3>
-            <p style={{ margin: "2px 0 0", fontSize: "0.82rem", color: "#94A3B8" }}>
+            <p style={{ margin: "2px 0 0", fontSize: "0.82rem", color: "#64748b" }}>
               Manage clinical diagnosis, prescribe medications, trace dosage administration, and review vitals.
             </p>
           </div>
@@ -801,14 +801,14 @@ export default function DoctorPortal({
             style={{
               padding: "40px 20px",
               textAlign: "center",
-              color: "#94A3B8",
-              backgroundColor: "#0B132B",
+              color: "#64748b",
+              backgroundColor: "#ffffff",
               borderRadius: "10px",
               border: "1px dashed #334155",
             }}
           >
             <Stethoscope size={36} style={{ color: "#64748B", margin: "0 auto 10px" }} />
-            <h4 style={{ margin: "0 0 6px", color: "#F8FAFC", fontSize: "1rem" }}>
+            <h4 style={{ margin: "0 0 6px", color: "#0f172a", fontSize: "1rem" }}>
               No Patients Currently Registered Under This Doctor
             </h4>
             <p style={{ margin: "0 0 16px", fontSize: "0.85rem" }}>
@@ -839,8 +839,8 @@ export default function DoctorPortal({
                 <div
                   key={patient.id}
                   style={{
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #1E293B",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #e2e8f0",
                     borderRadius: "12px",
                     padding: "20px",
                     transition: "border-color 0.2s ease",
@@ -854,7 +854,7 @@ export default function DoctorPortal({
                       alignItems: "flex-start",
                       flexWrap: "wrap",
                       gap: 12,
-                      borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+                      borderBottom: "1px solid #e2e8f0",
                       paddingBottom: 14,
                       marginBottom: 14,
                     }}
@@ -870,7 +870,7 @@ export default function DoctorPortal({
                         >
                           {patient.name}
                         </span>
-                        <span style={{ fontSize: "0.85rem", color: "#94A3B8" }}>
+                        <span style={{ fontSize: "0.85rem", color: "#64748b" }}>
                           ({patient.age} yrs • {patient.gender} • Blood Group:{" "}
                           <strong style={{ color: "#EF4444" }}>{patient.bloodGroup || "O+"}</strong>)
                         </span>
@@ -898,7 +898,7 @@ export default function DoctorPortal({
                       <div
                         style={{
                           fontSize: "0.8rem",
-                          color: "#94A3B8",
+                          color: "#64748b",
                           marginTop: 4,
                           display: "flex",
                           gap: 14,
@@ -906,14 +906,14 @@ export default function DoctorPortal({
                         }}
                       >
                         <span>
-                          UHID: <strong style={{ color: "#F8FAFC" }}>{patient.uhid}</strong>
+                          UHID: <strong style={{ color: "#0f172a" }}>{patient.uhid}</strong>
                         </span>
                         <span>
-                          Phone: <strong style={{ color: "#F8FAFC" }}>{patient.mobile}</strong>
+                          Phone: <strong style={{ color: "#0f172a" }}>{patient.mobile}</strong>
                         </span>
                         <span>
                           Admitted:{" "}
-                          <strong style={{ color: "#F8FAFC" }}>
+                          <strong style={{ color: "#0f172a" }}>
                             {new Date(patient.admissionDate).toLocaleDateString("en-IN", {
                               day: "numeric",
                               month: "short",
@@ -929,10 +929,10 @@ export default function DoctorPortal({
                     {/* Room & Bed Pill */}
                     <div
                       style={{
-                        backgroundColor: "#1E293B",
+                        backgroundColor: "#ffffff",
                         padding: "8px 14px",
                         borderRadius: "8px",
-                        border: "1px solid #334155",
+                        border: "1px solid #cbd5e1",
                         textAlign: "right",
                       }}
                     >
@@ -942,7 +942,7 @@ export default function DoctorPortal({
                           {patient.floor} • {patient.roomNo}
                         </span>
                       </div>
-                      <span style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                      <span style={{ fontSize: "0.76rem", color: "#64748b" }}>
                         Bed: <strong style={{ color: "#ffffff" }}>{patient.bedNo}</strong> • Attending Nurse:{" "}
                         <strong style={{ color: "#34D399" }}>{patient.attendingNurseName}</strong>
                       </span>
@@ -955,18 +955,18 @@ export default function DoctorPortal({
                       backgroundColor: "rgba(30, 41, 59, 0.5)",
                       padding: "12px 14px",
                       borderRadius: "8px",
-                      border: "1px solid rgba(255, 255, 255, 0.05)",
+                      border: "1px solid #e2e8f0",
                       marginBottom: 14,
                       fontSize: "0.85rem",
                     }}
                   >
-                    <div style={{ color: "#94A3B8", marginBottom: 3 }}>
-                      <strong style={{ color: "#F8FAFC" }}>Primary Diagnosis:</strong>{" "}
+                    <div style={{ color: "#64748b", marginBottom: 3 }}>
+                      <strong style={{ color: "#0f172a" }}>Primary Diagnosis:</strong>{" "}
                       <span style={{ color: "#FCD34D", fontWeight: 600 }}>{patient.diagnosis}</span>
                     </div>
                     {patient.symptoms && (
-                      <div style={{ color: "#94A3B8", fontSize: "0.82rem" }}>
-                        <strong style={{ color: "#CBD5E1" }}>Symptoms:</strong> {patient.symptoms}
+                      <div style={{ color: "#64748b", fontSize: "0.82rem" }}>
+                        <strong style={{ color: "#475569" }}>Symptoms:</strong> {patient.symptoms}
                       </div>
                     )}
                   </div>
@@ -992,19 +992,19 @@ export default function DoctorPortal({
                         <strong>Latest Vitals ({patient.vitals.recordedAt}):</strong>
                       </div>
                       <span>
-                        BP: <strong style={{ color: "#F8FAFC" }}>{patient.vitals.bp}</strong>
+                        BP: <strong style={{ color: "#0f172a" }}>{patient.vitals.bp}</strong>
                       </span>
                       <span>
-                        Pulse: <strong style={{ color: "#F8FAFC" }}>{patient.vitals.pulse}</strong>
+                        Pulse: <strong style={{ color: "#0f172a" }}>{patient.vitals.pulse}</strong>
                       </span>
                       <span>
                         SpO2: <strong style={{ color: "#34D399" }}>{patient.vitals.spo2}</strong>
                       </span>
                       <span>
-                        Temp: <strong style={{ color: "#F8FAFC" }}>{patient.vitals.temp}</strong>
+                        Temp: <strong style={{ color: "#0f172a" }}>{patient.vitals.temp}</strong>
                       </span>
                       <span>
-                        Sugar: <strong style={{ color: "#F8FAFC" }}>{patient.vitals.sugar}</strong>
+                        Sugar: <strong style={{ color: "#0f172a" }}>{patient.vitals.sugar}</strong>
                       </span>
                       <button
                         onClick={() => {
@@ -1046,7 +1046,7 @@ export default function DoctorPortal({
                         marginBottom: 8,
                       }}
                     >
-                      <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#CBD5E1" }}>
+                      <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#475569" }}>
                         💊 Prescribed Medicines ({meds.length})
                       </span>
                       <button
@@ -1070,23 +1070,23 @@ export default function DoctorPortal({
                         <div
                           key={idx}
                           style={{
-                            backgroundColor: "#1E293B",
+                            backgroundColor: "#ffffff",
                             padding: "4px 10px",
                             borderRadius: "6px",
                             fontSize: "0.78rem",
-                            border: "1px solid #334155",
+                            border: "1px solid #cbd5e1",
                             display: "flex",
                             alignItems: "center",
                             gap: 6,
                           }}
                         >
                           <Pill size={12} style={{ color: "#38BDF8" }} />
-                          <span style={{ color: "#F8FAFC", fontWeight: 600 }}>{med.name}</span>
-                          <span style={{ color: "#94A3B8" }}>({med.frequency})</span>
+                          <span style={{ color: "#0f172a", fontWeight: 600 }}>{med.name}</span>
+                          <span style={{ color: "#64748b" }}>({med.frequency})</span>
                         </div>
                       ))}
                       {meds.length > 4 && (
-                        <span style={{ fontSize: "0.78rem", color: "#94A3B8", alignSelf: "center" }}>
+                        <span style={{ fontSize: "0.78rem", color: "#64748b", alignSelf: "center" }}>
                           +{meds.length - 4} more
                         </span>
                       )}
@@ -1101,7 +1101,7 @@ export default function DoctorPortal({
                       gap: 10,
                       flexWrap: "wrap",
                       paddingTop: 12,
-                      borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                      borderTop: "1px solid #e2e8f0",
                     }}
                   >
                     <button
@@ -1150,9 +1150,9 @@ export default function DoctorPortal({
                         display: "flex",
                         alignItems: "center",
                         gap: 6,
-                        backgroundColor: "#1E293B",
-                        color: "#F8FAFC",
-                        border: "1px solid #334155",
+                        backgroundColor: "#ffffff",
+                        color: "#0f172a",
+                        border: "1px solid #cbd5e1",
                         padding: "7px 14px",
                         borderRadius: "6px",
                         fontSize: "0.82rem",
@@ -1177,7 +1177,7 @@ export default function DoctorPortal({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -1187,8 +1187,8 @@ export default function DoctorPortal({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 580,
@@ -1204,7 +1204,7 @@ export default function DoctorPortal({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -1212,13 +1212,13 @@ export default function DoctorPortal({
                 <h3 style={{ margin: 0, fontSize: "1.2rem", fontWeight: 700, color: "#ffffff" }}>
                   Write Prescription — {rxModalPatient.name}
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Doctor: {selectedDoctor.name} ({selectedDoctor.department})
                 </span>
               </div>
               <button
                 onClick={() => setRxModalPatient(null)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -1226,7 +1226,7 @@ export default function DoctorPortal({
 
             <form onSubmit={handleAddPrescription}>
               <div style={{ marginBottom: 16 }}>
-                <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                   Medicine Name &amp; Strength *
                 </label>
                 <input
@@ -1237,8 +1237,8 @@ export default function DoctorPortal({
                   onChange={(e) => setNewRx({ ...newRx, medicineName: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "10px 14px",
                     borderRadius: "8px",
                     color: "#ffffff",
@@ -1250,7 +1250,7 @@ export default function DoctorPortal({
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                     Form / Type
                   </label>
                   <select
@@ -1258,8 +1258,8 @@ export default function DoctorPortal({
                     onChange={(e) => setNewRx({ ...newRx, type: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "10px 14px",
                       borderRadius: "8px",
                       color: "#ffffff",
@@ -1276,7 +1276,7 @@ export default function DoctorPortal({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                     Dosage
                   </label>
                   <input
@@ -1286,8 +1286,8 @@ export default function DoctorPortal({
                     onChange={(e) => setNewRx({ ...newRx, dosage: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "10px 14px",
                       borderRadius: "8px",
                       color: "#ffffff",
@@ -1299,7 +1299,7 @@ export default function DoctorPortal({
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                     Frequency
                   </label>
                   <select
@@ -1307,8 +1307,8 @@ export default function DoctorPortal({
                     onChange={(e) => setNewRx({ ...newRx, frequency: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "10px 14px",
                       borderRadius: "8px",
                       color: "#ffffff",
@@ -1325,7 +1325,7 @@ export default function DoctorPortal({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                     Duration
                   </label>
                   <input
@@ -1335,8 +1335,8 @@ export default function DoctorPortal({
                     onChange={(e) => setNewRx({ ...newRx, duration: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "10px 14px",
                       borderRadius: "8px",
                       color: "#ffffff",
@@ -1347,7 +1347,7 @@ export default function DoctorPortal({
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                   Doctor&apos;s Specific Instructions for Nurse / Patient
                 </label>
                 <textarea
@@ -1357,8 +1357,8 @@ export default function DoctorPortal({
                   onChange={(e) => setNewRx({ ...newRx, instructions: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "10px 14px",
                     borderRadius: "8px",
                     color: "#ffffff",
@@ -1372,8 +1372,8 @@ export default function DoctorPortal({
                   type="button"
                   onClick={() => setRxModalPatient(null)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "8px",
@@ -1388,7 +1388,7 @@ export default function DoctorPortal({
                   type="submit"
                   style={{
                     backgroundColor: "#0D9488",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 20px",
                     borderRadius: "8px",
@@ -1411,7 +1411,7 @@ export default function DoctorPortal({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -1421,8 +1421,8 @@ export default function DoctorPortal({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 720,
@@ -1438,7 +1438,7 @@ export default function DoctorPortal({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -1449,13 +1449,13 @@ export default function DoctorPortal({
                     Trace Suggested Medicines — {traceMedPatient.name}
                   </h3>
                 </div>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Bed: {traceMedPatient.roomNo} ({traceMedPatient.bedNo}) • Diagnosis: {traceMedPatient.diagnosis}
                 </span>
               </div>
               <button
                 onClick={() => setTraceMedPatient(null)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -1463,7 +1463,7 @@ export default function DoctorPortal({
 
             {/* List of all medicines */}
             {getPatientPrescriptions(traceMedPatient.id).length === 0 ? (
-              <p style={{ color: "#94A3B8", textAlign: "center", padding: "30px" }}>
+              <p style={{ color: "#64748b", textAlign: "center", padding: "30px" }}>
                 No medicines have been prescribed yet for this patient.
               </p>
             ) : (
@@ -1472,8 +1472,8 @@ export default function DoctorPortal({
                   <div
                     key={index}
                     style={{
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #1E293B",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #e2e8f0",
                       borderRadius: "10px",
                       padding: "16px",
                       display: "flex",
@@ -1485,7 +1485,7 @@ export default function DoctorPortal({
                   >
                     <div>
                       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                        <span style={{ fontWeight: 800, fontSize: "0.98rem", color: "#F8FAFC" }}>
+                        <span style={{ fontWeight: 800, fontSize: "0.98rem", color: "#0f172a" }}>
                           {med.name}
                         </span>
                         <span
@@ -1501,7 +1501,7 @@ export default function DoctorPortal({
                           {med.type} • {med.dosage}
                         </span>
                       </div>
-                      <div style={{ fontSize: "0.8rem", color: "#94A3B8", marginTop: 4 }}>
+                      <div style={{ fontSize: "0.8rem", color: "#64748b", marginTop: 4 }}>
                         Schedule: <strong style={{ color: "#ffffff" }}>{med.frequency}</strong> • Duration:{" "}
                         <strong style={{ color: "#ffffff" }}>{med.duration}</strong>
                       </div>
@@ -1542,7 +1542,7 @@ export default function DoctorPortal({
                         {med.status === "Administered" ? <CheckCircle2 size={14} /> : <Clock size={14} />}
                         <span>{med.status}</span>
                       </div>
-                      <span style={{ fontSize: "0.74rem", color: "#94A3B8", display: "block", marginTop: 2 }}>
+                      <span style={{ fontSize: "0.74rem", color: "#64748b", display: "block", marginTop: 2 }}>
                         {med.lastGivenBy || "Scheduled"} • {med.lastGivenAt}
                       </span>
                     </div>
@@ -1581,7 +1581,7 @@ export default function DoctorPortal({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -1591,8 +1591,8 @@ export default function DoctorPortal({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 540,
@@ -1606,7 +1606,7 @@ export default function DoctorPortal({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -1615,7 +1615,7 @@ export default function DoctorPortal({
               </h3>
               <button
                 onClick={() => setVitalsModalPatient(null)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -1624,7 +1624,7 @@ export default function DoctorPortal({
             <form onSubmit={handleSaveVitals}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 4 }}>
                     Blood Pressure (BP)
                   </label>
                   <input
@@ -1633,8 +1633,8 @@ export default function DoctorPortal({
                     onChange={(e) => setVitalsForm({ ...vitalsForm, bp: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -1642,7 +1642,7 @@ export default function DoctorPortal({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 4 }}>
                     Pulse Rate (bpm)
                   </label>
                   <input
@@ -1651,8 +1651,8 @@ export default function DoctorPortal({
                     onChange={(e) => setVitalsForm({ ...vitalsForm, pulse: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -1663,7 +1663,7 @@ export default function DoctorPortal({
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 4 }}>
                     Oxygen Saturation (SpO2)
                   </label>
                   <input
@@ -1672,8 +1672,8 @@ export default function DoctorPortal({
                     onChange={(e) => setVitalsForm({ ...vitalsForm, spo2: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -1681,7 +1681,7 @@ export default function DoctorPortal({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 4 }}>
                     Temperature (°F)
                   </label>
                   <input
@@ -1690,8 +1690,8 @@ export default function DoctorPortal({
                     onChange={(e) => setVitalsForm({ ...vitalsForm, temp: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -1701,7 +1701,7 @@ export default function DoctorPortal({
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 4 }}>
                   Doctor Visit / Round Note
                 </label>
                 <textarea
@@ -1711,8 +1711,8 @@ export default function DoctorPortal({
                   onChange={(e) => setVitalsForm({ ...vitalsForm, nurseNotes: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -1725,8 +1725,8 @@ export default function DoctorPortal({
                   type="button"
                   onClick={() => setVitalsModalPatient(null)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "8px 16px",
                     borderRadius: "6px",
@@ -1761,7 +1761,7 @@ export default function DoctorPortal({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -1771,8 +1771,8 @@ export default function DoctorPortal({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 680,
@@ -1787,7 +1787,7 @@ export default function DoctorPortal({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -1795,20 +1795,20 @@ export default function DoctorPortal({
                 <h3 style={{ margin: 0, fontSize: "1.25rem", color: "#ffffff" }}>
                   Clinical File: {activePatientModal.name}
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   UHID: {activePatientModal.uhid} • Phone: {activePatientModal.mobile}
                 </span>
               </div>
               <button
                 onClick={() => setActivePatientModal(null)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 14, fontSize: "0.88rem" }}>
-              <div style={{ backgroundColor: "#0F172A", padding: "14px", borderRadius: "8px" }}>
+              <div style={{ backgroundColor: "#ffffff", padding: "14px", borderRadius: "8px" }}>
                 <strong style={{ color: "#38BDF8", display: "block", marginBottom: 4 }}>
                   Inpatient Location &amp; Duty Team:
                 </strong>
@@ -1823,24 +1823,24 @@ export default function DoctorPortal({
                 </div>
               </div>
 
-              <div style={{ backgroundColor: "#0F172A", padding: "14px", borderRadius: "8px" }}>
+              <div style={{ backgroundColor: "#ffffff", padding: "14px", borderRadius: "8px" }}>
                 <strong style={{ color: "#FCD34D", display: "block", marginBottom: 4 }}>
                   Diagnosis &amp; Clinical Symptoms:
                 </strong>
                 <div>{activePatientModal.diagnosis}</div>
                 {activePatientModal.symptoms && (
-                  <p style={{ margin: "6px 0 0", color: "#94A3B8", fontSize: "0.84rem" }}>
+                  <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: "0.84rem" }}>
                     {activePatientModal.symptoms}
                   </p>
                 )}
               </div>
 
               {activePatientModal.nurseNotes && (
-                <div style={{ backgroundColor: "#0F172A", padding: "14px", borderRadius: "8px" }}>
+                <div style={{ backgroundColor: "#ffffff", padding: "14px", borderRadius: "8px" }}>
                   <strong style={{ color: "#34D399", display: "block", marginBottom: 4 }}>
                     Nurse Rounds &amp; Care Notes:
                   </strong>
-                  <p style={{ margin: 0, color: "#CBD5E1" }}>{activePatientModal.nurseNotes}</p>
+                  <p style={{ margin: 0, color: "#475569" }}>{activePatientModal.nurseNotes}</p>
                 </div>
               )}
             </div>

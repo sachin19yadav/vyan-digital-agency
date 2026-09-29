@@ -173,7 +173,7 @@ export default function GoogleSheetSyncModal({
       style={{
         position: "fixed",
         inset: 0,
-        backgroundColor: "rgba(0,0,0,0.85)",
+        backgroundColor: "rgba(15, 23, 42, 0.65)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -183,8 +183,8 @@ export default function GoogleSheetSyncModal({
     >
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           padding: "30px",
           maxWidth: 640,
@@ -199,7 +199,7 @@ export default function GoogleSheetSyncModal({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderBottom: "1px solid #1E293B",
+            borderBottom: "1px solid #e2e8f0",
             paddingBottom: 16,
             marginBottom: 20,
           }}
@@ -210,14 +210,14 @@ export default function GoogleSheetSyncModal({
               <h3 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 800, color: "#ffffff" }}>
                 Google Sheet Database Sync
               </h3>
-              <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+              <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                 Bidirectional synchronization between web app and Google Sheets
               </span>
             </div>
           </div>
           <button
             onClick={onClose}
-            style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+            style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
           >
             <X size={20} />
           </button>
@@ -246,7 +246,7 @@ export default function GoogleSheetSyncModal({
 
         {/* Web App URL input */}
         <div style={{ marginBottom: 20 }}>
-          <label style={{ display: "block", fontSize: "0.84rem", color: "#CBD5E1", fontWeight: 600, marginBottom: 6 }}>
+          <label style={{ display: "block", fontSize: "0.84rem", color: "#475569", fontWeight: 600, marginBottom: 6 }}>
             Google Apps Script Web App URL:
           </label>
           <div style={{ display: "flex", gap: 8 }}>
@@ -257,8 +257,8 @@ export default function GoogleSheetSyncModal({
               onChange={(e) => setScriptUrl(e.target.value)}
               style={{
                 flex: 1,
-                backgroundColor: "#0F172A",
-                border: "1px solid #334155",
+                backgroundColor: "#ffffff",
+                border: "1px solid #cbd5e1",
                 padding: "10px 14px",
                 borderRadius: "8px",
                 color: "#ffffff",
@@ -269,9 +269,9 @@ export default function GoogleSheetSyncModal({
             <button
               onClick={handleSaveUrl}
               style={{
-                backgroundColor: "#1E293B",
+                backgroundColor: "#ffffff",
                 color: "#38BDF8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "8px 14px",
                 borderRadius: "8px",
                 fontSize: "0.82rem",
@@ -282,7 +282,7 @@ export default function GoogleSheetSyncModal({
               Save URL
             </button>
           </div>
-          <span style={{ fontSize: "0.75rem", color: "#94A3B8", marginTop: 4, display: "block" }}>
+          <span style={{ fontSize: "0.75rem", color: "#64748b", marginTop: 4, display: "block" }}>
             See <strong>SETUP-HOSPITAL-SHEET.md</strong> in project root for the 3-minute Google Apps Script setup.
           </span>
         </div>
@@ -301,7 +301,7 @@ export default function GoogleSheetSyncModal({
             disabled={loading}
             style={{
               backgroundColor: "#0D9488",
-              color: "#ffffff",
+              color: "#0f172a",
               border: "none",
               padding: "12px 18px",
               borderRadius: "8px",
@@ -324,7 +324,7 @@ export default function GoogleSheetSyncModal({
             disabled={loading}
             style={{
               backgroundColor: "#0284C7",
-              color: "#ffffff",
+              color: "#0f172a",
               border: "none",
               padding: "12px 18px",
               borderRadius: "8px",
@@ -346,10 +346,10 @@ export default function GoogleSheetSyncModal({
         {/* Backup & Reset utilities */}
         <div
           style={{
-            backgroundColor: "#0F172A",
+            backgroundColor: "#ffffff",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #1E293B",
+            border: "1px solid #e2e8f0",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -361,8 +361,8 @@ export default function GoogleSheetSyncModal({
             onClick={handleExportBackup}
             style={{
               background: "none",
-              border: "1px solid #334155",
-              color: "#CBD5E1",
+              border: "1px solid #cbd5e1",
+              color: "#475569",
               padding: "6px 12px",
               borderRadius: "6px",
               fontSize: "0.8rem",

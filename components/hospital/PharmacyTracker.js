@@ -102,20 +102,20 @@ export default function PharmacyTracker({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Prescription &amp; Patient Medicine Administration Tracker
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Track every medicine suggested by doctors, doses given by nurses, and pharmacy dispensing records.
           </p>
         </div>
 
         <div
           style={{
-            backgroundColor: "#111C44",
+            backgroundColor: "#ffffff",
             padding: "8px 16px",
             borderRadius: "8px",
-            border: "1px solid #1E293B",
+            border: "1px solid #e2e8f0",
             fontSize: "0.85rem",
             color: "#34D399",
             fontWeight: 700,
@@ -128,8 +128,8 @@ export default function PharmacyTracker({
       {/* Filter and Search */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "12px",
           padding: "14px 20px",
           marginBottom: 20,
@@ -145,15 +145,15 @@ export default function PharmacyTracker({
             display: "flex",
             alignItems: "center",
             gap: 10,
-            backgroundColor: "#0F172A",
-            border: "1px solid #334155",
+            backgroundColor: "#ffffff",
+            border: "1px solid #cbd5e1",
             borderRadius: "8px",
             padding: "8px 14px",
             flex: "1 1 300px",
             maxWidth: 420,
           }}
         >
-          <Search size={16} style={{ color: "#94A3B8" }} />
+          <Search size={16} style={{ color: "#64748b" }} />
           <input
             type="text"
             placeholder="Search medicine, patient name, doctor, or dosage..."
@@ -178,7 +178,7 @@ export default function PharmacyTracker({
               style={{
                 backgroundColor: statusFilter === st ? "#0D9488" : "#1E293B",
                 color: statusFilter === st ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "6px 14px",
                 borderRadius: "6px",
                 fontSize: "0.82rem",
@@ -195,15 +195,15 @@ export default function PharmacyTracker({
       {/* Medicines Table */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           overflowX: "auto",
         }}
       >
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.86rem" }}>
           <thead>
-            <tr style={{ backgroundColor: "#0F172A", borderBottom: "1px solid #1E293B", color: "#94A3B8" }}>
+            <tr style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #e2e8f0", color: "#64748b" }}>
               <th style={{ padding: "14px 18px" }}>Medicine Name &amp; Strength</th>
               <th style={{ padding: "14px 18px" }}>Patient &amp; Inpatient Bed</th>
               <th style={{ padding: "14px 18px" }}>Prescribing Doctor</th>
@@ -217,7 +217,7 @@ export default function PharmacyTracker({
               <tr
                 key={`${item.rxId}-${item.id || idx}`}
                 style={{
-                  borderBottom: "1px solid #1E293B",
+                  borderBottom: "1px solid #e2e8f0",
                 }}
               >
                 {/* Medicine details */}
@@ -228,7 +228,7 @@ export default function PharmacyTracker({
                       {item.name}
                     </span>
                   </div>
-                  <div style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 2 }}>
+                  <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 2 }}>
                     Type: {item.type} • Dosage: {item.dosage} • Duration: {item.duration}
                   </div>
                   {item.instructions && (
@@ -240,7 +240,7 @@ export default function PharmacyTracker({
 
                 {/* Patient details */}
                 <td style={{ padding: "14px 18px" }}>
-                  <div style={{ fontWeight: 700, color: "#F8FAFC" }}>{item.patientName}</div>
+                  <div style={{ fontWeight: 700, color: "#0f172a" }}>{item.patientName}</div>
                   <div style={{ fontSize: "0.78rem", color: "#38BDF8", marginTop: 2 }}>
                     {item.patientRoom}
                   </div>
@@ -249,7 +249,7 @@ export default function PharmacyTracker({
                 {/* Prescribing doctor */}
                 <td style={{ padding: "14px 18px" }}>
                   <div style={{ fontWeight: 600, color: "#ffffff" }}>{item.doctorName}</div>
-                  <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                  <div style={{ fontSize: "0.76rem", color: "#64748b" }}>
                     Diagnosis: {item.diagnosis}
                   </div>
                 </td>
@@ -258,12 +258,12 @@ export default function PharmacyTracker({
                 <td style={{ padding: "14px 18px" }}>
                   <span
                     style={{
-                      backgroundColor: "#1E293B",
+                      backgroundColor: "#ffffff",
                       padding: "4px 8px",
                       borderRadius: "6px",
-                      color: "#F8FAFC",
+                      color: "#0f172a",
                       fontWeight: 600,
-                      border: "1px solid #334155",
+                      border: "1px solid #cbd5e1",
                       fontSize: "0.82rem",
                     }}
                   >
@@ -297,7 +297,7 @@ export default function PharmacyTracker({
                     {item.status === "Administered" ? <CheckCircle2 size={13} /> : <Clock size={13} />}
                     <span>{item.status}</span>
                   </div>
-                  <span style={{ display: "block", fontSize: "0.74rem", color: "#94A3B8", marginTop: 3 }}>
+                  <span style={{ display: "block", fontSize: "0.74rem", color: "#64748b", marginTop: 3 }}>
                     {item.lastGivenBy} ({item.lastGivenAt})
                   </span>
                 </td>
@@ -309,7 +309,7 @@ export default function PharmacyTracker({
                       onClick={() => handleMarkAdministered(item.rxId, item.id)}
                       style={{
                         backgroundColor: "#10B981",
-                        color: "#ffffff",
+                        color: "#0f172a",
                         border: "none",
                         padding: "6px 12px",
                         borderRadius: "6px",

@@ -84,10 +84,10 @@ export default function DutyRoster({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Floor-Wise, Room-Wise &amp; Shift Duty Allocation Matrix
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Doctors and nurses divided by roles, shift timings, floor rounds, and assigned inpatient care.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function DutyRoster({
             alignItems: "center",
             gap: 8,
             backgroundColor: "#0284C7",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "10px 18px",
             borderRadius: "8px",
@@ -124,7 +124,7 @@ export default function DutyRoster({
           flexWrap: "wrap",
         }}
       >
-        <span style={{ fontSize: "0.85rem", color: "#94A3B8", fontWeight: 600 }}>Shift View:</span>
+        <span style={{ fontSize: "0.85rem", color: "#64748b", fontWeight: 600 }}>Shift View:</span>
         {["ALL", "Morning", "Evening", "Night"].map((shift) => (
           <button
             key={shift}
@@ -163,8 +163,8 @@ export default function DutyRoster({
             <div
               key={roster.id}
               style={{
-                backgroundColor: "#111C44",
-                border: "1px solid #1E293B",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: "14px",
                 padding: "22px",
                 display: "flex",
@@ -178,7 +178,7 @@ export default function DutyRoster({
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "flex-start",
-                  borderBottom: "1px solid #1E293B",
+                  borderBottom: "1px solid #e2e8f0",
                   paddingBottom: 14,
                 }}
               >
@@ -189,8 +189,8 @@ export default function DutyRoster({
                       {roster.floor}
                     </h3>
                   </div>
-                  <span style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 2, display: "block" }}>
-                    Covering: <strong style={{ color: "#F8FAFC" }}>{roster.roomsCovered}</strong>
+                  <span style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 2, display: "block" }}>
+                    Covering: <strong style={{ color: "#0f172a" }}>{roster.roomsCovered}</strong>
                   </span>
                 </div>
 
@@ -214,10 +214,10 @@ export default function DutyRoster({
                 {/* Doctor Incharge */}
                 <div
                   style={{
-                    backgroundColor: "#0F172A",
+                    backgroundColor: "#ffffff",
                     padding: "10px 14px",
                     borderRadius: "8px",
-                    border: "1px solid #1E293B",
+                    border: "1px solid #e2e8f0",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#38BDF8", fontSize: "0.78rem", fontWeight: 700 }}>
@@ -227,7 +227,7 @@ export default function DutyRoster({
                   <div style={{ fontWeight: 700, color: "#ffffff", marginTop: 2 }}>
                     {roster.doctorIncharge}
                   </div>
-                  <span style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                  <span style={{ fontSize: "0.76rem", color: "#64748b" }}>
                     On-Call Backup: {roster.doctorOnCall}
                   </span>
                 </div>
@@ -235,10 +235,10 @@ export default function DutyRoster({
                 {/* Lead Nurse */}
                 <div
                   style={{
-                    backgroundColor: "#0F172A",
+                    backgroundColor: "#ffffff",
                     padding: "10px 14px",
                     borderRadius: "8px",
-                    border: "1px solid #1E293B",
+                    border: "1px solid #e2e8f0",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#34D399", fontSize: "0.78rem", fontWeight: 700 }}>
@@ -248,7 +248,7 @@ export default function DutyRoster({
                   <div style={{ fontWeight: 700, color: "#ffffff", marginTop: 2 }}>
                     {roster.leadNurse}
                   </div>
-                  <span style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                  <span style={{ fontSize: "0.76rem", color: "#64748b" }}>
                     Assigned Ward Care, Vitals &amp; Meds Administration
                   </span>
                 </div>
@@ -263,7 +263,7 @@ export default function DutyRoster({
                     padding: "10px 12px",
                     borderRadius: "6px",
                     fontSize: "0.8rem",
-                    color: "#CBD5E1",
+                    color: "#475569",
                   }}
                 >
                   <strong style={{ color: "#38BDF8" }}>Shift Handover Note:</strong> {roster.notes}
@@ -272,7 +272,7 @@ export default function DutyRoster({
 
               {/* Currently Admitted Patients in This Ward */}
               <div>
-                <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#94A3B8", display: "block", marginBottom: 6 }}>
+                <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#64748b", display: "block", marginBottom: 6 }}>
                   Patients Under Care in this Zone ({floorPatients.length}):
                 </span>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -280,12 +280,12 @@ export default function DutyRoster({
                     <span
                       key={p.id}
                       style={{
-                        backgroundColor: "#1E293B",
-                        color: "#F8FAFC",
+                        backgroundColor: "#ffffff",
+                        color: "#0f172a",
                         padding: "3px 8px",
                         borderRadius: "4px",
                         fontSize: "0.74rem",
-                        border: "1px solid #334155",
+                        border: "1px solid #cbd5e1",
                       }}
                     >
                       {p.name} ({p.bedNo})
@@ -309,7 +309,7 @@ export default function DutyRoster({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -319,8 +319,8 @@ export default function DutyRoster({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 600,
@@ -335,7 +335,7 @@ export default function DutyRoster({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -343,13 +343,13 @@ export default function DutyRoster({
                 <h3 style={{ margin: 0, fontSize: "1.2rem", fontWeight: 800, color: "#ffffff" }}>
                   Assign Floor, Room &amp; Shift Duty
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Allocate doctor and nurse to a specific ward
                 </span>
               </div>
               <button
                 onClick={() => setIsAssignModalOpen(false)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -358,7 +358,7 @@ export default function DutyRoster({
             <form onSubmit={handleAssignSubmit}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Select Floor / Ward *
                   </label>
                   <select
@@ -366,8 +366,8 @@ export default function DutyRoster({
                     onChange={(e) => setRosterForm({ ...rosterForm, floor: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -381,7 +381,7 @@ export default function DutyRoster({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Shift Timing *
                   </label>
                   <select
@@ -389,8 +389,8 @@ export default function DutyRoster({
                     onChange={(e) => setRosterForm({ ...rosterForm, shift: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -405,7 +405,7 @@ export default function DutyRoster({
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Attending Doctor In-Charge *
                   </label>
                   <select
@@ -413,8 +413,8 @@ export default function DutyRoster({
                     onChange={(e) => setRosterForm({ ...rosterForm, doctorId: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -429,7 +429,7 @@ export default function DutyRoster({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Attending Duty Nurse *
                   </label>
                   <select
@@ -437,8 +437,8 @@ export default function DutyRoster({
                     onChange={(e) => setRosterForm({ ...rosterForm, nurseId: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -454,7 +454,7 @@ export default function DutyRoster({
               </div>
 
               <div style={{ marginBottom: 14 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Rooms / Beds Covered
                 </label>
                 <input
@@ -464,8 +464,8 @@ export default function DutyRoster({
                   onChange={(e) => setRosterForm({ ...rosterForm, roomsCovered: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -474,7 +474,7 @@ export default function DutyRoster({
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Handover Notes / Specific Instructions
                 </label>
                 <textarea
@@ -484,8 +484,8 @@ export default function DutyRoster({
                   onChange={(e) => setRosterForm({ ...rosterForm, notes: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -498,8 +498,8 @@ export default function DutyRoster({
                   type="button"
                   onClick={() => setIsAssignModalOpen(false)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "6px",
@@ -512,7 +512,7 @@ export default function DutyRoster({
                   type="submit"
                   style={{
                     backgroundColor: "#0284C7",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 22px",
                     borderRadius: "6px",

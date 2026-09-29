@@ -184,10 +184,10 @@ export default function PatientManager({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Hospital Inpatient (IPD) &amp; Outpatient (OPD) Directory
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Total Registered Patients: <strong>{patients.length}</strong> • Currently Admitted:{" "}
             <strong style={{ color: "#34D399" }}>
               {patients.filter((p) => p.status === "Admitted").length}
@@ -202,7 +202,7 @@ export default function PatientManager({
             alignItems: "center",
             gap: 8,
             backgroundColor: "#0284C7",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "10px 20px",
             borderRadius: "8px",
@@ -220,8 +220,8 @@ export default function PatientManager({
       {/* Filter and Search Bar */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "12px",
           padding: "14px 20px",
           marginBottom: 20,
@@ -238,15 +238,15 @@ export default function PatientManager({
             display: "flex",
             alignItems: "center",
             gap: 10,
-            backgroundColor: "#0F172A",
-            border: "1px solid #334155",
+            backgroundColor: "#ffffff",
+            border: "1px solid #cbd5e1",
             borderRadius: "8px",
             padding: "8px 14px",
             flex: "1 1 300px",
             maxWidth: 420,
           }}
         >
-          <Search size={16} style={{ color: "#94A3B8" }} />
+          <Search size={16} style={{ color: "#64748b" }} />
           <input
             type="text"
             placeholder="Search by Patient Name, UHID, Mobile, Doctor, or Room..."
@@ -272,7 +272,7 @@ export default function PatientManager({
               style={{
                 backgroundColor: statusFilter === status ? "#0284C7" : "#1E293B",
                 color: statusFilter === status ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "6px 14px",
                 borderRadius: "6px",
                 fontSize: "0.82rem",
@@ -289,15 +289,15 @@ export default function PatientManager({
       {/* Patient Table */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           overflowX: "auto",
         }}
       >
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.86rem" }}>
           <thead>
-            <tr style={{ backgroundColor: "#0F172A", borderBottom: "1px solid #1E293B", color: "#94A3B8" }}>
+            <tr style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #e2e8f0", color: "#64748b" }}>
               <th style={{ padding: "14px 18px" }}>Patient &amp; UHID</th>
               <th style={{ padding: "14px 18px" }}>Status / Type</th>
               <th style={{ padding: "14px 18px" }}>Ward / Bed Location</th>
@@ -312,7 +312,7 @@ export default function PatientManager({
               <tr
                 key={patient.id}
                 style={{
-                  borderBottom: "1px solid #1E293B",
+                  borderBottom: "1px solid #e2e8f0",
                   transition: "background-color 0.15s ease",
                 }}
               >
@@ -320,7 +320,7 @@ export default function PatientManager({
                   <div style={{ fontWeight: 700, color: "#ffffff", fontSize: "0.94rem" }}>
                     {patient.name}
                   </div>
-                  <div style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 2 }}>
+                  <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 2 }}>
                     {patient.uhid} • {patient.age}y/{patient.gender} • 📞 {patient.mobile}
                   </div>
                 </td>
@@ -361,7 +361,7 @@ export default function PatientManager({
                       <div style={{ fontWeight: 600, color: "#38BDF8" }}>
                         {patient.floor} • {patient.roomNo}
                       </div>
-                      <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                      <div style={{ fontSize: "0.76rem", color: "#64748b" }}>
                         Bed: <strong>{patient.bedNo}</strong>
                       </div>
                     </div>
@@ -371,8 +371,8 @@ export default function PatientManager({
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
-                  <div style={{ fontWeight: 600, color: "#F8FAFC" }}>{patient.primaryDoctorName}</div>
-                  <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>{patient.doctorDepartment}</div>
+                  <div style={{ fontWeight: 600, color: "#0f172a" }}>{patient.primaryDoctorName}</div>
+                  <div style={{ fontSize: "0.76rem", color: "#64748b" }}>{patient.doctorDepartment}</div>
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
@@ -385,7 +385,7 @@ export default function PatientManager({
                       whiteSpace: "nowrap",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
-                      color: "#CBD5E1",
+                      color: "#475569",
                     }}
                   >
                     {patient.diagnosis}
@@ -397,9 +397,9 @@ export default function PatientManager({
                     <button
                       onClick={() => setSelectedPatient(patient)}
                       style={{
-                        backgroundColor: "#1E293B",
+                        backgroundColor: "#ffffff",
                         color: "#38BDF8",
-                        border: "1px solid #334155",
+                        border: "1px solid #cbd5e1",
                         padding: "5px 10px",
                         borderRadius: "6px",
                         fontSize: "0.78rem",
@@ -441,7 +441,7 @@ export default function PatientManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -451,8 +451,8 @@ export default function PatientManager({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 720,
@@ -467,7 +467,7 @@ export default function PatientManager({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -475,13 +475,13 @@ export default function PatientManager({
                 <h3 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 800, color: "#ffffff" }}>
                   New Patient Registration &amp; Hospital Admission
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Assign doctor, ward, room, and attending nurse
                 </span>
               </div>
               <button
                 onClick={() => setIsAdmitModalOpen(false)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -491,7 +491,7 @@ export default function PatientManager({
               {/* Patient Basic Info */}
               <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Patient Full Name *
                   </label>
                   <input
@@ -502,8 +502,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, name: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -511,7 +511,7 @@ export default function PatientManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Age (Years) *
                   </label>
                   <input
@@ -522,8 +522,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, age: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -531,7 +531,7 @@ export default function PatientManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Gender *
                   </label>
                   <select
@@ -539,8 +539,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, gender: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -555,7 +555,7 @@ export default function PatientManager({
 
               <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Mobile Number (WhatsApp) *
                   </label>
                   <input
@@ -567,8 +567,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, mobile: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -576,7 +576,7 @@ export default function PatientManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Blood Group
                   </label>
                   <select
@@ -584,8 +584,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, bloodGroup: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -597,7 +597,7 @@ export default function PatientManager({
                   </select>
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Admission Type
                   </label>
                   <select
@@ -605,8 +605,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, admissionType: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -625,10 +625,10 @@ export default function PatientManager({
               {!patientForm.admissionType.includes("OPD") && (
                 <div
                   style={{
-                    backgroundColor: "#0F172A",
+                    backgroundColor: "#ffffff",
                     padding: "16px",
                     borderRadius: "8px",
-                    border: "1px solid #334155",
+                    border: "1px solid #cbd5e1",
                     marginBottom: 14,
                   }}
                 >
@@ -637,13 +637,13 @@ export default function PatientManager({
                   </span>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12 }}>
                     <div>
-                      <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                      <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                         Floor
                       </label>
                       <select
                         value={patientForm.floor}
                         onChange={(e) => setPatientForm({ ...patientForm, floor: e.target.value })}
-                        style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
+                        style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
                       >
                         <option value="Ground Floor">Ground Floor (Emergency)</option>
                         <option value="Floor 1">Floor 1 (General Ward)</option>
@@ -653,7 +653,7 @@ export default function PatientManager({
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                      <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                         Room / Ward No.
                       </label>
                       <input
@@ -661,12 +661,12 @@ export default function PatientManager({
                         placeholder="e.g. Room 204 or Ward 101"
                         value={patientForm.roomNo}
                         onChange={(e) => setPatientForm({ ...patientForm, roomNo: e.target.value })}
-                        style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
+                        style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
                       />
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                      <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                         Bed Number
                       </label>
                       <input
@@ -674,12 +674,12 @@ export default function PatientManager({
                         placeholder="e.g. Bed 204-A"
                         value={patientForm.bedNo}
                         onChange={(e) => setPatientForm({ ...patientForm, bedNo: e.target.value })}
-                        style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
+                        style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
                       />
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                      <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                         Bed Charge (₹/Day)
                       </label>
                       <input
@@ -687,7 +687,7 @@ export default function PatientManager({
                         placeholder="1200"
                         value={patientForm.roomChargePerDay}
                         onChange={(e) => setPatientForm({ ...patientForm, roomChargePerDay: e.target.value })}
-                        style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
+                        style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "8px", borderRadius: "6px", border: "1px solid #475569" }}
                       />
                     </div>
                   </div>
@@ -697,7 +697,7 @@ export default function PatientManager({
               {/* Staff Assignments: Doctor & Nurse */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Assign Primary Doctor *
                   </label>
                   <select
@@ -705,8 +705,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, primaryDoctorId: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -721,7 +721,7 @@ export default function PatientManager({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Assign Attending Nurse *
                   </label>
                   <select
@@ -729,8 +729,8 @@ export default function PatientManager({
                     onChange={(e) => setPatientForm({ ...patientForm, attendingNurseId: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -747,7 +747,7 @@ export default function PatientManager({
 
               {/* Diagnosis and Symptoms */}
               <div style={{ marginBottom: 14 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Initial Clinical Diagnosis *
                 </label>
                 <input
@@ -758,8 +758,8 @@ export default function PatientManager({
                   onChange={(e) => setPatientForm({ ...patientForm, diagnosis: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -768,7 +768,7 @@ export default function PatientManager({
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Presenting Symptoms &amp; History
                 </label>
                 <textarea
@@ -778,8 +778,8 @@ export default function PatientManager({
                   onChange={(e) => setPatientForm({ ...patientForm, symptoms: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -792,8 +792,8 @@ export default function PatientManager({
                   type="button"
                   onClick={() => setIsAdmitModalOpen(false)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "6px",
@@ -806,7 +806,7 @@ export default function PatientManager({
                   type="submit"
                   style={{
                     backgroundColor: "#0284C7",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 24px",
                     borderRadius: "6px",
@@ -828,7 +828,7 @@ export default function PatientManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -838,8 +838,8 @@ export default function PatientManager({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 700,
@@ -854,7 +854,7 @@ export default function PatientManager({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -862,42 +862,42 @@ export default function PatientManager({
                 <h3 style={{ margin: 0, fontSize: "1.3rem", fontWeight: 800, color: "#ffffff" }}>
                   {selectedPatient.name} ({selectedPatient.uhid})
                 </h3>
-                <span style={{ fontSize: "0.82rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.82rem", color: "#64748b" }}>
                   Status: <strong style={{ color: "#34D399" }}>{selectedPatient.status}</strong> • {selectedPatient.admissionType}
                 </span>
               </div>
               <button
                 onClick={() => setSelectedPatient(null)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 14, fontSize: "0.88rem" }}>
-              <div style={{ backgroundColor: "#0F172A", padding: "16px", borderRadius: "8px" }}>
+              <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                   <div>
-                    <span style={{ color: "#94A3B8", display: "block" }}>Age &amp; Gender:</span>
+                    <span style={{ color: "#64748b", display: "block" }}>Age &amp; Gender:</span>
                     <strong>{selectedPatient.age} yrs • {selectedPatient.gender}</strong>
                   </div>
                   <div>
-                    <span style={{ color: "#94A3B8", display: "block" }}>Blood Group:</span>
+                    <span style={{ color: "#64748b", display: "block" }}>Blood Group:</span>
                     <strong style={{ color: "#EF4444" }}>{selectedPatient.bloodGroup}</strong>
                   </div>
                   <div>
-                    <span style={{ color: "#94A3B8", display: "block" }}>Contact Phone:</span>
+                    <span style={{ color: "#64748b", display: "block" }}>Contact Phone:</span>
                     <strong>{selectedPatient.mobile}</strong>
                   </div>
                   <div>
-                    <span style={{ color: "#94A3B8", display: "block" }}>Emergency Contact:</span>
+                    <span style={{ color: "#64748b", display: "block" }}>Emergency Contact:</span>
                     <strong>{selectedPatient.emergencyContact}</strong>
                   </div>
                 </div>
               </div>
 
               {selectedPatient.status === "Admitted" && (
-                <div style={{ backgroundColor: "#0F172A", padding: "16px", borderRadius: "8px" }}>
+                <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px" }}>
                   <span style={{ color: "#38BDF8", fontWeight: 700, display: "block", marginBottom: 6 }}>
                     Inpatient Location:
                   </span>
@@ -914,18 +914,18 @@ export default function PatientManager({
                 </div>
               )}
 
-              <div style={{ backgroundColor: "#0F172A", padding: "16px", borderRadius: "8px" }}>
+              <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px" }}>
                 <span style={{ color: "#FCD34D", fontWeight: 700, display: "block", marginBottom: 4 }}>
                   Diagnosis &amp; Care History:
                 </span>
                 <div>{selectedPatient.diagnosis}</div>
                 {selectedPatient.symptoms && (
-                  <p style={{ margin: "6px 0 0", color: "#94A3B8", fontSize: "0.84rem" }}>
+                  <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: "0.84rem" }}>
                     {selectedPatient.symptoms}
                   </p>
                 )}
                 {selectedPatient.nurseNotes && (
-                  <div style={{ marginTop: 10, borderTop: "1px solid #1E293B", paddingTop: 8, fontSize: "0.82rem", color: "#CBD5E1" }}>
+                  <div style={{ marginTop: 10, borderTop: "1px solid #e2e8f0", paddingTop: 8, fontSize: "0.82rem", color: "#475569" }}>
                     <strong>Nurse / Ward Notes:</strong> {selectedPatient.nurseNotes}
                   </div>
                 )}

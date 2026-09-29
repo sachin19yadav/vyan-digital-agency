@@ -158,10 +158,10 @@ export default function OPDAppointmentManager({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             OPD Appointments &amp; Day-Wise Token Queue Management
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Receptionist appointment booking, doctor assignment, day/date tracking, and live chamber queue.
           </p>
         </div>
@@ -173,7 +173,7 @@ export default function OPDAppointmentManager({
             alignItems: "center",
             gap: 8,
             backgroundColor: "#0D9488",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "10px 20px",
             borderRadius: "8px",
@@ -191,8 +191,8 @@ export default function OPDAppointmentManager({
       {/* Date & Day Filter Tabs Bar */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           padding: "18px 22px",
           marginBottom: 20,
@@ -205,7 +205,7 @@ export default function OPDAppointmentManager({
       >
         {/* Quick Date Pills */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-          <span style={{ fontSize: "0.84rem", color: "#94A3B8", fontWeight: 700 }}>
+          <span style={{ fontSize: "0.84rem", color: "#64748b", fontWeight: 700 }}>
             Select Day / Date:
           </span>
           <button
@@ -213,7 +213,7 @@ export default function OPDAppointmentManager({
             style={{
               backgroundColor: selectedDate === "2026-09-29" ? "#0284C7" : "#0F172A",
               color: selectedDate === "2026-09-29" ? "#ffffff" : "#94A3B8",
-              border: "1px solid #334155",
+              border: "1px solid #cbd5e1",
               padding: "7px 14px",
               borderRadius: "8px",
               fontSize: "0.84rem",
@@ -229,7 +229,7 @@ export default function OPDAppointmentManager({
             style={{
               backgroundColor: selectedDate === "2026-09-30" ? "#0284C7" : "#0F172A",
               color: selectedDate === "2026-09-30" ? "#ffffff" : "#94A3B8",
-              border: "1px solid #334155",
+              border: "1px solid #cbd5e1",
               padding: "7px 14px",
               borderRadius: "8px",
               fontSize: "0.84rem",
@@ -245,7 +245,7 @@ export default function OPDAppointmentManager({
             style={{
               backgroundColor: selectedDate === "ALL" ? "#0284C7" : "#0F172A",
               color: selectedDate === "ALL" ? "#ffffff" : "#94A3B8",
-              border: "1px solid #334155",
+              border: "1px solid #cbd5e1",
               padding: "7px 14px",
               borderRadius: "8px",
               fontSize: "0.84rem",
@@ -264,9 +264,9 @@ export default function OPDAppointmentManager({
               value={selectedDate === "ALL" ? todayStr : selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
               style={{
-                backgroundColor: "#0F172A",
+                backgroundColor: "#ffffff",
                 color: "#ffffff",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "6px 10px",
                 borderRadius: "6px",
                 fontSize: "0.82rem",
@@ -321,8 +321,8 @@ export default function OPDAppointmentManager({
       {/* Filter and Search Bar */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "12px",
           padding: "14px 20px",
           marginBottom: 20,
@@ -338,15 +338,15 @@ export default function OPDAppointmentManager({
             display: "flex",
             alignItems: "center",
             gap: 10,
-            backgroundColor: "#0F172A",
-            border: "1px solid #334155",
+            backgroundColor: "#ffffff",
+            border: "1px solid #cbd5e1",
             borderRadius: "8px",
             padding: "8px 14px",
             flex: "1 1 300px",
             maxWidth: 400,
           }}
         >
-          <Search size={16} style={{ color: "#94A3B8" }} />
+          <Search size={16} style={{ color: "#64748b" }} />
           <input
             type="text"
             placeholder="Search patient, mobile, doctor, complaint..."
@@ -369,9 +369,9 @@ export default function OPDAppointmentManager({
             value={doctorFilter}
             onChange={(e) => setDoctorFilter(e.target.value)}
             style={{
-              backgroundColor: "#0F172A",
+              backgroundColor: "#ffffff",
               color: "#ffffff",
-              border: "1px solid #334155",
+              border: "1px solid #cbd5e1",
               padding: "7px 12px",
               borderRadius: "6px",
               fontSize: "0.82rem",
@@ -390,9 +390,9 @@ export default function OPDAppointmentManager({
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
             style={{
-              backgroundColor: "#0F172A",
+              backgroundColor: "#ffffff",
               color: "#ffffff",
-              border: "1px solid #334155",
+              border: "1px solid #cbd5e1",
               padding: "7px 12px",
               borderRadius: "6px",
               fontSize: "0.82rem",
@@ -411,15 +411,15 @@ export default function OPDAppointmentManager({
       {/* OPD Appointments Table */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           overflowX: "auto",
         }}
       >
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.86rem" }}>
           <thead>
-            <tr style={{ backgroundColor: "#0F172A", borderBottom: "1px solid #1E293B", color: "#94A3B8" }}>
+            <tr style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #e2e8f0", color: "#64748b" }}>
               <th style={{ padding: "14px 18px", textAlign: "center" }}>Token #</th>
               <th style={{ padding: "14px 18px" }}>Patient Details</th>
               <th style={{ padding: "14px 18px" }}>Assigned Doctor</th>
@@ -432,7 +432,7 @@ export default function OPDAppointmentManager({
           <tbody>
             {filteredAppointments.length === 0 ? (
               <tr>
-                <td colSpan={7} style={{ padding: "36px", textAlign: "center", color: "#94A3B8" }}>
+                <td colSpan={7} style={{ padding: "36px", textAlign: "center", color: "#64748b" }}>
                   No OPD appointments found for this selection. Click <strong>+ Book OPD Appointment</strong> above.
                 </td>
               </tr>
@@ -441,7 +441,7 @@ export default function OPDAppointmentManager({
                 <tr
                   key={apt.id}
                   style={{
-                    borderBottom: "1px solid #1E293B",
+                    borderBottom: "1px solid #e2e8f0",
                   }}
                 >
                   {/* Token Number */}
@@ -487,7 +487,7 @@ export default function OPDAppointmentManager({
                     <div style={{ fontWeight: 800, color: "#ffffff", fontSize: "0.95rem" }}>
                       {apt.patientName}
                     </div>
-                    <div style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 2 }}>
+                    <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 2 }}>
                       {apt.age}y • {apt.gender} • 📞 {apt.mobile}
                     </div>
                     <div style={{ fontSize: "0.75rem", color: "#64748B" }}>
@@ -500,7 +500,7 @@ export default function OPDAppointmentManager({
                     <div style={{ fontWeight: 700, color: "#38BDF8" }}>
                       {apt.doctorName}
                     </div>
-                    <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>
+                    <div style={{ fontSize: "0.76rem", color: "#64748b" }}>
                       {apt.department}
                     </div>
                     <div style={{ fontSize: "0.72rem", color: "#34D399", marginTop: 2 }}>
@@ -510,7 +510,7 @@ export default function OPDAppointmentManager({
 
                   {/* Date & Time Slot */}
                   <td style={{ padding: "14px 18px" }}>
-                    <div style={{ fontWeight: 700, color: "#F8FAFC" }}>
+                    <div style={{ fontWeight: 700, color: "#0f172a" }}>
                       {apt.appointmentDate}
                     </div>
                     <div style={{ fontSize: "0.78rem", color: "#FCD34D" }}>
@@ -520,7 +520,7 @@ export default function OPDAppointmentManager({
 
                   {/* Complaint */}
                   <td style={{ padding: "14px 18px", maxWidth: 220 }}>
-                    <div style={{ color: "#CBD5E1", fontSize: "0.82rem" }}>
+                    <div style={{ color: "#475569", fontSize: "0.82rem" }}>
                       {apt.chiefComplaint}
                     </div>
                   </td>
@@ -566,7 +566,7 @@ export default function OPDAppointmentManager({
                           onClick={() => handleStatusChange(apt.id, "In Consultation")}
                           style={{
                             backgroundColor: "#0284C7",
-                            color: "#fff",
+                            color: "#ffffff",
                             border: "none",
                             padding: "4px 8px",
                             borderRadius: "4px",
@@ -584,7 +584,7 @@ export default function OPDAppointmentManager({
                           onClick={() => handleStatusChange(apt.id, "Completed")}
                           style={{
                             backgroundColor: "#10B981",
-                            color: "#fff",
+                            color: "#ffffff",
                             border: "none",
                             padding: "4px 8px",
                             borderRadius: "4px",
@@ -600,9 +600,9 @@ export default function OPDAppointmentManager({
                       <button
                         onClick={() => setPrintableToken(apt)}
                         style={{
-                          backgroundColor: "#1E293B",
-                          color: "#94A3B8",
-                          border: "1px solid #334155",
+                          backgroundColor: "#ffffff",
+                          color: "#64748b",
+                          border: "1px solid #cbd5e1",
                           padding: "4px 8px",
                           borderRadius: "4px",
                           fontSize: "0.75rem",
@@ -630,7 +630,7 @@ export default function OPDAppointmentManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -640,8 +640,8 @@ export default function OPDAppointmentManager({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 640,
@@ -656,7 +656,7 @@ export default function OPDAppointmentManager({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -664,13 +664,13 @@ export default function OPDAppointmentManager({
                 <h3 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 800, color: "#ffffff" }}>
                   Book OPD Appointment &amp; Assign Doctor
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Reception desk patient booking &amp; token queue generator
                 </span>
               </div>
               <button
                 onClick={() => setIsBookModalOpen(false)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -680,7 +680,7 @@ export default function OPDAppointmentManager({
               {/* Patient Basic Info */}
               <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Patient Full Name *
                   </label>
                   <input
@@ -691,8 +691,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, patientName: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -700,7 +700,7 @@ export default function OPDAppointmentManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Age (Years) *
                   </label>
                   <input
@@ -711,8 +711,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, age: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -720,7 +720,7 @@ export default function OPDAppointmentManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Gender *
                   </label>
                   <select
@@ -728,8 +728,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, gender: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -744,7 +744,7 @@ export default function OPDAppointmentManager({
 
               <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Mobile Number (WhatsApp) *
                   </label>
                   <input
@@ -757,8 +757,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, mobile: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -766,7 +766,7 @@ export default function OPDAppointmentManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     City / Address
                   </label>
                   <input
@@ -776,8 +776,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, city: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -789,7 +789,7 @@ export default function OPDAppointmentManager({
               {/* Date & Time Slot */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Appointment Date *
                   </label>
                   <input
@@ -799,8 +799,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, appointmentDate: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -809,7 +809,7 @@ export default function OPDAppointmentManager({
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Preferred Time Slot *
                   </label>
                   <select
@@ -817,8 +817,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, timeSlot: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -842,7 +842,7 @@ export default function OPDAppointmentManager({
 
               {/* Assign Doctor */}
               <div style={{ marginBottom: 14 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Assign Specialist Doctor *
                 </label>
                 <select
@@ -857,8 +857,8 @@ export default function OPDAppointmentManager({
                   }}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "10px 14px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -876,7 +876,7 @@ export default function OPDAppointmentManager({
 
               {/* Chief Problem / Symptoms */}
               <div style={{ marginBottom: 14 }}>
-                <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                   Chief Problem / Reason for Visit *
                 </label>
                 <input
@@ -887,8 +887,8 @@ export default function OPDAppointmentManager({
                   onChange={(e) => setBookingForm({ ...bookingForm, chiefComplaint: e.target.value })}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "8px 12px",
                     borderRadius: "6px",
                     color: "#ffffff",
@@ -899,7 +899,7 @@ export default function OPDAppointmentManager({
               {/* Fee and Payment */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 20 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     OPD Consultation Fee (₹)
                   </label>
                   <input
@@ -908,8 +908,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, consultationFee: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -917,7 +917,7 @@ export default function OPDAppointmentManager({
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Payment Status
                   </label>
                   <select
@@ -925,8 +925,8 @@ export default function OPDAppointmentManager({
                     onChange={(e) => setBookingForm({ ...bookingForm, paymentStatus: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -943,8 +943,8 @@ export default function OPDAppointmentManager({
                   type="button"
                   onClick={() => setIsBookModalOpen(false)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "6px",
@@ -957,7 +957,7 @@ export default function OPDAppointmentManager({
                   type="submit"
                   style={{
                     backgroundColor: "#0D9488",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 24px",
                     borderRadius: "6px",
@@ -979,7 +979,7 @@ export default function OPDAppointmentManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -1034,7 +1034,7 @@ export default function OPDAppointmentManager({
             <div
               style={{
                 textAlign: "left",
-                backgroundColor: "#F8FAFC",
+                backgroundColor: "#ffffff",
                 padding: "12px 16px",
                 borderRadius: "8px",
                 fontSize: "0.84rem",
@@ -1064,7 +1064,7 @@ export default function OPDAppointmentManager({
                 onClick={() => window.print()}
                 style={{
                   backgroundColor: "#0D9488",
-                  color: "#ffffff",
+                  color: "#0f172a",
                   border: "none",
                   padding: "8px 18px",
                   borderRadius: "6px",

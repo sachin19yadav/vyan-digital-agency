@@ -108,10 +108,10 @@ export default function StaffManager({ allStaff, setAllStaff }) {
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Hospital Medical &amp; Clinical Staff Directory
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Manage staff profiles, designations, qualifications, shifts, and departmental assignments.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
             alignItems: "center",
             gap: 8,
             backgroundColor: "#0284C7",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "10px 18px",
             borderRadius: "8px",
@@ -141,8 +141,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
       {/* Filter & Role Switcher */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "12px",
           padding: "14px 20px",
           marginBottom: 24,
@@ -159,15 +159,15 @@ export default function StaffManager({ allStaff, setAllStaff }) {
             display: "flex",
             alignItems: "center",
             gap: 10,
-            backgroundColor: "#0F172A",
-            border: "1px solid #334155",
+            backgroundColor: "#ffffff",
+            border: "1px solid #cbd5e1",
             borderRadius: "8px",
             padding: "8px 14px",
             flex: "1 1 300px",
             maxWidth: 400,
           }}
         >
-          <Search size={16} style={{ color: "#94A3B8" }} />
+          <Search size={16} style={{ color: "#64748b" }} />
           <input
             type="text"
             placeholder="Search by Doctor, Nurse, Designation, or ID..."
@@ -199,7 +199,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
               style={{
                 backgroundColor: roleFilter === tab.id ? "#0284C7" : "#1E293B",
                 color: roleFilter === tab.id ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "6px 14px",
                 borderRadius: "6px",
                 fontSize: "0.82rem",
@@ -229,7 +229,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
             <div
               key={staff.id}
               style={{
-                backgroundColor: "#111C44",
+                backgroundColor: "#ffffff",
                 border: `1px solid ${isDoc ? "rgba(13, 148, 136, 0.3)" : isNurse ? "rgba(2, 132, 199, 0.3)" : "#1E293B"}`,
                 borderRadius: "14px",
                 padding: "22px",
@@ -283,7 +283,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
               {/* Department, Qualification & Timing Info */}
               <div
                 style={{
-                  backgroundColor: "#0F172A",
+                  backgroundColor: "#ffffff",
                   padding: "12px 14px",
                   borderRadius: "8px",
                   fontSize: "0.84rem",
@@ -293,26 +293,26 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 }}
               >
                 <div>
-                  <span style={{ color: "#94A3B8" }}>Department: </span>
-                  <strong style={{ color: "#F8FAFC" }}>{staff.department}</strong>
+                  <span style={{ color: "#64748b" }}>Department: </span>
+                  <strong style={{ color: "#0f172a" }}>{staff.department}</strong>
                 </div>
                 <div>
-                  <span style={{ color: "#94A3B8" }}>Qualifications: </span>
-                  <strong style={{ color: "#CBD5E1" }}>{staff.qualification}</strong>
+                  <span style={{ color: "#64748b" }}>Qualifications: </span>
+                  <strong style={{ color: "#475569" }}>{staff.qualification}</strong>
                 </div>
                 <div>
-                  <span style={{ color: "#94A3B8" }}>Shift Timing: </span>
+                  <span style={{ color: "#64748b" }}>Shift Timing: </span>
                   <span style={{ color: "#FCD34D", fontWeight: 600 }}>{staff.shift}</span>
                 </div>
                 {staff.room && (
                   <div>
-                    <span style={{ color: "#94A3B8" }}>Location / Chamber: </span>
-                    <strong style={{ color: "#F8FAFC" }}>{staff.room}</strong>
+                    <span style={{ color: "#64748b" }}>Location / Chamber: </span>
+                    <strong style={{ color: "#0f172a" }}>{staff.room}</strong>
                   </div>
                 )}
                 {staff.assignedFloor && (
                   <div>
-                    <span style={{ color: "#94A3B8" }}>Assigned Floor: </span>
+                    <span style={{ color: "#64748b" }}>Assigned Floor: </span>
                     <strong style={{ color: "#34D399" }}>{staff.assignedFloor}</strong>
                   </div>
                 )}
@@ -325,8 +325,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                   justifyContent: "space-between",
                   alignItems: "center",
                   fontSize: "0.78rem",
-                  color: "#94A3B8",
-                  borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                  color: "#64748b",
+                  borderTop: "1px solid #e2e8f0",
                   paddingTop: 10,
                 }}
               >
@@ -350,7 +350,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.8)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -360,8 +360,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 640,
@@ -376,7 +376,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -384,13 +384,13 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 <h3 style={{ margin: 0, fontSize: "1.2rem", fontWeight: 800, color: "#ffffff" }}>
                   Register Staff Member &amp; Profile Setup
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Assign designation, department, qualification, and shift timing
                 </span>
               </div>
               <button
                 onClick={() => setIsRegisterModalOpen(false)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -399,7 +399,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
             <form onSubmit={handleRegisterStaff}>
               <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Staff Full Name *
                   </label>
                   <input
@@ -410,8 +410,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, name: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -420,7 +420,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Role / Category *
                   </label>
                   <select
@@ -428,8 +428,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, role: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -446,7 +446,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Designation *
                   </label>
                   <input
@@ -457,8 +457,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, designation: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -467,7 +467,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Department *
                   </label>
                   <input
@@ -478,8 +478,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, department: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -490,7 +490,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Qualifications
                   </label>
                   <input
@@ -500,8 +500,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, qualification: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -510,7 +510,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Mobile Number *
                   </label>
                   <input
@@ -521,8 +521,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, mobile: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -533,7 +533,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 20 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Shift Timing *
                   </label>
                   <select
@@ -541,8 +541,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, shift: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -556,7 +556,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                 </div>
 
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", color: "#94A3B8", marginBottom: 4 }}>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#64748b", marginBottom: 4 }}>
                     Chamber / Assigned Floor
                   </label>
                   <input
@@ -566,8 +566,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                     onChange={(e) => setStaffForm({ ...staffForm, room: e.target.value })}
                     style={{
                       width: "100%",
-                      backgroundColor: "#0F172A",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #cbd5e1",
                       padding: "8px 12px",
                       borderRadius: "6px",
                       color: "#ffffff",
@@ -581,8 +581,8 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                   type="button"
                   onClick={() => setIsRegisterModalOpen(false)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "6px",
@@ -595,7 +595,7 @@ export default function StaffManager({ allStaff, setAllStaff }) {
                   type="submit"
                   style={{
                     backgroundColor: "#0284C7",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 22px",
                     borderRadius: "6px",

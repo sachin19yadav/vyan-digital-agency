@@ -23,18 +23,19 @@ export default function HospitalFooter({ setActiveTab }) {
   return (
     <footer
       style={{
-        backgroundColor: "#070D1F",
-        color: "#94a3b8",
-        borderTop: "2px solid #0ea5e9",
+        backgroundColor: "#ffffff",
+        color: "#475569",
+        borderTop: "2px solid #0284c7",
         fontSize: "0.9rem",
         marginTop: "auto",
+        boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.03)",
       }}
     >
-      {/* Emergency Strip */}
+      {/* Emergency Strip - Light Theme */}
       <div
         style={{
-          backgroundColor: "#0f172a",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          backgroundColor: "#fef2f2",
+          borderBottom: "1px solid #fee2e2",
           padding: "16px 24px",
         }}
       >
@@ -55,22 +56,23 @@ export default function HospitalFooter({ setActiveTab }) {
                 width: "42px",
                 height: "42px",
                 borderRadius: "50%",
-                backgroundColor: "rgba(239, 68, 68, 0.15)",
+                backgroundColor: "#fee2e2",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#ef4444",
+                color: "#dc2626",
                 flexShrink: 0,
+                border: "1px solid #fca5a5",
               }}
             >
-              <AlertCircle size={22} className="pulse-dot" />
+              <AlertCircle size={22} className="pulse-dot" color="#dc2626" />
             </div>
             <div>
-              <div style={{ color: "#ffffff", fontWeight: 700, fontSize: "0.98rem" }}>
-                24x7 Medical Emergency & Critical Trauma Care
+              <div style={{ color: "#991b1b", fontWeight: 700, fontSize: "0.98rem" }}>
+                24x7 Medical Emergency &amp; Critical Trauma Care
               </div>
-              <div style={{ color: "#94a3b8", fontSize: "0.82rem" }}>
-                Immediate Cardiac Life Support (ACLS), Stroke Ready, ICU & Ambulance Response
+              <div style={{ color: "#b91c1c", fontSize: "0.82rem" }}>
+                Immediate Cardiac Life Support (ACLS), Stroke Ready, ICU &amp; Ambulance Response
               </div>
             </div>
           </div>
@@ -89,7 +91,7 @@ export default function HospitalFooter({ setActiveTab }) {
                 fontWeight: 600,
                 fontSize: "0.88rem",
                 textDecoration: "none",
-                boxShadow: "0 2px 10px rgba(220, 38, 38, 0.35)",
+                boxShadow: "0 2px 8px rgba(220, 38, 38, 0.25)",
               }}
             >
               <Phone size={16} />
@@ -101,17 +103,18 @@ export default function HospitalFooter({ setActiveTab }) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "6px",
-                backgroundColor: "rgba(255, 255, 255, 0.08)",
-                color: "#ffffff",
+                backgroundColor: "#ffffff",
+                color: "#0f172a",
                 padding: "8px 16px",
                 borderRadius: "8px",
                 fontSize: "0.86rem",
                 fontWeight: 600,
                 textDecoration: "none",
-                border: "1px solid rgba(255, 255, 255, 0.15)",
+                border: "1px solid #cbd5e1",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
               }}
             >
-              <Activity size={15} color="#10b981" />
+              <Activity size={15} color="#16a34a" />
               <span>Ambulance: 108</span>
             </a>
           </div>
@@ -141,7 +144,7 @@ export default function HospitalFooter({ setActiveTab }) {
                   width: "36px",
                   height: "36px",
                   borderRadius: "8px",
-                  background: "linear-gradient(135deg, #0ea5e9, #0284c7)",
+                  background: "linear-gradient(135deg, #0284c7, #0d9488)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -155,20 +158,20 @@ export default function HospitalFooter({ setActiveTab }) {
                   style={{
                     fontSize: "1.1rem",
                     fontWeight: 700,
-                    color: "#ffffff",
+                    color: "#0f172a",
                     margin: 0,
                     lineHeight: 1.2,
                   }}
                 >
                   {hospitalInfo.name}
                 </h3>
-                <span style={{ fontSize: "0.75rem", color: "#38bdf8", fontWeight: 500 }}>
-                  Hospital Management & Clinical System
+                <span style={{ fontSize: "0.75rem", color: "#0284c7", fontWeight: 600 }}>
+                  Hospital Management &amp; Clinical System
                 </span>
               </div>
             </div>
 
-            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#94a3b8", marginBottom: "16px" }}>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", marginBottom: "16px" }}>
               A state-of-the-art super-speciality medical center delivering compassionate, 
               evidence-based clinical care, equipped with advanced ICU, modular operation theatres, 
               and 24x7 emergency resuscitation units.
@@ -180,11 +183,12 @@ export default function HospitalFooter({ setActiveTab }) {
                 alignItems: "center",
                 gap: "8px",
                 padding: "6px 12px",
-                backgroundColor: "rgba(14, 165, 233, 0.1)",
-                border: "1px solid rgba(14, 165, 233, 0.25)",
+                backgroundColor: "#f0f9ff",
+                border: "1px solid #bae6fd",
                 borderRadius: "6px",
                 fontSize: "0.78rem",
-                color: "#38bdf8",
+                color: "#0369a1",
+                fontWeight: 600,
               }}
             >
               <ShieldCheck size={16} />
@@ -196,7 +200,7 @@ export default function HospitalFooter({ setActiveTab }) {
           <div>
             <h4
               style={{
-                color: "#ffffff",
+                color: "#0f172a",
                 fontSize: "0.95rem",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -207,27 +211,27 @@ export default function HospitalFooter({ setActiveTab }) {
                 gap: "8px",
               }}
             >
-              <Stethoscope size={16} color="#0ea5e9" />
-              Specialities & Units
+              <Stethoscope size={16} color="#0284c7" />
+              Specialities &amp; Units
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "0.85rem", lineHeight: 2 }}>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• Cardiology & Cath Lab</span>
+                <span style={{ color: "#334155" }}>• Cardiology &amp; Cath Lab</span>
               </li>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• Orthopedics & Joint Replacement</span>
+                <span style={{ color: "#334155" }}>• Orthopedics &amp; Joint Replacement</span>
               </li>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• General Medicine & Diabetology</span>
+                <span style={{ color: "#334155" }}>• General Medicine &amp; Diabetology</span>
               </li>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• Obstetrics, Gynecology & NICU</span>
+                <span style={{ color: "#334155" }}>• Obstetrics, Gynecology &amp; NICU</span>
               </li>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• 24x7 Trauma & Critical Care ICU</span>
+                <span style={{ color: "#334155" }}>• 24x7 Trauma &amp; Critical Care ICU</span>
               </li>
               <li>
-                <span style={{ color: "#cbd5e1" }}>• In-House Digital Pathology & Pharmacy</span>
+                <span style={{ color: "#334155" }}>• In-House Digital Pathology &amp; Pharmacy</span>
               </li>
             </ul>
           </div>
@@ -236,7 +240,7 @@ export default function HospitalFooter({ setActiveTab }) {
           <div>
             <h4
               style={{
-                color: "#ffffff",
+                color: "#0f172a",
                 fontSize: "0.95rem",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -247,7 +251,7 @@ export default function HospitalFooter({ setActiveTab }) {
                 gap: "8px",
               }}
             >
-              <Building size={16} color="#10b981" />
+              <Building size={16} color="#059669" />
               Hospital Workspaces
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "0.85rem" }}>
@@ -262,19 +266,19 @@ export default function HospitalFooter({ setActiveTab }) {
                   border: "none",
                   padding: 0,
                   textAlign: "left",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ArrowRight size={14} color="#0ea5e9" /> Doctor Chamber & Prescription Portal
+                <ArrowRight size={14} color="#0284c7" /> Doctor Chamber &amp; Prescription Portal
               </button>
               <button
                 type="button"
                 onClick={() => {
-                  if (setActiveTab) setActiveTab("opd");
+                  if (setActiveTab) setActiveTab("reception");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 style={{
@@ -282,19 +286,19 @@ export default function HospitalFooter({ setActiveTab }) {
                   border: "none",
                   padding: 0,
                   textAlign: "left",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ArrowRight size={14} color="#0ea5e9" /> OPD Appointments & Token Queue
+                <ArrowRight size={14} color="#0284c7" /> Reception Desk &amp; OPD Booking
               </button>
               <button
                 type="button"
                 onClick={() => {
-                  if (setActiveTab) setActiveTab("patients");
+                  if (setActiveTab) setActiveTab("nurse");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 style={{
@@ -302,19 +306,19 @@ export default function HospitalFooter({ setActiveTab }) {
                   border: "none",
                   padding: 0,
                   textAlign: "left",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ArrowRight size={14} color="#0ea5e9" /> Patient Admissions (IPD)
+                <ArrowRight size={14} color="#0284c7" /> Nurse Station &amp; Scheduled Meds
               </button>
               <button
                 type="button"
                 onClick={() => {
-                  if (setActiveTab) setActiveTab("duty");
+                  if (setActiveTab) setActiveTab("hr");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 style={{
@@ -322,14 +326,14 @@ export default function HospitalFooter({ setActiveTab }) {
                   border: "none",
                   padding: 0,
                   textAlign: "left",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ArrowRight size={14} color="#0ea5e9" /> Nurse & Doctor Floor Duty Roster
+                <ArrowRight size={14} color="#0284c7" /> HR Staff Attendance &amp; Shift Roster
               </button>
               <button
                 type="button"
@@ -342,14 +346,14 @@ export default function HospitalFooter({ setActiveTab }) {
                   border: "none",
                   padding: 0,
                   textAlign: "left",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
                 }}
               >
-                <ArrowRight size={14} color="#0ea5e9" /> Discharge Summary & Itemized Bills
+                <ArrowRight size={14} color="#0284c7" /> Discharge Summary &amp; Itemized Bills
               </button>
             </div>
           </div>
@@ -358,7 +362,7 @@ export default function HospitalFooter({ setActiveTab }) {
           <div>
             <h4
               style={{
-                color: "#ffffff",
+                color: "#0f172a",
                 fontSize: "0.95rem",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -369,31 +373,31 @@ export default function HospitalFooter({ setActiveTab }) {
                 gap: "8px",
               }}
             >
-              <MapPin size={16} color="#f59e0b" />
-              Location & Contact
+              <MapPin size={16} color="#d97706" />
+              Location &amp; Contact
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "0.85rem" }}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                <MapPin size={16} color="#94a3b8" style={{ marginTop: "3px", flexShrink: 0 }} />
+                <MapPin size={16} color="#64748b" style={{ marginTop: "3px", flexShrink: 0 }} />
                 <span>{hospitalInfo.address}</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <Phone size={15} color="#94a3b8" style={{ flexShrink: 0 }} />
-                <a href={`tel:${hospitalInfo.phone}`} style={{ color: "#38bdf8", textDecoration: "none" }}>
+                <Phone size={15} color="#64748b" style={{ flexShrink: 0 }} />
+                <a href={`tel:${hospitalInfo.phone}`} style={{ color: "#0284c7", textDecoration: "none", fontWeight: 600 }}>
                   {hospitalInfo.phone}
                 </a>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <Mail size={15} color="#94a3b8" style={{ flexShrink: 0 }} />
-                <a href={`mailto:${hospitalInfo.email}`} style={{ color: "#cbd5e1", textDecoration: "none" }}>
+                <Mail size={15} color="#64748b" style={{ flexShrink: 0 }} />
+                <a href={`mailto:${hospitalInfo.email}`} style={{ color: "#334155", textDecoration: "none" }}>
                   {hospitalInfo.email}
                 </a>
               </div>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                <Clock size={15} color="#94a3b8" style={{ marginTop: "3px", flexShrink: 0 }} />
+                <Clock size={15} color="#64748b" style={{ marginTop: "3px", flexShrink: 0 }} />
                 <span>
                   OPD: 09:00 AM – 08:00 PM <br />
-                  Emergency & ICU: Open 24x7
+                  Emergency &amp; ICU: Open 24x7
                 </span>
               </div>
             </div>
@@ -405,7 +409,7 @@ export default function HospitalFooter({ setActiveTab }) {
           style={{
             margin: "36px 0 24px",
             height: "1px",
-            backgroundColor: "rgba(255, 255, 255, 0.08)",
+            backgroundColor: "#e2e8f0",
           }}
         />
 
@@ -422,8 +426,8 @@ export default function HospitalFooter({ setActiveTab }) {
           }}
         >
           <div>
-            © {currentYear} {hospitalInfo.name}. All Clinical & Medical Records Reserved.
-            <span style={{ marginLeft: "10px", color: "#10b981" }}>• HIPAA & NABH Compliance Ready</span>
+            © {currentYear} {hospitalInfo.name}. All Clinical &amp; Medical Records Reserved.
+            <span style={{ marginLeft: "10px", color: "#16a34a", fontWeight: 600 }}>• HIPAA &amp; NABH Compliance Ready</span>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
@@ -433,9 +437,9 @@ export default function HospitalFooter({ setActiveTab }) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "5px",
-                color: "#38bdf8",
+                color: "#0284c7",
                 textDecoration: "none",
-                fontWeight: 500,
+                fontWeight: 600,
               }}
             >
               <span>Switch to Main Agency Website</span>

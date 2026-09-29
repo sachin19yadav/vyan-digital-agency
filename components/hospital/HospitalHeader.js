@@ -17,11 +17,17 @@ import {
   CreditCard,
   Building2,
   Pill,
+  Briefcase,
+  LogOut,
+  Home,
+  ShieldCheck,
 } from "lucide-react";
 
 export default function HospitalHeader({
   activeTab,
   setActiveTab,
+  currentRole = "Admin",
+  setCurrentRole,
   currentStaff,
   setCurrentStaff,
   allStaff,
@@ -31,28 +37,32 @@ export default function HospitalHeader({
   occupiedBeds,
   syncStatus,
   onOpenSync,
+  onOpenLoginModal,
 }) {
   const doctors = allStaff.filter((s) => s.role === "Doctor");
   const nurses = allStaff.filter((s) => s.role === "Nurse");
+  const receptionists = allStaff.filter((s) => s.role === "Receptionist");
+  const hrStaff = allStaff.filter((s) => s.role === "HR");
 
   const bedPercentage = Math.round((occupiedBeds / totalBeds) * 100) || 0;
 
   return (
     <header
       style={{
-        backgroundColor: "#0B132B",
-        borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-        color: "#ffffff",
+        backgroundColor: "#ffffff",
+        borderBottom: "1px solid #e2e8f0",
+        color: "#0f172a",
         position: "sticky",
         top: 0,
         zIndex: 50,
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
       }}
     >
-      {/* Top Utility & Emergency Bar */}
+      {/* Top Utility & Emergency Bar - Light Theme */}
       <div
         style={{
-          backgroundColor: "#070D1F",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+          backgroundColor: "#f8fafc",
+          borderBottom: "1px solid #e2e8f0",
           padding: "6px 20px",
           display: "flex",
           justifyContent: "space-between",
@@ -63,71 +73,89 @@ export default function HospitalHeader({
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#38BDF8" }}>
-            <Activity size={14} className="pulse-dot" />
+          <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#0284c7" }}>
+            <Activity size={14} className="pulse-dot" color="#0284c7" />
             <span style={{ fontWeight: 600 }}>24x7 Emergency &amp; Trauma Center Active</span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#94A3B8" }}>
-            <Phone size={13} style={{ color: "#EF4444" }} />
-            <span>Emergency: <strong style={{ color: "#ffffff" }}>+91 96548 80240</strong></span>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#64748b" }}>
+            <Phone size={13} style={{ color: "#dc2626" }} />
+            <span>Emergency Helpline: <strong style={{ color: "#dc2626" }}>+91 96548 80240</strong> / <strong>108 Ambulance</strong></span>
           </div>
         </div>
 
         {/* Live Census & Active Role Switcher */}
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           {/* Bed Occupancy Pill */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               gap: 8,
-              backgroundColor: "rgba(255, 255, 255, 0.05)",
+              backgroundColor: "#f0fdf4",
+              color: "#15803d",
               padding: "3px 10px",
               borderRadius: "20px",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-            }}
-          >
-            <Bed size={13} style={{ color: "#10B981" }} />
-            <span>
-              Beds: <strong style={{ color: "#10B981" }}>{occupiedBeds}/{totalBeds}</strong> ({bedPercentage}% Full)
-            </span>
-          </div>
-
-          {/* Google Sheet Sync Indicator */}
-          <button
-            onClick={onOpenSync}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              background: syncStatus?.synced ? "rgba(16, 185, 129, 0.15)" : "rgba(56, 189, 248, 0.12)",
-              color: syncStatus?.synced ? "#34D399" : "#38BDF8",
-              border: `1px solid ${syncStatus?.synced ? "rgba(16, 185, 129, 0.3)" : "rgba(56, 189, 248, 0.3)"}`,
-              padding: "4px 10px",
-              borderRadius: "6px",
-              fontSize: "0.78rem",
-              cursor: "pointer",
+              border: "1px solid #bbf7d0",
               fontWeight: 600,
             }}
           >
-            <Cloud size={13} />
-            <span>{syncStatus?.text || "Google Sheet Sync"}</span>
-          </button>
+            <Bed size={13} style={{ color: "#16a34a" }} />
+            <span>
+              Beds: <strong>{occupiedBeds}/{totalBeds}</strong> ({bedPercentage}% Occupied)
+            </span>
+          </div>
 
-          {/* Role / Staff Profile Switcher Dropdown */}
+          {/* Google Sheet Sync (Visible for Admin / HR) */}
+          {(currentRole === "Admin" || currentRole === "HR") && (
+            <button
+              onClick={onOpenSync}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+                background: syncStatus?.synced ? "#ecfdf5" : "#f0f9ff",
+                color: syncStatus?.synced ? "#059669" : "#0284c7",
+                border: `1px solid ${syncStatus?.synced ? "#a7f3d0" : "#bae6fd"}`,
+                padding: "4px 10px",
+                borderRadius: "6px",
+                fontSize: "0.78rem",
+                cursor: "pointer",
+                fontWeight: 600,
+              }}
+            >
+              <Cloud size={13} />
+              <span>{syncStatus?.text || "Google Sheet Sync"}</span>
+            </button>
+          )}
+
+          {/* Role / Profile Switcher Dropdown */}
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ color: "#64748B", fontSize: "0.78rem" }}>Logged In As:</span>
+            <span style={{ color: "#64748b", fontSize: "0.78rem", fontWeight: 600 }}>Active Role:</span>
             <div style={{ position: "relative" }}>
               <select
-                value={currentStaff?.id || ""}
+                value={currentRole === "Guest" ? "Guest" : currentStaff?.id || "ADM-001"}
                 onChange={(e) => {
-                  const found = allStaff.find((s) => s.id === e.target.value);
-                  if (found) setCurrentStaff(found);
+                  const val = e.target.value;
+                  if (val === "Guest") {
+                    setCurrentRole("Guest");
+                    setActiveTab("landing");
+                    return;
+                  }
+                  const found = allStaff.find((s) => s.id === val);
+                  if (found) {
+                    setCurrentStaff(found);
+                    setCurrentRole(found.role);
+                    if (found.role === "Doctor") setActiveTab("doctor");
+                    else if (found.role === "Nurse") setActiveTab("nurse");
+                    else if (found.role === "Receptionist") setActiveTab("reception");
+                    else if (found.role === "HR") setActiveTab("hr");
+                    else setActiveTab("dashboard");
+                  }
                 }}
                 style={{
-                  backgroundColor: "#1E293B",
-                  color: "#F8FAFC",
-                  border: "1px solid #334155",
+                  backgroundColor: "#ffffff",
+                  color: "#0f172a",
+                  border: "1px solid #cbd5e1",
                   padding: "4px 28px 4px 10px",
                   borderRadius: "6px",
                   fontSize: "0.82rem",
@@ -135,26 +163,40 @@ export default function HospitalHeader({
                   outline: "none",
                   cursor: "pointer",
                   appearance: "none",
+                  boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
                 }}
               >
-                <optgroup label="Doctors">
+                <option value="Guest">🌐 Public Hospital Visitor (Landing Page)</option>
+                <optgroup label="👑 Super Admin">
+                  <option value="ADM-001">Super Admin (Full Master Control)</option>
+                </optgroup>
+                <optgroup label="🩺 Doctors">
                   {doctors.map((doc) => (
                     <option key={doc.id} value={doc.id}>
                       👨‍⚕️ {doc.name} ({doc.department})
                     </option>
                   ))}
                 </optgroup>
-                <optgroup label="Nurses & Clinical Staff">
+                <optgroup label="👩‍⚕️ Nurses (Ward / ICU)">
                   {nurses.map((nurse) => (
                     <option key={nurse.id} value={nurse.id}>
-                      👩‍⚕️ {nurse.name} ({nurse.role})
+                      👩‍⚕️ {nurse.name} ({nurse.assignedFloor || nurse.role})
                     </option>
                   ))}
                 </optgroup>
-                <optgroup label="Hospital Admin & Reception">
-                  <option value="ADM-301">👩‍💼 Neha Gupta (Reception &amp; Billing)</option>
-                  <option value="PHM-401">💊 Rahul Verma (Chief Pharmacist)</option>
-                  <option value="ADM-001">🛡️ Super Administrator</option>
+                <optgroup label="📋 Reception & Front Desk">
+                  {receptionists.map((rec) => (
+                    <option key={rec.id} value={rec.id}>
+                      📋 {rec.name} (Front Desk)
+                    </option>
+                  ))}
+                </optgroup>
+                <optgroup label="👥 Human Resources (HR)">
+                  {hrStaff.map((hr) => (
+                    <option key={hr.id} value={hr.id}>
+                      👥 {hr.name} (HR &amp; Attendance)
+                    </option>
+                  ))}
                 </optgroup>
               </select>
               <ChevronDown
@@ -165,7 +207,7 @@ export default function HospitalHeader({
                   top: "50%",
                   transform: "translateY(-50%)",
                   pointerEvents: "none",
-                  color: "#94A3B8",
+                  color: "#64748b",
                 }}
               />
             </div>
@@ -185,18 +227,24 @@ export default function HospitalHeader({
         }}
       >
         {/* Brand & Hospital Identity */}
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+        <div
+          style={{ display: "flex", alignItems: "center", gap: 14, cursor: "pointer" }}
+          onClick={() => {
+            if (currentRole === "Guest") setActiveTab("landing");
+            else if (currentRole === "Admin") setActiveTab("dashboard");
+          }}
+        >
           <div
             style={{
               width: 44,
               height: 44,
               borderRadius: "10px",
-              background: "linear-gradient(135deg, #0284C7, #0D9488)",
+              background: "linear-gradient(135deg, #0284c7, #0d9488)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               color: "#ffffff",
-              boxShadow: "0 4px 12px rgba(2, 132, 199, 0.4)",
+              boxShadow: "0 4px 12px rgba(2, 132, 199, 0.25)",
             }}
           >
             <HeartPulse size={26} />
@@ -209,252 +257,480 @@ export default function HospitalHeader({
                   fontSize: "1.25rem",
                   fontWeight: 800,
                   letterSpacing: "-0.3px",
-                  color: "#ffffff",
+                  color: "#0f172a",
                 }}
               >
                 Aarogya Care Hospital
               </h1>
               <span
                 style={{
-                  backgroundColor: "rgba(14, 165, 233, 0.2)",
-                  color: "#38BDF8",
+                  backgroundColor:
+                    currentRole === "Doctor"
+                      ? "#f0fdf4"
+                      : currentRole === "Nurse"
+                      ? "#fef3c7"
+                      : currentRole === "Receptionist"
+                      ? "#f3e8ff"
+                      : currentRole === "HR"
+                      ? "#fce7f3"
+                      : "#e0f2fe",
+                  color:
+                    currentRole === "Doctor"
+                      ? "#15803d"
+                      : currentRole === "Nurse"
+                      ? "#b45309"
+                      : currentRole === "Receptionist"
+                      ? "#7e22ce"
+                      : currentRole === "HR"
+                      ? "#be185d"
+                      : "#0369a1",
                   padding: "2px 8px",
                   borderRadius: "12px",
                   fontSize: "0.72rem",
                   fontWeight: 700,
-                  border: "1px solid rgba(56, 189, 248, 0.3)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                 }}
               >
-                HMS PRO
+                {currentRole === "Guest" ? "PUBLIC PORTAL" : `${currentRole.toUpperCase()} DESK`}
               </span>
             </div>
             <p
               style={{
                 margin: "2px 0 0",
                 fontSize: "0.78rem",
-                color: "#94A3B8",
+                color: "#64748b",
               }}
             >
-              Multispeciality Medical &amp; Inpatient Care System • Panki, Kanpur
+              {currentRole === "Doctor"
+                ? `Chamber: ${currentStaff?.room || "Chamber 101"} • ${currentStaff?.name}`
+                : currentRole === "Nurse"
+                ? `Ward: ${currentStaff?.assignedFloor || "Floor 3 ICU"} • ${currentStaff?.name}`
+                : currentRole === "Receptionist"
+                ? `Front Office • ${currentStaff?.name || "Reception Desk"}`
+                : currentRole === "HR"
+                ? `HR & Workforce Manager • ${currentStaff?.name || "Kavita Saxena"}`
+                : "Multispeciality Medical & Trauma Center • Panki, Kanpur"}
             </p>
           </div>
         </div>
 
-        {/* Navigation Tabs */}
+        {/* Dynamic Navigation Tabs based on Role */}
         <nav
           style={{
             display: "flex",
             alignItems: "center",
             gap: 4,
-            backgroundColor: "rgba(15, 23, 42, 0.75)",
+            backgroundColor: "#f1f5f9",
             padding: "4px",
             borderRadius: "10px",
-            border: "1px solid rgba(255, 255, 255, 0.08)",
+            border: "1px solid #e2e8f0",
             flexWrap: "wrap",
           }}
         >
-          <button
-            onClick={() => setActiveTab("dashboard")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "dashboard" ? "#0284C7" : "transparent",
-              color: activeTab === "dashboard" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Activity size={15} />
-            <span>Overview</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab("doctor")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "doctor" ? "#0D9488" : "transparent",
-              color: activeTab === "doctor" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Stethoscope size={15} />
-            <span>Doctor Portal</span>
-            {currentStaff?.role === "Doctor" && (
-              <span
+          {/* GUEST ROLE TABS */}
+          {currentRole === "Guest" && (
+            <>
+              <button
+                onClick={() => setActiveTab("landing")}
                 style={{
-                  backgroundColor: "#ffffff",
-                  color: "#0D9488",
-                  borderRadius: "10px",
-                  padding: "1px 6px",
-                  fontSize: "0.7rem",
-                  fontWeight: 800,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 14px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "landing" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "landing" ? "#ffffff" : "transparent",
+                  color: activeTab === "landing" ? "#0284c7" : "#475569",
+                  boxShadow: activeTab === "landing" ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
                 }}
               >
-                Active
-              </span>
-            )}
-          </button>
+                <Home size={15} />
+                <span>Hospital Home</span>
+              </button>
 
-          <button
-            onClick={() => setActiveTab("opd")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "opd" ? "#0284C7" : "transparent",
-              color: activeTab === "opd" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Calendar size={15} />
-            <span>OPD Appointments</span>
-          </button>
+              <button
+                onClick={onOpenLoginModal}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: "none",
+                  backgroundColor: "#0284c7",
+                  color: "#ffffff",
+                  boxShadow: "0 2px 8px rgba(2, 132, 199, 0.3)",
+                }}
+              >
+                <Users size={15} />
+                <span>Staff &amp; Doctor Login</span>
+              </button>
+            </>
+          )}
 
-          <button
-            onClick={() => setActiveTab("patients")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "patients" ? "#0284C7" : "transparent",
-              color: activeTab === "patients" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Bed size={15} />
-            <span>Patients ({admittedCount} IPD)</span>
-          </button>
+          {/* DOCTOR ROLE TABS */}
+          {currentRole === "Doctor" && (
+            <>
+              <button
+                onClick={() => setActiveTab("doctor")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: activeTab === "doctor" ? "1px solid #0d9488" : "none",
+                  backgroundColor: activeTab === "doctor" ? "#0d9488" : "transparent",
+                  color: activeTab === "doctor" ? "#ffffff" : "#475569",
+                  boxShadow: activeTab === "doctor" ? "0 2px 6px rgba(13, 148, 136, 0.25)" : "none",
+                }}
+              >
+                <Stethoscope size={15} />
+                <span>My Doctor Chamber (IPD &amp; OPD Queue)</span>
+              </button>
 
-          <button
-            onClick={() => setActiveTab("duty")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "duty" ? "#0284C7" : "transparent",
-              color: activeTab === "duty" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Clock size={15} />
-            <span>Duty &amp; Shifts</span>
-          </button>
+              <button
+                onClick={() => setActiveTab("rooms")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 14px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "rooms" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "rooms" ? "#ffffff" : "transparent",
+                  color: activeTab === "rooms" ? "#0284c7" : "#475569",
+                }}
+              >
+                <Bed size={15} />
+                <span>Bed Census ({totalBeds - occupiedBeds} Khali)</span>
+              </button>
+            </>
+          )}
 
-          <button
-            onClick={() => setActiveTab("staff")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "staff" ? "#0284C7" : "transparent",
-              color: activeTab === "staff" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Users size={15} />
-            <span>Staff ({allStaff.length})</span>
-          </button>
+          {/* NURSE ROLE TABS */}
+          {currentRole === "Nurse" && (
+            <>
+              <button
+                onClick={() => setActiveTab("nurse")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: activeTab === "nurse" ? "1px solid #d97706" : "none",
+                  backgroundColor: activeTab === "nurse" ? "#f59e0b" : "transparent",
+                  color: activeTab === "nurse" ? "#000000" : "#475569",
+                  boxShadow: activeTab === "nurse" ? "0 2px 6px rgba(245, 158, 11, 0.25)" : "none",
+                }}
+              >
+                <Pill size={15} />
+                <span>Nurse Station (Scheduled Meds &amp; Vitals)</span>
+              </button>
 
-          <button
-            onClick={() => setActiveTab("pharmacy")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "pharmacy" ? "#0284C7" : "transparent",
-              color: activeTab === "pharmacy" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Pill size={15} />
-            <span>Prescriptions</span>
-          </button>
+              <button
+                onClick={() => setActiveTab("duty")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 14px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "duty" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "duty" ? "#ffffff" : "transparent",
+                  color: activeTab === "duty" ? "#0284c7" : "#475569",
+                }}
+              >
+                <Clock size={15} />
+                <span>My Shift Roster</span>
+              </button>
+            </>
+          )}
 
-          <button
-            onClick={() => setActiveTab("billing")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "billing" ? "#0284C7" : "transparent",
-              color: activeTab === "billing" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <CreditCard size={15} />
-            <span>Billing</span>
-          </button>
+          {/* RECEPTIONIST ROLE TABS */}
+          {currentRole === "Receptionist" && (
+            <>
+              <button
+                onClick={() => setActiveTab("reception")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: activeTab === "reception" ? "1px solid #7c3aed" : "none",
+                  backgroundColor: activeTab === "reception" ? "#7c3aed" : "transparent",
+                  color: activeTab === "reception" ? "#ffffff" : "#475569",
+                  boxShadow: activeTab === "reception" ? "0 2px 6px rgba(124, 58, 237, 0.25)" : "none",
+                }}
+              >
+                <Calendar size={15} />
+                <span>Reception Desk (Book OPD &amp; Bed Status)</span>
+              </button>
 
-          <button
-            onClick={() => setActiveTab("rooms")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "8px 14px",
-              borderRadius: "8px",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: "none",
-              backgroundColor: activeTab === "rooms" ? "#0284C7" : "transparent",
-              color: activeTab === "rooms" ? "#ffffff" : "#94A3B8",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <Building2 size={15} />
-            <span>Floors &amp; Beds</span>
-          </button>
+              <button
+                onClick={() => setActiveTab("billing")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 14px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "billing" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "billing" ? "#ffffff" : "transparent",
+                  color: activeTab === "billing" ? "#059669" : "#475569",
+                }}
+              >
+                <CreditCard size={15} />
+                <span>Billing &amp; Collections</span>
+              </button>
+            </>
+          )}
+
+          {/* HR ROLE TABS */}
+          {currentRole === "HR" && (
+            <>
+              <button
+                onClick={() => setActiveTab("hr")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 16px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: activeTab === "hr" ? "1px solid #be185d" : "none",
+                  backgroundColor: activeTab === "hr" ? "#db2777" : "transparent",
+                  color: activeTab === "hr" ? "#ffffff" : "#475569",
+                  boxShadow: activeTab === "hr" ? "0 2px 6px rgba(219, 39, 119, 0.25)" : "none",
+                }}
+              >
+                <Briefcase size={15} />
+                <span>HR &amp; Staff Attendance</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("duty")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 14px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "duty" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "duty" ? "#ffffff" : "transparent",
+                  color: activeTab === "duty" ? "#0284c7" : "#475569",
+                }}
+              >
+                <Clock size={15} />
+                <span>Floor Duty Roster</span>
+              </button>
+            </>
+          )}
+
+          {/* SUPER ADMIN ROLE TABS (Full Control Over All Modules) */}
+          {currentRole === "Admin" && (
+            <>
+              <button
+                onClick={() => setActiveTab("dashboard")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "dashboard" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "dashboard" ? "#ffffff" : "transparent",
+                  color: activeTab === "dashboard" ? "#0284c7" : "#475569",
+                  boxShadow: activeTab === "dashboard" ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
+                }}
+              >
+                <Activity size={14} />
+                <span>Overview</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("doctor")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "doctor" ? "1px solid #0d9488" : "none",
+                  backgroundColor: activeTab === "doctor" ? "#0d9488" : "transparent",
+                  color: activeTab === "doctor" ? "#ffffff" : "#475569",
+                }}
+              >
+                <Stethoscope size={14} />
+                <span>Doctor Chamber</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("nurse")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "nurse" ? "1px solid #d97706" : "none",
+                  backgroundColor: activeTab === "nurse" ? "#f59e0b" : "transparent",
+                  color: activeTab === "nurse" ? "#000000" : "#475569",
+                }}
+              >
+                <Pill size={14} />
+                <span>Nurse Station</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("reception")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "reception" ? "1px solid #7c3aed" : "none",
+                  backgroundColor: activeTab === "reception" ? "#7c3aed" : "transparent",
+                  color: activeTab === "reception" ? "#ffffff" : "#475569",
+                }}
+              >
+                <Calendar size={14} />
+                <span>Reception Desk</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("hr")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "hr" ? "1px solid #be185d" : "none",
+                  backgroundColor: activeTab === "hr" ? "#db2777" : "transparent",
+                  color: activeTab === "hr" ? "#ffffff" : "#475569",
+                }}
+              >
+                <Briefcase size={14} />
+                <span>HR &amp; Attendance</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("patients")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "patients" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "patients" ? "#ffffff" : "transparent",
+                  color: activeTab === "patients" ? "#0284c7" : "#475569",
+                }}
+              >
+                <Users size={14} />
+                <span>IPD Patients</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("billing")}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "7px 12px",
+                  borderRadius: "8px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  border: activeTab === "billing" ? "1px solid #cbd5e1" : "none",
+                  backgroundColor: activeTab === "billing" ? "#ffffff" : "transparent",
+                  color: activeTab === "billing" ? "#059669" : "#475569",
+                }}
+              >
+                <CreditCard size={14} />
+                <span>Billing</span>
+              </button>
+            </>
+          )}
+
+          {/* Quick Return to Landing Page button */}
+          {currentRole !== "Guest" && (
+            <button
+              onClick={() => {
+                setCurrentRole("Guest");
+                setActiveTab("landing");
+              }}
+              title="Logout & Return to Public Hospital Landing Page"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+                padding: "7px 10px",
+                borderRadius: "8px",
+                fontSize: "0.78rem",
+                cursor: "pointer",
+                border: "1px solid #cbd5e1",
+                backgroundColor: "#ffffff",
+                color: "#64748b",
+                marginLeft: 4,
+                boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+              }}
+            >
+              <LogOut size={13} />
+              <span>Logout</span>
+            </button>
+          )}
         </nav>
       </div>
     </header>

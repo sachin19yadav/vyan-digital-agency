@@ -132,10 +132,10 @@ export default function BillingManager({
         }}
       >
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#F8FAFC" }}>
+          <h2 style={{ margin: 0, fontSize: "1.4rem", fontWeight: 800, color: "#0f172a" }}>
             Hospital Inpatient &amp; Outpatient Billing &amp; Invoices
           </h2>
-          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>
+          <p style={{ margin: "4px 0 0", fontSize: "0.85rem", color: "#64748b" }}>
             Generate itemized discharge bills, trace consultation fees, bed charges, surgery, and medications.
           </p>
         </div>
@@ -147,7 +147,7 @@ export default function BillingManager({
             alignItems: "center",
             gap: 8,
             backgroundColor: "#0284C7",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "10px 18px",
             borderRadius: "8px",
@@ -165,8 +165,8 @@ export default function BillingManager({
       {/* Filter and Search */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "12px",
           padding: "14px 20px",
           marginBottom: 20,
@@ -182,15 +182,15 @@ export default function BillingManager({
             display: "flex",
             alignItems: "center",
             gap: 10,
-            backgroundColor: "#0F172A",
-            border: "1px solid #334155",
+            backgroundColor: "#ffffff",
+            border: "1px solid #cbd5e1",
             borderRadius: "8px",
             padding: "8px 14px",
             flex: "1 1 300px",
             maxWidth: 420,
           }}
         >
-          <Search size={16} style={{ color: "#94A3B8" }} />
+          <Search size={16} style={{ color: "#64748b" }} />
           <input
             type="text"
             placeholder="Search by Bill No, Patient Name, or Doctor..."
@@ -215,7 +215,7 @@ export default function BillingManager({
               style={{
                 backgroundColor: statusFilter === st ? "#0284C7" : "#1E293B",
                 color: statusFilter === st ? "#ffffff" : "#94A3B8",
-                border: "1px solid #334155",
+                border: "1px solid #cbd5e1",
                 padding: "6px 14px",
                 borderRadius: "6px",
                 fontSize: "0.82rem",
@@ -232,15 +232,15 @@ export default function BillingManager({
       {/* Invoices Table */}
       <div
         style={{
-          backgroundColor: "#111C44",
-          border: "1px solid #1E293B",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
           borderRadius: "14px",
           overflowX: "auto",
         }}
       >
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.86rem" }}>
           <thead>
-            <tr style={{ backgroundColor: "#0F172A", borderBottom: "1px solid #1E293B", color: "#94A3B8" }}>
+            <tr style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #e2e8f0", color: "#64748b" }}>
               <th style={{ padding: "14px 18px" }}>Invoice / Bill No</th>
               <th style={{ padding: "14px 18px" }}>Patient &amp; Room</th>
               <th style={{ padding: "14px 18px" }}>Doctor</th>
@@ -256,21 +256,21 @@ export default function BillingManager({
               <tr
                 key={bill.id}
                 style={{
-                  borderBottom: "1px solid #1E293B",
+                  borderBottom: "1px solid #e2e8f0",
                 }}
               >
                 <td style={{ padding: "14px 18px" }}>
                   <div style={{ fontWeight: 800, color: "#38BDF8" }}>{bill.billNumber}</div>
-                  <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>Date: {bill.billDate}</div>
+                  <div style={{ fontSize: "0.76rem", color: "#64748b" }}>Date: {bill.billDate}</div>
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
                   <div style={{ fontWeight: 700, color: "#ffffff" }}>{bill.patientName}</div>
-                  <div style={{ fontSize: "0.76rem", color: "#94A3B8" }}>{bill.roomDetails}</div>
+                  <div style={{ fontSize: "0.76rem", color: "#64748b" }}>{bill.roomDetails}</div>
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
-                  <div style={{ color: "#F8FAFC" }}>{bill.doctorName}</div>
+                  <div style={{ color: "#0f172a" }}>{bill.doctorName}</div>
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
@@ -283,7 +283,7 @@ export default function BillingManager({
                   <span style={{ color: "#34D399", fontWeight: 700 }}>
                     ₹{bill.paid.toLocaleString("en-IN")}
                   </span>
-                  <div style={{ fontSize: "0.72rem", color: "#94A3B8" }}>{bill.paymentMode}</div>
+                  <div style={{ fontSize: "0.72rem", color: "#64748b" }}>{bill.paymentMode}</div>
                 </td>
 
                 <td style={{ padding: "14px 18px" }}>
@@ -292,7 +292,7 @@ export default function BillingManager({
                       ₹{bill.balance.toLocaleString("en-IN")}
                     </span>
                   ) : (
-                    <span style={{ color: "#94A3B8" }}>Nil (Paid)</span>
+                    <span style={{ color: "#64748b" }}>Nil (Paid)</span>
                   )}
                 </td>
 
@@ -333,9 +333,9 @@ export default function BillingManager({
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 6,
-                      backgroundColor: "#1E293B",
+                      backgroundColor: "#ffffff",
                       color: "#38BDF8",
-                      border: "1px solid #334155",
+                      border: "1px solid #cbd5e1",
                       padding: "6px 12px",
                       borderRadius: "6px",
                       fontSize: "0.8rem",
@@ -359,7 +359,7 @@ export default function BillingManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -369,8 +369,8 @@ export default function BillingManager({
         >
           <div
             style={{
-              backgroundColor: "#111C44",
-              border: "1px solid #1E293B",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
               borderRadius: "14px",
               padding: "28px",
               maxWidth: 750,
@@ -385,7 +385,7 @@ export default function BillingManager({
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: 20,
-                borderBottom: "1px solid #1E293B",
+                borderBottom: "1px solid #e2e8f0",
                 paddingBottom: 14,
               }}
             >
@@ -393,13 +393,13 @@ export default function BillingManager({
                 <h3 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 800, color: "#ffffff" }}>
                   Generate Hospital Invoice / Discharge Bill
                 </h3>
-                <span style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
                   Select patient to automatically load charges and add custom services
                 </span>
               </div>
               <button
                 onClick={() => setIsNewBillModalOpen(false)}
-                style={{ background: "none", border: "none", color: "#94A3B8", cursor: "pointer" }}
+                style={{ background: "none", border: "none", color: "#64748b", cursor: "pointer" }}
               >
                 <X size={20} />
               </button>
@@ -408,7 +408,7 @@ export default function BillingManager({
             <form onSubmit={handleCreateBillSubmit}>
               {/* Select Patient */}
               <div style={{ marginBottom: 16 }}>
-                <label style={{ display: "block", fontSize: "0.82rem", color: "#94A3B8", marginBottom: 6 }}>
+                <label style={{ display: "block", fontSize: "0.82rem", color: "#64748b", marginBottom: 6 }}>
                   Select Inpatient / Outpatient *
                 </label>
                 <select
@@ -416,8 +416,8 @@ export default function BillingManager({
                   onChange={(e) => setSelectedPatientId(e.target.value)}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0F172A",
-                    border: "1px solid #334155",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid #cbd5e1",
                     padding: "10px 14px",
                     borderRadius: "8px",
                     color: "#ffffff",
@@ -436,10 +436,10 @@ export default function BillingManager({
               {/* Line Items Table */}
               <div
                 style={{
-                  backgroundColor: "#0F172A",
+                  backgroundColor: "#ffffff",
                   padding: "16px",
                   borderRadius: "8px",
-                  border: "1px solid #1E293B",
+                  border: "1px solid #e2e8f0",
                   marginBottom: 16,
                 }}
               >
@@ -449,7 +449,7 @@ export default function BillingManager({
 
                 <table style={{ width: "100%", fontSize: "0.82rem", borderCollapse: "collapse", marginBottom: 12 }}>
                   <thead>
-                    <tr style={{ color: "#94A3B8", borderBottom: "1px solid #334155" }}>
+                    <tr style={{ color: "#64748b", borderBottom: "1px solid #334155" }}>
                       <th style={{ padding: "6px 8px", textAlign: "left" }}>Item Description</th>
                       <th style={{ padding: "6px 8px", textAlign: "center" }}>Qty</th>
                       <th style={{ padding: "6px 8px", textAlign: "right" }}>Rate (₹)</th>
@@ -459,8 +459,8 @@ export default function BillingManager({
                   </thead>
                   <tbody>
                     {billItems.map((item, index) => (
-                      <tr key={index} style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.05)" }}>
-                        <td style={{ padding: "8px", color: "#F8FAFC" }}>{item.name}</td>
+                      <tr key={index} style={{ borderBottom: "1px solid #e2e8f0" }}>
+                        <td style={{ padding: "8px", color: "#0f172a" }}>{item.name}</td>
                         <td style={{ padding: "8px", textAlign: "center" }}>{item.qty}</td>
                         <td style={{ padding: "8px", textAlign: "right" }}>₹{item.rate}</td>
                         <td style={{ padding: "8px", textAlign: "right", fontWeight: 700 }}>₹{item.amount}</td>
@@ -481,7 +481,7 @@ export default function BillingManager({
                 {/* Add Line Item Subform */}
                 <div style={{ display: "grid", gridTemplateColumns: "2.5fr 1fr 1fr 1fr auto", gap: 8, alignItems: "flex-end" }}>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.74rem", color: "#94A3B8", marginBottom: 2 }}>
+                    <label style={{ display: "block", fontSize: "0.74rem", color: "#64748b", marginBottom: 2 }}>
                       Service / Medicine Description
                     </label>
                     <input
@@ -489,17 +489,17 @@ export default function BillingManager({
                       placeholder="e.g. ECG Test / ICU Rounds"
                       value={newItemName}
                       onChange={(e) => setNewItemName(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
                     />
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.74rem", color: "#94A3B8", marginBottom: 2 }}>
+                    <label style={{ display: "block", fontSize: "0.74rem", color: "#64748b", marginBottom: 2 }}>
                       Category
                     </label>
                     <select
                       value={newItemCategory}
                       onChange={(e) => setNewItemCategory(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
                     >
                       <option value="Bed Charges">Bed</option>
                       <option value="Doctor Fee">Doctor</option>
@@ -510,7 +510,7 @@ export default function BillingManager({
                     </select>
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.74rem", color: "#94A3B8", marginBottom: 2 }}>
+                    <label style={{ display: "block", fontSize: "0.74rem", color: "#64748b", marginBottom: 2 }}>
                       Qty / Days
                     </label>
                     <input
@@ -518,11 +518,11 @@ export default function BillingManager({
                       min="1"
                       value={newItemQty}
                       onChange={(e) => setNewItemQty(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
                     />
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.74rem", color: "#94A3B8", marginBottom: 2 }}>
+                    <label style={{ display: "block", fontSize: "0.74rem", color: "#64748b", marginBottom: 2 }}>
                       Rate (₹)
                     </label>
                     <input
@@ -530,7 +530,7 @@ export default function BillingManager({
                       placeholder="800"
                       value={newItemRate}
                       onChange={(e) => setNewItemRate(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
                     />
                   </div>
                   <button
@@ -538,7 +538,7 @@ export default function BillingManager({
                     onClick={handleAddLineItem}
                     style={{
                       backgroundColor: "#0D9488",
-                      color: "#fff",
+                      color: "#ffffff",
                       border: "none",
                       padding: "7px 12px",
                       borderRadius: "4px",
@@ -554,19 +554,19 @@ export default function BillingManager({
 
               {/* Total Summary & Payment */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
-                <div style={{ backgroundColor: "#0F172A", padding: "16px", borderRadius: "8px" }}>
+                <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8, fontSize: "0.86rem" }}>
-                    <span style={{ color: "#94A3B8" }}>Subtotal:</span>
+                    <span style={{ color: "#64748b" }}>Subtotal:</span>
                     <strong style={{ color: "#ffffff" }}>₹{subtotal.toLocaleString("en-IN")}</strong>
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8, fontSize: "0.86rem" }}>
-                    <span style={{ color: "#94A3B8" }}>Concession / Discount:</span>
+                    <span style={{ color: "#64748b" }}>Concession / Discount:</span>
                     <input
                       type="number"
                       placeholder="0"
                       value={discount}
                       onChange={(e) => setDiscount(e.target.value)}
-                      style={{ width: 100, backgroundColor: "#1E293B", color: "#fff", padding: "4px 8px", borderRadius: "4px", border: "1px solid #475569", textAlign: "right" }}
+                      style={{ width: 100, backgroundColor: "#ffffff", color: "#ffffff", padding: "4px 8px", borderRadius: "4px", border: "1px solid #475569", textAlign: "right" }}
                     />
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between", paddingTop: 8, borderTop: "1px solid #334155", fontSize: "1.05rem" }}>
@@ -575,9 +575,9 @@ export default function BillingManager({
                   </div>
                 </div>
 
-                <div style={{ backgroundColor: "#0F172A", padding: "16px", borderRadius: "8px" }}>
+                <div style={{ backgroundColor: "#ffffff", padding: "16px", borderRadius: "8px" }}>
                   <div style={{ marginBottom: 10 }}>
-                    <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                    <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                       Payment Received (₹) *
                     </label>
                     <input
@@ -586,23 +586,23 @@ export default function BillingManager({
                       placeholder="Enter amount collected"
                       value={amountPaid}
                       onChange={(e) => setAmountPaid(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 10px", borderRadius: "4px", border: "1px solid #475569", fontWeight: 700 }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 10px", borderRadius: "4px", border: "1px solid #475569", fontWeight: 700 }}
                     />
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10, fontSize: "0.85rem" }}>
-                    <span style={{ color: "#94A3B8" }}>Pending Balance:</span>
+                    <span style={{ color: "#64748b" }}>Pending Balance:</span>
                     <strong style={{ color: balanceDue > 0 ? "#F87171" : "#34D399" }}>
                       ₹{balanceDue.toLocaleString("en-IN")}
                     </strong>
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.78rem", color: "#94A3B8", marginBottom: 4 }}>
+                    <label style={{ display: "block", fontSize: "0.78rem", color: "#64748b", marginBottom: 4 }}>
                       Payment Method
                     </label>
                     <select
                       value={paymentMode}
                       onChange={(e) => setPaymentMode(e.target.value)}
-                      style={{ width: "100%", backgroundColor: "#1E293B", color: "#fff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
+                      style={{ width: "100%", backgroundColor: "#ffffff", color: "#ffffff", padding: "6px 8px", borderRadius: "4px", border: "1px solid #475569" }}
                     >
                       <option value="UPI / GPay / PhonePe">UPI / GPay / PhonePe</option>
                       <option value="Cash Counter">Cash Counter</option>
@@ -619,8 +619,8 @@ export default function BillingManager({
                   type="button"
                   onClick={() => setIsNewBillModalOpen(false)}
                   style={{
-                    backgroundColor: "#1E293B",
-                    color: "#94A3B8",
+                    backgroundColor: "#ffffff",
+                    color: "#64748b",
                     border: "none",
                     padding: "10px 18px",
                     borderRadius: "6px",
@@ -633,7 +633,7 @@ export default function BillingManager({
                   type="submit"
                   style={{
                     backgroundColor: "#0284C7",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "10px 24px",
                     borderRadius: "6px",
@@ -655,7 +655,7 @@ export default function BillingManager({
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor: "rgba(15, 23, 42, 0.65)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -698,7 +698,7 @@ export default function BillingManager({
                   onClick={() => window.print()}
                   style={{
                     backgroundColor: "#0D9488",
-                    color: "#ffffff",
+                    color: "#0f172a",
                     border: "none",
                     padding: "8px 16px",
                     borderRadius: "6px",
@@ -739,7 +739,7 @@ export default function BillingManager({
               <p style={{ margin: "2px 0", fontSize: "0.8rem", color: "#64748B" }}>
                 {hospitalInfo.address} • Emergency Helpline: {hospitalInfo.emergencyPhone}
               </p>
-              <p style={{ margin: "2px 0", fontSize: "0.75rem", color: "#94A3B8" }}>
+              <p style={{ margin: "2px 0", fontSize: "0.75rem", color: "#64748b" }}>
                 Reg No: {hospitalInfo.regNo} • GSTIN: {hospitalInfo.gstNo}
               </p>
             </div>
@@ -750,7 +750,7 @@ export default function BillingManager({
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: 16,
-                backgroundColor: "#F8FAFC",
+                backgroundColor: "#ffffff",
                 padding: "16px",
                 borderRadius: "8px",
                 fontSize: "0.84rem",

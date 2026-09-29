@@ -72,7 +72,7 @@ export default function HospitalDashboard({
             <strong style={{ color: "#FCA5A5", fontSize: "0.95rem" }}>
               Level-1 Trauma &amp; Emergency Command Center Online
             </strong>
-            <p style={{ margin: "2px 0 0", fontSize: "0.8rem", color: "#CBD5E1" }}>
+            <p style={{ margin: "2px 0 0", fontSize: "0.8rem", color: "#475569" }}>
               ICU telemetry active • 24x7 Ambulance &amp; surgical theatre on standby:{" "}
               <strong style={{ color: "#ffffff" }}>+91 96548 80240</strong>
             </p>
@@ -83,7 +83,7 @@ export default function HospitalDashboard({
           onClick={onAdmitClick}
           style={{
             backgroundColor: "#EF4444",
-            color: "#ffffff",
+            color: "#0f172a",
             border: "none",
             padding: "8px 16px",
             borderRadius: "6px",
@@ -110,8 +110,8 @@ export default function HospitalDashboard({
         <div
           onClick={() => setActiveTab("patients")}
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "20px",
             cursor: "pointer",
@@ -119,7 +119,7 @@ export default function HospitalDashboard({
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "0.82rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.82rem", color: "#64748b", fontWeight: 600 }}>
               Admitted Inpatients (IPD)
             </span>
             <div
@@ -139,7 +139,7 @@ export default function HospitalDashboard({
           </div>
           <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "#ffffff", marginTop: 8 }}>
             {admittedPatients.length}{" "}
-            <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "#94A3B8" }}>
+            <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "#64748b" }}>
               / {patients.length} Total Registered
             </span>
           </div>
@@ -153,15 +153,15 @@ export default function HospitalDashboard({
         <div
           onClick={() => setActiveTab("rooms")}
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "20px",
             cursor: "pointer",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "0.82rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.82rem", color: "#64748b", fontWeight: 600 }}>
               Bed Occupancy
             </span>
             <div
@@ -185,7 +185,7 @@ export default function HospitalDashboard({
               ({freeBeds} Beds Free)
             </span>
           </div>
-          <div style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 4 }}>
+          <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 4 }}>
             {occupiedBeds} of {totalBeds} total beds occupied
           </div>
         </div>
@@ -194,15 +194,15 @@ export default function HospitalDashboard({
         <div
           onClick={() => setActiveTab("duty")}
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "20px",
             cursor: "pointer",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "0.82rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.82rem", color: "#64748b", fontWeight: 600 }}>
               Clinical Staff On Duty
             </span>
             <div
@@ -222,7 +222,7 @@ export default function HospitalDashboard({
           </div>
           <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "#ffffff", marginTop: 8 }}>
             {doctorsOnDuty.length + nursesOnDuty.length}{" "}
-            <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "#94A3B8" }}>
+            <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "#64748b" }}>
               ({doctorsOnDuty.length} Docs • {nursesOnDuty.length} Nurses)
             </span>
           </div>
@@ -236,15 +236,15 @@ export default function HospitalDashboard({
         <div
           onClick={() => setActiveTab("billing")}
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "20px",
             cursor: "pointer",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "0.82rem", color: "#94A3B8", fontWeight: 600 }}>
+            <span style={{ fontSize: "0.82rem", color: "#64748b", fontWeight: 600 }}>
               Hospital Inpatient Billing
             </span>
             <div
@@ -286,8 +286,8 @@ export default function HospitalDashboard({
         {/* Left Column: Recent Admitted Inpatients */}
         <div
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "22px",
           }}
@@ -298,15 +298,15 @@ export default function HospitalDashboard({
               justifyContent: "space-between",
               alignItems: "center",
               marginBottom: 16,
-              borderBottom: "1px solid #1E293B",
+              borderBottom: "1px solid #e2e8f0",
               paddingBottom: 12,
             }}
           >
             <div>
-              <h3 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: "#F8FAFC" }}>
+              <h3 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: "#0f172a" }}>
                 Active Inpatients Under Care
               </h3>
-              <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>
+              <span style={{ fontSize: "0.78rem", color: "#64748b" }}>
                 Real-time ward location, vitals, and assigned doctor
               </span>
             </div>
@@ -330,8 +330,8 @@ export default function HospitalDashboard({
               <div
                 key={p.id}
                 style={{
-                  backgroundColor: "#0F172A",
-                  border: "1px solid #1E293B",
+                  backgroundColor: "#ffffff",
+                  border: "1px solid #e2e8f0",
                   borderRadius: "10px",
                   padding: "14px",
                   display: "flex",
@@ -346,7 +346,7 @@ export default function HospitalDashboard({
                     <span style={{ fontWeight: 800, color: "#ffffff", fontSize: "0.95rem" }}>
                       {p.name}
                     </span>
-                    <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>
+                    <span style={{ fontSize: "0.78rem", color: "#64748b" }}>
                       ({p.age}y • {p.gender})
                     </span>
                     <span
@@ -362,8 +362,8 @@ export default function HospitalDashboard({
                       {p.bedNo}
                     </span>
                   </div>
-                  <div style={{ fontSize: "0.78rem", color: "#94A3B8", marginTop: 2 }}>
-                    Doctor: <strong style={{ color: "#F8FAFC" }}>{p.primaryDoctorName}</strong> • Nurse:{" "}
+                  <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: 2 }}>
+                    Doctor: <strong style={{ color: "#0f172a" }}>{p.primaryDoctorName}</strong> • Nurse:{" "}
                     <strong style={{ color: "#34D399" }}>{p.attendingNurseName}</strong>
                   </div>
                   <div style={{ fontSize: "0.78rem", color: "#FCD34D", marginTop: 2 }}>
@@ -374,7 +374,7 @@ export default function HospitalDashboard({
                 {p.vitals && (
                   <div
                     style={{
-                      backgroundColor: "#1E293B",
+                      backgroundColor: "#ffffff",
                       padding: "6px 10px",
                       borderRadius: "6px",
                       fontSize: "0.75rem",
@@ -393,8 +393,8 @@ export default function HospitalDashboard({
         {/* Right Column: Floor & Ward Occupancy Summary */}
         <div
           style={{
-            backgroundColor: "#111C44",
-            border: "1px solid #1E293B",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             borderRadius: "14px",
             padding: "22px",
             display: "flex",
@@ -402,11 +402,11 @@ export default function HospitalDashboard({
             gap: 18,
           }}
         >
-          <div style={{ borderBottom: "1px solid #1E293B", paddingBottom: 12 }}>
-            <h3 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: "#F8FAFC" }}>
+          <div style={{ borderBottom: "1px solid #e2e8f0", paddingBottom: 12 }}>
+            <h3 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: "#0f172a" }}>
               Floor-Wise Ward Occupancy
             </h3>
-            <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>
+            <span style={{ fontSize: "0.78rem", color: "#64748b" }}>
               Live census breakdown per floor
             </span>
           </div>
@@ -421,8 +421,8 @@ export default function HospitalDashboard({
               return (
                 <div key={floor.id}>
                   <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", marginBottom: 6 }}>
-                    <span style={{ fontWeight: 600, color: "#F8FAFC" }}>{floor.name}</span>
-                    <span style={{ color: "#94A3B8" }}>
+                    <span style={{ fontWeight: 600, color: "#0f172a" }}>{floor.name}</span>
+                    <span style={{ color: "#64748b" }}>
                       {floorPatients.length} / {floor.totalBeds} Beds ({occ}%)
                     </span>
                   </div>
@@ -430,7 +430,7 @@ export default function HospitalDashboard({
                   <div
                     style={{
                       height: 8,
-                      backgroundColor: "#0F172A",
+                      backgroundColor: "#ffffff",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -453,10 +453,10 @@ export default function HospitalDashboard({
           <div
             style={{
               marginTop: "auto",
-              backgroundColor: "#0F172A",
+              backgroundColor: "#ffffff",
               padding: "16px",
               borderRadius: "8px",
-              border: "1px solid #1E293B",
+              border: "1px solid #e2e8f0",
             }}
           >
             <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#38BDF8", display: "block", marginBottom: 8 }}>
@@ -471,9 +471,9 @@ export default function HospitalDashboard({
                     key={doc.id}
                     onClick={() => setActiveTab("doctor")}
                     style={{
-                      backgroundColor: "#1E293B",
-                      color: "#CBD5E1",
-                      border: "1px solid #334155",
+                      backgroundColor: "#ffffff",
+                      color: "#475569",
+                      border: "1px solid #cbd5e1",
                       padding: "5px 10px",
                       borderRadius: "6px",
                       fontSize: "0.78rem",
