@@ -34,7 +34,7 @@ function YoutubeIcon(props) {
 
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname?.startsWith("/hospital")) {
+  if (pathname?.startsWith("/hospital") || pathname?.startsWith("/resturent") || pathname?.startsWith("/restaurant")) {
     return null;
   }
 

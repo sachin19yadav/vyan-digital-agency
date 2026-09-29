@@ -48,8 +48,8 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Do not render website agency header on dedicated hospital application
-  if (pathname?.startsWith("/hospital")) {
+  // Do not render website agency header on dedicated hospital or restaurant applications
+  if (pathname?.startsWith("/hospital") || pathname?.startsWith("/resturent") || pathname?.startsWith("/restaurant")) {
     return null;
   }
 
